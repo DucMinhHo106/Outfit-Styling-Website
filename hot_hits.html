@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hot Hits 2026 — STYLEMIX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/global.css" />
+    <link rel="stylesheet" href="./assets/css/pages.css" />
+</head>
+
+<body data-page="hot_hits">
+
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+    <div class="page-transition" id="pageTransition"></div>
+
+    <div class="toast" id="toast">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <polyline points="20 6 9 13 4 11" />
+            <polyline points="4 11 9 20 20 6" /></svg>
+        <span id="toastMsg">Thông báo</span>
+    </div>
+
+    <div class="modal-overlay" id="modal">
+        <div class="modal">
+            <div class="modal__img"><img src="" alt="" id="modalImg" /></div>
+            <div class="modal__body">
+                <button class="modal__close" id="modalClose">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" /></svg>
+                </button>
+                <span class="tag tag--orange" id="modalTag"></span>
+                <h2 class="modal__title" id="modalTitle"></h2>
+                <p class="modal__desc" id="modalDesc"></p>
+                <p class="modal__items-label">Items trong outfit</p>
+                <ul class="modal__items" id="modalItems"></ul>
+                <button class="btn btn--primary btn--full" onclick="saveOutfitLocal(currentOutfit)">
+                    style="margin-top:auto">
+                    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" /></svg>
+                    Lưu outfit này
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <nav class="nav" id="navbar">
+        <a class="nav__logo" href="./index.html">
+            <span class="nav__logo-style">STYLE</span><span class="nav__logo-mix">MIX</span>
+        </a>
+        <div class="nav__links">
+            <a href="ao.html">Áo</a>
+            <a href="quan.html">Quần</a>
+            <a href="phu-kien.html">Phụ kiện</a>
+            <a href="hot_hits.html" class="active">Hot Hits</a>
+        </div>
+        <div class="nav__right">
+            <div class="search-bar">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>
+                <input type="text" placeholder="Tìm outfit hot..." />
+            </div>
+            <div class="nav__icon" onclick="showToast('Danh sách yêu thích trống!')">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path
+                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                    </svg>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="page-hero page-hero--hot"
+        style="min-height:520px;justify-content:center;padding-top:calc(var(--nav-height) + 60px);padding-bottom:60px">
+        <div class="page-hero__content" style="text-align:center">
+            <span class="tag tag--red reveal" style="margin-bottom:24px;display:inline-flex;gap:6px">
+                <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2c0 0-4 4-4 8a4 4 0 0 0 8 0c0-4-4-8-4-8zm0 18a8 8 0 0 1-8-8c0-5 5-10 8-12 3 2 8 7 8 12a8 8 0 0 1-8 8z" />
+                    </svg>
+                Hot Hits 2026
+            </span>
+            <h1 class="reveal"
+                style="font-family:'Bebas Neue',sans-serif;font-size:clamp(56px,9vw,110px);line-height:0.95;transition-delay:.1s">
+                <span style="color:var(--color-orange);display:block">Hot Hits</span>
+                <span style="color:#fff;display:block">of the Year</span>
+            </h1>
+            <p class="reveal"
+                style="font-size:16px;color:rgba(255,255,255,.65);font-weight:300;margin-top:18px;transition-delay:.2s">
+                Những outfit được yêu thích và săn đón nhiều nhất năm 2026
+            </p>
+            <div class="stats-bar reveal" style="transition-delay:.3s">
+                <div class="stat-card">
+                    <div class="stat-card__icon">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"
+                            viewBox="0 0 24 24">
+                            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+                            <polyline points="17 6 23 6 23 12" /></svg>
+                    </div>
+                    <div class="stat-card__value">2.5K+</div>
+                    <div class="stat-card__label">Trending</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card__icon">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2c0 0-4 4-4 8a4 4 0 0 0 8 0c0-4-4-8-4-8z" opacity=".6" />
+                            <circle cx="12" cy="18" r="4" /></svg>
+                    </div>
+                    <div class="stat-card__value">850+</div>
+                    <div class="stat-card__label">Hot This Week</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card__icon">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"
+                            viewBox="0 0 24 24">
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg>
+                    </div>
+                    <div class="stat-card__value">1.2K+</div>
+                    <div class="stat-card__label">Top Rated</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Outfit -->
+    <section class="hot-featured">
+        <div class="hot-featured__inner reveal">
+            <div class="hot-featured__img">
+                <img src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?w=800&q=80" alt="Orange Energy"
+                    id="featuredImg" loading="lazy" />
+            </div>
+            <div class="hot-featured__body">
+                <span class="tag tag--red">#1 Outfit tháng này</span>
+                <h2 class="hot-featured__title" id="featuredName"></h2>
+                <p class="hot-featured__desc" id="featuredDesc"></p>
+                <div class="hot-featured__tags">
+                    <span class="tag tag--dark">Đường phố</span>
+                    <span class="tag tag--dark">Cam</span>
+                </div>
+                <div class="hot-featured__stats">
+                    <div>
+                        <div class="hot-stat__value" id="featuredViews"></div>
+                        <div class="hot-stat__label">Lượt xem</div>
+                    </div>
+                    <div>
+                        <div class="hot-stat__value" id="featuredSaves"></div>
+                        <div class="hot-stat__label">Lượt lưu</div>
+                    </div>
+                    <div>
+                        <div class="hot-stat__value" id="featuredRating"></div>
+                        <div class="hot-stat__label">Đánh giá</div>
+                    </div>
+                </div>
+                <button class="btn btn--primary btn--full" onclick="saveOutfitLocal(currentOutfit)">
+                    Xem chi tiết outfit
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Hits Grid -->
+    <section class="all-hits">
+        <div class="all-hits__inner">
+            <h2 class="all-hits__title reveal">Tất cả <span class="accent">Hot Hits</span></h2>
+            <p class="all-hits__sub reveal">8 outfit hot nhất được cập nhật liên tục</p>
+            <div class="hits-grid" id="hitsGrid"></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__grid reveal">
+                <div>
+                    <div class="footer__logo"><span class="accent">STYLE</span>MIX</div>
+                    <p class="footer__tagline">Nền tảng phối đồ hiện đại dành cho người trẻ yêu thích thời trang</p>
+                </div>
+                <div class="footer__col">
+                    <h4>Danh mục</h4><a href="ao.html">Áo</a><a href="quan.html">Quần</a><a href="phu-kien.html">Phụ
+                        kiện</a><a href="#">Giày dép</a>
+                </div>
+                <div class="footer__col">
+                    <h4>Styles</h4><a href="#">Streetwear</a><a href="#">Minimal</a><a href="#">Vintage</a><a
+                        href="#">Sporty</a>
+                </div>
+                <div class="footer__col">
+                    <h4>Hỗ trợ</h4><a href="#">Về chúng tôi</a><a href="#">Liên hệ</a><a href="#">Điều khoản</a><a
+                        href="#">Bảo mật</a>
+                </div>
+            </div>
+            <div class="footer__bottom">© 2026 StyleMix. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/global.js"></script>
+    <script src="./assets/js/pages.js"></script>
+</body>
+
+</html>

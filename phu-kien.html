@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phụ kiện thời trang — STYLEMIX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/global.css" />
+    <link rel="stylesheet" href="./assets/css/pages.css" />
+</head>
+
+<body data-page="phu-kien">
+
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+    <div class="page-transition" id="pageTransition"></div>
+
+    <div class="toast" id="toast">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <polyline points="20 6 9 13 4 11" />
+            <polyline points="4 11 9 20 20 6" /></svg>
+        <span id="toastMsg">Thông báo</span>
+    </div>
+
+    <div class="modal-overlay" id="modal">
+        <div class="modal">
+            <div class="modal__img"><img src="" alt="" id="modalImg" /></div>
+            <div class="modal__body">
+                <button class="modal__close" id="modalClose">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" /></svg>
+                </button>
+                <span class="tag tag--orange" id="modalTag"></span>
+                <h2 class="modal__title" id="modalTitle"></h2>
+                <p class="modal__desc" id="modalDesc"></p>
+                <p class="modal__items-label">Chi tiết sản phẩm</p>
+                <ul class="modal__items" id="modalItems"></ul>
+                <button class="btn btn--primary btn--full" onclick="saveOutfitLocal(currentOutfit)">
+                    style="margin-top:auto">
+                    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" /></svg>
+                    Lưu vào tủ đồ
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <nav class="nav" id="navbar">
+        <a class="nav__logo" href="./index.html">
+            <span class="nav__logo-style">STYLE</span><span class="nav__logo-mix">MIX</span>
+        </a>
+        <div class="nav__links">
+            <a href="./ao.html">Áo</a>
+            <a href="./quan.html">Quần</a>
+            <a href="./phu-kien.html" class="active">Phụ kiện</a>
+            <a href="./hot_hits.html">Hot Hits</a>
+        </div>
+        <div class="nav__right">
+            <div class="search-bar">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>
+                <input type="text" placeholder="Tìm phụ kiện, màu sắc..." />
+            </div>
+            <div class="nav__icon" onclick="showToast('Danh sách yêu thích trống!')">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path
+                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                    </svg>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="accessories-hero">
+        <span class="tag tag--dark reveal" style="margin-bottom:24px">Hoàn thiện phong cách</span>
+        <h1 class="accessories-hero__title reveal" style="transition-delay:.1s">
+            Phụ kiện <span class="accent">thời trang</span>
+        </h1>
+        <p class="accessories-hero__sub reveal" style="transition-delay:.2s">Những món phụ kiện nhỏ tạo nên sự khác biệt
+            lớn cho outfit của bạn</p>
+    </div>
+
+    <!-- Category Grid -->
+    <section style="padding: 0 var(--section-px) 56px;">
+        <div style="max-width:var(--max-width);margin:0 auto;">
+            <h2 class="section-title reveal" style="margin-bottom:32px">Danh mục <span class="accent">phụ kiện</span>
+            </h2>
+            <div class="cat-grid">
+                <div class="cat-card reveal" style="transition-delay:.0s" onclick="showToast('Đồng hồ & Trang sức')">
+                    <img class="cat-card__img"
+                        src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&q=80" alt="Đồng hồ"
+                        loading="lazy" />
+                    <div class="cat-card__overlay">
+                        <div class="cat-card__icon">
+                            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5"
+                                viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="7" />
+                                <polyline points="12 9 12 12 13.5 13.5" />
+                                <path
+                                    d="M16.51 17.35l-.35 3.83a2 2 0 0 1-2 1.82H9.83a2 2 0 0 1-2-1.82l-.35-3.83m.01-10.7.35-3.83A2 2 0 0 1 9.83 1h4.35a2 2 0 0 1 2 1.82l.35 3.83" />
+                                </svg>
+                        </div>
+                        <p class="cat-card__name">Đồng hồ &amp; Trang sức</p>
+                        <p class="cat-card__count">234 sản phẩm</p>
+                    </div>
+                </div>
+                <div class="cat-card reveal" style="transition-delay:.08s" onclick="showToast('Kính mắt')">
+                    <img class="cat-card__img"
+                        src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=500&q=80" alt="Kính mắt"
+                        loading="lazy" />
+                    <div class="cat-card__overlay">
+                        <div class="cat-card__icon">
+                            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5"
+                                viewBox="0 0 24 24">
+                                <circle cx="6" cy="15" r="4" />
+                                <circle cx="18" cy="15" r="4" />
+                                <path d="M2 15s0-8 4-8m12 0c4 0 4 8 4 8M10 15h4" /></svg>
+                        </div>
+                        <p class="cat-card__name">Kính mắt</p>
+                        <p class="cat-card__count">156 sản phẩm</p>
+                    </div>
+                </div>
+                <div class="cat-card reveal" style="transition-delay:.16s" onclick="showToast('Túi xách')">
+                    <img class="cat-card__img"
+                        src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=500&q=80" alt="Túi xách"
+                        loading="lazy" />
+                    <div class="cat-card__overlay">
+                        <div class="cat-card__icon">
+                            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5"
+                                viewBox="0 0 24 24">
+                                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                                <line x1="3" y1="6" x2="21" y2="6" />
+                                <path d="M16 10a4 4 0 0 1-8 0" /></svg>
+                        </div>
+                        <p class="cat-card__name">Túi xách</p>
+                        <p class="cat-card__count">312 sản phẩm</p>
+                    </div>
+                </div>
+                <div class="cat-card reveal" style="transition-delay:.24s" onclick="showToast('Mũ & Khăn')">
+                    <img class="cat-card__img"
+                        src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=500&q=80" alt="Mũ & Khăn"
+                        loading="lazy" />
+                    <div class="cat-card__overlay">
+                        <div class="cat-card__icon">
+                            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5"
+                                viewBox="0 0 24 24">
+                                <path d="M2 20h20M5 20V10a7 7 0 0 1 14 0v10" />
+                                <path d="M12 3v7" /></svg>
+                        </div>
+                        <p class="cat-card__name">Mũ &amp; Khăn</p>
+                        <p class="cat-card__count">189 sản phẩm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured -->
+    <section style="padding: 0 var(--section-px) 72px;">
+        <div style="max-width:var(--max-width);margin:0 auto;">
+            <h2 class="section-title reveal" style="margin-bottom:8px">Phụ kiện <span class="accent">nổi bật</span></h2>
+            <p class="section-sub reveal" style="margin-bottom:36px">Những món phụ kiện được yêu thích nhất</p>
+            <div class="featured-grid" id="featuredGrid"></div>
+        </div>
+    </section>
+
+    <!-- Tips -->
+    <section class="tips-section">
+        <div class="tips-section__header reveal">
+            <h2 class="section-title">Cách phối <span class="accent">phụ kiện</span></h2>
+            <p class="section-sub" style="margin:12px auto 0;text-align:center">Bí quyết sử dụng phụ kiện để nâng tầm
+                outfit</p>
+        </div>
+        <div class="tips-grid">
+            <div class="tip-card reveal" style="transition-delay:.0s">
+                <div class="tip-card__icon tip-card__icon--orange">
+                    <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5"
+                        viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="7" />
+                        <polyline points="12 9 12 12 13.5 13.5" />
+                        <path
+                            d="M16.51 17.35l-.35 3.83a2 2 0 0 1-2 1.82H9.83a2 2 0 0 1-2-1.82l-.35-3.83m.01-10.7.35-3.83A2 2 0 0 1 9.83 1h4.35a2 2 0 0 1 2 1.82l.35 3.83" />
+                        </svg>
+                </div>
+                <h3 class="tip-card__title">Less is More</h3>
+                <p class="tip-card__desc">Không cần quá nhiều phụ kiện. Chọn 2-3 món để tạo điểm nhấn mà không làm rối
+                    outfit.</p>
+            </div>
+            <div class="tip-card reveal" style="transition-delay:.1s">
+                <div class="tip-card__icon tip-card__icon--red">
+                    <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5"
+                        viewBox="0 0 24 24">
+                        <path d="M2 20h20M5 20V10a7 7 0 0 1 14 0v10" />
+                        <path d="M12 3v7" /></svg>
+                </div>
+                <h3 class="tip-card__title">Cân bằng màu sắc</h3>
+                <p class="tip-card__desc">Phụ kiện nên cùng tông hoặc tương phản với outfit. Tránh sử dụng quá nhiều màu
+                    sắc khác nhau.</p>
+            </div>
+            <div class="tip-card reveal" style="transition-delay:.2s">
+                <div class="tip-card__icon tip-card__icon--brown">
+                    <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5"
+                        viewBox="0 0 24 24">
+                        <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <path d="M16 10a4 4 0 0 1-8 0" /></svg>
+                </div>
+                <h3 class="tip-card__title">Tỷ lệ phù hợp</h3>
+                <p class="tip-card__desc">Phụ kiện to nhỏ cần cân đối với tỷ lệ cơ thể và phong cách outfit tổng thể.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__grid reveal">
+                <div>
+                    <div class="footer__logo"><span class="accent">STYLE</span>MIX</div>
+                    <p class="footer__tagline">Nền tảng phối đồ hiện đại dành cho người trẻ yêu thích thời trang</p>
+                </div>
+                <div class="footer__col">
+                    <h4>Danh mục</h4><a href="./ao.html">Áo</a><a href="./quan.html">Quần</a><a href="./phu-kien.html">Phụ
+                        kiện</a><a href="#">Giày dép</a>
+                </div>
+                <div class="footer__col">
+                    <h4>Styles</h4><a href="#">Streetwear</a><a href="#">Minimal</a><a href="#">Vintage</a><a
+                        href="#">Sporty</a>
+                </div>
+                <div class="footer__col">
+                    <h4>Hỗ trợ</h4><a href="#">Về chúng tôi</a><a href="#">Liên hệ</a><a href="#">Điều khoản</a><a
+                        href="#">Bảo mật</a>
+                </div>
+            </div>
+            <div class="footer__bottom">© 2026 StyleMix. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/global.js"></script>
+    <script src="./assets/js/pages.js"></script>
+</body>
+
+</html>

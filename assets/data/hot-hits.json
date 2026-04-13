@@ -1,0 +1,97 @@
+[{
+        "id": "h1",
+        "img": "https://down-vn.img.susercontent.com/file/vn-11134207-820l4-mh01sas2328a3c.webp",
+        "name": "Orange Energy",
+        "tag": "Streetwear",
+        "color": "orange",
+        "views": "12.5K",
+        "saves": "3.2K",
+        "rating": "98%",
+        "desc": "Outfit được yêu thích nhất trong tháng với phong cách streetwear năng động, sử dụng màu cam nổi bật kết hợp cùng các tông màu trung tính.",
+        "items": ["Áo khoác trắng", "Set đồ cam", "Crossbody bag cam", "Sneakers trắng"]
+    },
+    {
+        "id": "h2",
+        "img": "https://down-vn.img.susercontent.com/file/sg-11134201-81zuc-mmjzrtlgdxqb7d@resize_w900_nl.webp",
+        "name": "Gray Layers",
+        "tag": "Minimal",
+        "color": "white",
+        "views": "9.1K",
+        "saves": "2.1K",
+        "rating": "95%",
+        "desc": "Bộ outfit layering tinh tế với các tầng màu xám, sang trọng và dễ ứng dụng vào mọi hoàn cảnh.",
+        "items": ["Outer xám lông", "Áo trắng bên trong", "Quần xám thẳng", "Heels đen"]
+    },
+    {
+        "id": "h3",
+        "img": "https://i.pinimg.com/736x/61/17/66/611766ee30ec0aebda1f62a2eabae085.jpg",
+        "name": "Red White Statement",
+        "tag": "Streetwear",
+        "color": "red",
+        "views": "8.7K",
+        "saves": "1.9K",
+        "rating": "93%",
+        "desc": "Màu đỏ nổi bật tạo điểm nhấn mạnh mẽ cho tổng thể outfit đơn màu.",
+        "items": ["Bomber đỏ", "Áo thun trắng oversized", "Quần boxer trắng", "Sneakers trắng"]
+    },
+    {
+        "id": "h4",
+        "img": "https://down-vn.img.susercontent.com/file/sg-11134201-82629-mm02jd564v0hf0.webp",
+        "name": "Light Minimal",
+        "tag": "Minimal",
+        "color": "white",
+        "views": "7.4K",
+        "saves": "1.7K",
+        "rating": "91%",
+        "desc": "Tông trắng nhẹ tinh tế cùng màu xanh denim nhấn mạnh tạo nên bộ outfit trong sáng và trẻ trung.",
+        "items": ["Áo khoác xanh", "Quần trắng wide", "Sneakers trắng"]
+    },
+    {
+        "id": "h5",
+        "img": "https://down-vn.img.susercontent.com/file/sg-11134201-7rauk-ma9bne17y74z36.webp",
+        "name": "Beige Tones",
+        "tag": "Vintage",
+        "color": "brown",
+        "views": "6.9K",
+        "saves": "1.5K",
+        "rating": "90%",
+        "desc": "Bộ outfit beige và cream phong cách vintage cổ điển, nhẹ nhàng và sang trọng.",
+        "items": ["Sơ mi trắng", "Quần beige", "Sneakers trắng", "Túi xách"]
+    },
+    {
+        "id": "h6",
+        "img": "https://dongphucmattana.vn/wp-content/uploads/2026/02/phong-cach-vintage-nu-1775.jpg",
+        "name": "Vintage Style",
+        "tag": "Vintage",
+        "color": "white",
+        "views": "6.2K",
+        "saves": "1.3K",
+        "rating": "89%",
+        "desc": "Earth tones ấm áp và đậm chất vintage, phong cách này luôn gây ấn tượng sâu sắc.",
+        "items": ["Áo sơ mi trắng", "Chân váy", "Mũ beret"]
+    },
+    {
+        "id": "h7",
+        "img": "https://down-vn.img.susercontent.com/file/a7dd43e36847a6358112a69ce1278e3b.webp",
+        "name": "Sporty Luxe Orange",
+        "tag": "Sporty",
+        "color": "orange",
+        "views": "5.8K",
+        "saves": "1.2K",
+        "rating": "88%",
+        "desc": "Phong cách sport-luxury với màu cam mạnh mẽ, năng động nhưng vẫn toát lên vẻ sang trọng.",
+        "items": ["Crop top cam", "Quần thể thao", "Sneakers platform", "Mũ lưỡi trai"]
+    },
+    {
+        "id": "h8",
+        "img": "https://i.ebayimg.com/images/g/M8sAAOSwobVjahfL/s-l960.webp",
+        "name": "Dark Street Seoul",
+        "tag": "Streetwear",
+        "color": "black",
+        "views": "5.1K",
+        "saves": "1.0K",
+        "rating": "87%",
+        "desc": "Phong cách street Seoul tối màu, layering tinh tế với các texture khác nhau.",
+        "items": ["Áo khoác đen", "Áo đen graphic", "Cargo pants", "Phụ kiện"]
+    }
+]

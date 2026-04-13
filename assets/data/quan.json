@@ -1,0 +1,37 @@
+[{
+        "id": "q1",
+        "img": "https://i.pinimg.com/736x/23/3e/9f/233e9f0924274d2c74cccd8ab816ced8.jpg",
+        "name": "Quần Denim",
+        "tag": "Minimal",
+        "color": "blue",
+        "desc": "Quần ống rộng màu xanh, điểm nhấn sắc nét cho tổng thể outfit.",
+        "items": ["Denim Outfits", "Ống rộng", "Cạp cao thun", "Màu xanh bền màu"]
+    },
+    {
+        "id": "q2",
+        "img": "https://www.acfc.com.vn/acfc_wp/wp-content/uploads/2025/06/quan-kaki-nam-instagram-819x1024.webp",
+        "name": "Quần kaki",
+        "tag": "Vintage",
+        "color": "brown",
+        "desc": "Quần kaki vintage, dáng cao eo cổ điển đầy cuốn hút.",
+        "items": ["Cotton 100%", "Cạp cao", "Ống vừa", "Acid wash"]
+    },
+    {
+        "id": "q3",
+        "img": "https://down-vn.img.susercontent.com/file/sg-11134201-824jd-mfhyquu279xmab.webp",
+        "name": "Quần trắng basic",
+        "tag": "Minimal",
+        "color": "white",
+        "desc": "Quần trắng thanh lịch, dễ phối và luôn on-trend.",
+        "items": ["Cotton", "Dáng straight", "Cạp vừa", "Trắng tinh khôi"]
+    },
+    {
+        "id": "q4",
+        "img": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lqcvevggsg5u41.webp",
+        "name": "Quần da nâu earth",
+        "tag": "Vintage",
+        "color": "brown",
+        "desc": "Quần da tông nâu đất, mang hơi thở vintage đầy cá tính.",
+        "items": ["Da PU cao cấp", "Ống đứng", "Cạp cao", "Nâu chocolate"]
+    }
+]

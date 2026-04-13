@@ -1,0 +1,403 @@
+/* =============================================================
+   STYLEMIX — assets/css/home.css
+   Styles specific to index.html (homepage)
+   ============================================================= */
+
+/* ── Hero ─────────────────────────────────────────────────── */
+.hero {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero__bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #1a1a0e 0%, #0d1a0d 40%, #1a0d0d 100%);
+    z-index: 0;
+}
+
+.hero__bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80') center / cover no-repeat;
+    opacity: 0.35;
+}
+
+.hero__bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(10, 10, 10, 0.25) 0%, rgba(10, 10, 10, 0.05) 40%, rgba(10, 10, 10, 0.75) 100%);
+}
+
+.hero__content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 900px;
+    padding: 0 24px;
+}
+
+.hero__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(180, 100, 30, 0.35);
+    border: 1px solid rgba(249, 115, 22, 0.4);
+    border-radius: var(--radius-full);
+    padding: 8px 18px;
+    font-size: 13px;
+    color: #FED7AA;
+    margin-bottom: 32px;
+    backdrop-filter: blur(8px);
+}
+
+.hero__badge svg {
+    color: var(--color-orange);
+}
+
+.hero__title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(72px, 10vw, 140px);
+    line-height: 0.92;
+    letter-spacing: 0.02em;
+    margin-bottom: 14px;
+}
+
+.hero__title .line-white {
+    color: #fff;
+    display: block;
+}
+
+.hero__title .line-orange {
+    color: var(--color-orange);
+    display: block;
+}
+
+.hero__sub {
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.6;
+    max-width: 500px;
+    margin: 0 auto 40px;
+    font-weight: 300;
+}
+
+.hero__ctas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.hero__scroll {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-text-dim);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.hero__scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, transparent, var(--color-orange));
+    animation: scrollPulse 1.8s ease infinite;
+}
+
+@keyframes scrollPulse {
+
+    0%,
+    100% {
+        opacity: 0.3;
+        transform: scaleY(0.5);
+        transform-origin: top;
+    }
+
+    50% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+/* ── Color Filter Bar ─────────────────────────────────────── */
+.color-filter {
+    background: var(--color-bg);
+    padding: 26px var(--section-px);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.color-filter__inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.color-filter__label {
+    font-size: 14px;
+    color: var(--color-text-muted);
+    white-space: nowrap;
+}
+
+.color-filter__pills {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.color-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    border-radius: var(--radius-full);
+    border: 1.5px solid var(--color-border);
+    background: var(--color-bg-2);
+    cursor: pointer;
+    font-size: 13px;
+    color: var(--color-text-muted);
+    transition: all 0.25s;
+    font-family: inherit;
+}
+
+.color-pill:hover,
+.color-pill.active {
+    border-color: var(--color-orange);
+    color: var(--color-text);
+    background: rgba(249, 115, 22, 0.08);
+}
+
+.color-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* ── Hot Outfits Section ──────────────────────────────────── */
+.hot-outfits {
+    padding: 80px var(--section-px);
+}
+
+.hot-outfits__header {
+    margin-bottom: 48px;
+}
+
+.outfit-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.view-more {
+    text-align: center;
+    margin-top: 48px;
+}
+
+/* ── Trending Slider ──────────────────────────────────────── */
+.trending {
+    padding: 100px var(--section-px);
+}
+
+.trending__header {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.trending__sub {
+    font-size: 15px;
+    color: var(--color-text-muted);
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+.trending__slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.trending__track {
+    display: flex;
+    gap: 28px;
+    transition: transform 0.5s var(--ease-out);
+}
+
+.trending__slide {
+    flex: 0 0 calc(50% - 14px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    min-height: 480px;
+    background: var(--color-bg-3);
+}
+
+.slide__content {
+    padding: 48px 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.slide__title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 42px;
+    line-height: 1.05;
+    margin: 20px 0 16px;
+    color: #fff;
+}
+
+.slide__desc {
+    font-size: 14px;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    font-weight: 300;
+    margin-bottom: 32px;
+}
+
+.slide__img {
+    overflow: hidden;
+}
+
+.slide__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.trending__slide:hover .slide__img img {
+    transform: scale(1.05);
+}
+
+.slider-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 40px;
+}
+
+.slider-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--color-bg-3);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s;
+}
+
+.slider-btn:hover {
+    border-color: var(--color-orange);
+    color: var(--color-orange);
+    background: rgba(249, 115, 22, 0.08);
+}
+
+.slider-dots {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.slider-dot {
+    width: 24px;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--color-border);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.slider-dot.active {
+    background: var(--color-orange);
+    width: 36px;
+}
+
+/* ── CTA Banner ───────────────────────────────────────────── */
+.cta-banner {
+    position: relative;
+    overflow: hidden;
+    margin: 0 var(--section-px);
+    border-radius: var(--radius-lg);
+}
+
+.cta-banner__bg {
+    position: absolute;
+    inset: 0;
+    background: url('https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1400&q=80') center / cover no-repeat;
+}
+
+.cta-banner__bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.58);
+}
+
+.cta-banner__content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 96px 40px;
+}
+
+.cta-banner__title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(42px, 6vw, 80px);
+    line-height: 1.1;
+    margin-bottom: 16px;
+}
+
+.cta-banner__desc {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.72);
+    margin-bottom: 36px;
+    font-weight: 300;
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .outfit-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .trending__slide {
+        flex: 0 0 calc(80% - 14px);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero__title {
+        font-size: clamp(52px, 12vw, 80px);
+    }
+
+    .trending__slide {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-banner {
+        margin: 0 var(--section-px);
+    }
+}

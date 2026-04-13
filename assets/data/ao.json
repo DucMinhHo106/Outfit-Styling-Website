@@ -1,0 +1,55 @@
+[{
+        "id": "a1",
+        "img": "https://bizweb.dktcdn.net/100/502/737/products/o1cn010gy2vr23zmtt08mgq1776987.jpg?v=1724484098753",
+        "name": "Áo khoác trắng nhẹ",
+        "tag": "Minimal",
+        "color": "white",
+        "desc": "Áo khoác trắng dáng dài, nhẹ nhàng phù hợp mọi phong cách.",
+        "items": ["Chất liệu polyester nhẹ", "Kiểu dáng oversize", "Màu trắng tinh", "Size S-XL"]
+    },
+    {
+        "id": "a2",
+        "img": "https://down-vn.img.susercontent.com/file/sg-11134201-7reph-m2nmdipraq6e27.webp",
+        "name": "Áo thun oversized đen",
+        "tag": "Streetwear",
+        "color": "black",
+        "desc": "Áo thun đen dáng rộng, basic nhưng dễ phối với mọi kiểu quần.",
+        "items": ["100% cotton mềm mịn", "Dáng oversized", "In graphic tùy chọn", "Wash được máy"]
+    },
+    {
+        "id": "a3",
+        "img": "https://down-vn.img.susercontent.com/file/sg-11134201-824ha-mfm1tcrtep6z5f.webp",
+        "name": "Outer xám dài",
+        "tag": "Vintage",
+        "color": "white",
+        "desc": "Outer xám tone-on-tone, phong cách editorial sang trọng.",
+        "items": ["Vải tweed pha lông", "Dáng dài qua gối", "Cúc bạc", "1 lớp lót trong"]
+    },
+    {
+        "id": "a4",
+        "img": "https://down-vn.img.susercontent.com/file/6d00efa56e7c49fb99de8a19185f55b2.webp",
+        "name": "Áo sơ mi trắng basic",
+        "tag": "Minimal",
+        "color": "white",
+        "desc": "Áo sơ mi trắng classic, dễ phối đủ kiểu từ formal đến casual.",
+        "items": ["Linen 100%", "Cổ button-down", "Tay áo cuộn", "Phom regular fit"]
+    },
+    {
+        "id": "a5",
+        "img": "https://down-vn.img.susercontent.com/file/vn-11134207-81ztc-mm4n5785s5j41f.webp",
+        "name": "Áo polo đen",
+        "tag": "Vintage",
+        "color": "black",
+        "desc": "Áo thun đen cơ bản, nền tảng hoàn hảo cho mọi bộ outfit.",
+        "items": ["Cotton combed 220gsm", "Cổ tròn reinforced", "Khâu tay cẩn thận", "Faded wash look"]
+    },
+    {
+        "id": "a6",
+        "img": "https://down-vn.img.susercontent.com/file/3fb00c937fad7e0d4c9b4c39b5ab1e62.webp",
+        "name": "Crop top",
+        "tag": "Sporty",
+        "color": "white",
+        "desc": "Áo crop top trắng rực rỡ, năng động và táo bạo cho style sporty.",
+        "items": ["Spandex 4 chiều", "Màu trắng tinh", "Cổ tròn", "Phom body-fit"]
+    }
+]
