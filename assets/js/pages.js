@@ -146,9 +146,9 @@ if (document.body.dataset.page === 'hot_hits') {
             grid.appendChild(div);
         });
 
-        // ⭐ Featured = item đầu tiên
         const f = data[0];
         if (f) {
+            window.currentOutfit = f;
             document.getElementById('featuredImg').src = f.img;
             document.getElementById('featuredName').textContent = f.name;
             document.getElementById('featuredDesc').textContent = f.desc;
@@ -166,3 +166,15 @@ if (document.body.dataset.page === 'hot_hits') {
 window.saveOutfit = function () {
     showToast('Đã lưu outfit vào tủ đồ!');
 };
+
+/* ── Filter outfits ───────────────────────────────── */
+
+const filtered = DATA.filter(item =>
+    item.name.toLowerCase().includes(keyword) ||
+    item.tag.toLowerCase().includes(keyword) ||
+    (
+        Array.isArray(item.color)
+            ? item.color.some(c => c.toLowerCase().includes(keyword))
+            : item.color.toLowerCase().includes(keyword)
+    )
+);

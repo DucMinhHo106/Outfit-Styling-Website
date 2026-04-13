@@ -41,7 +41,7 @@
                 <p class="modal__desc" id="modalDesc"></p>
                 <p class="modal__items-label">Chi tiết sản phẩm</p>
                 <ul class="modal__items" id="modalItems"></ul>
-                <button class="btn btn--primary btn--full" onclick="saveOutfitLocal(currentOutfit)">
+                <button class="btn btn--primary btn--full" onclick="saveOutfitLocal(window.currentOutfit)"
                     style="margin-top:auto">
                     <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" /></svg>
@@ -68,7 +68,7 @@
                     <line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>
                 <input type="text" placeholder="Tìm phụ kiện, màu sắc..." />
             </div>
-            <div class="nav__icon" onclick="showToast('Danh sách yêu thích trống!')">
+            <div class="nav__icon" onclick="openSavedOutfits()">
                 <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <path
                         d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />

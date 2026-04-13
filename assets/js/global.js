@@ -209,15 +209,14 @@ window.createOutfitCard = createOutfitCard;
 
 /* ── Save Outfits to LocalStorage ──────────────────────────────── */
 
-function saveOutfitLocal(outfit) {
-    let list = JSON.parse(localStorage.getItem('savedOutfits')) || [];
+function openSavedOutfits() {
+    const list = JSON.parse(localStorage.getItem('savedOutfits')) || [];
 
-    if (!list.find(i => i.id === outfit.id)) {
-        list.push(outfit);
-        localStorage.setItem('savedOutfits', JSON.stringify(list));
-        showToast('Đã lưu vào tủ đồ!');
-    } else {
-        showToast('Outfit đã tồn tại!');
+    if (list.length === 0) {
+        showToast('Tủ đồ trống!');
+        return;
     }
+
+    window.openOutfitModal(list[0]);
 }
-window.saveOutfitLocal = saveOutfitLocal;
+window.openSavedOutfits = openSavedOutfits;
