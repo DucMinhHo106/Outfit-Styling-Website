@@ -62,7 +62,7 @@ if (document.body.dataset.page === 'ao') {
         });
     }
 
-    /* 🎯 Filter theo màu (nếu dùng sau này) */
+    /* Filter theo màu */
     window.filterAo = function (btn, color) {
         document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
         btn.classList.add('active');
