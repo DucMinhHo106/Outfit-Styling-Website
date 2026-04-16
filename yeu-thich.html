@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Tủ đồ yêu thích — STYLEMIX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="./assets/css/global.css"/>
+    <link rel="stylesheet" href="./assets/css/pages.css"/>
+    <style>
+        .liked-hero {
+            min-height: 320px;
+            display: flex; flex-direction: column; justify-content: flex-end;
+            padding: calc(var(--nav-height) + 48px) var(--section-px) 48px;
+            position: relative; overflow: hidden;
+            background: radial-gradient(ellipse at 65% 50%, rgba(249,115,22,0.12) 0%, var(--color-bg) 70%);
+        }
+        .liked-hero::after {
+            content: '';
+            position: absolute; inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 15 C18 5 0 12 0 25 C0 38 15 46 30 55 C45 46 60 38 60 25 C60 12 42 5 30 15Z' fill='none' stroke='rgba(249,115,22,0.04)' stroke-width='1'/%3E%3C/svg%3E") repeat;
+            pointer-events: none;
+        }
+        .liked-hero__content { position: relative; z-index: 1; max-width: var(--max-width); margin: 0 auto; width: 100%; }
+        .liked-hero__badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(249,115,22,0.12); border: 1px solid rgba(249,115,22,0.3);
+            color: var(--color-orange-light); font-size: 12px; font-weight: 500;
+            padding: 6px 16px; border-radius: var(--radius-full); margin-bottom: 20px;
+        }
+        .liked-hero__title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(48px, 7vw, 90px); line-height: 0.95; margin-bottom: 16px;
+        }
+        .liked-hero__title .accent { color: var(--color-orange); }
+        .liked-hero__sub { font-size: 15px; color: var(--color-text-muted); font-weight: 300; }
+        .liked-hero__count {
+            margin-top: 24px; display: inline-flex; align-items: center; gap: 10px;
+            font-size: 14px; color: var(--color-text-muted);
+        }
+        .liked-hero__count strong { color: var(--color-text); font-size: 22px; font-family: 'Bebas Neue',sans-serif; letter-spacing: 0.05em; }
+
+        /* Toolbar with clear btn */
+        .liked-toolbar {
+            padding: 14px var(--section-px);
+            border-bottom: 1px solid var(--color-border);
+        }
+        .liked-toolbar__inner {
+            max-width: var(--max-width); margin: 0 auto; width: 100%;
+            display: flex; align-items: center; justify-content: space-between; gap: 12px;
+        }
+        .btn-clear {
+            display: inline-flex; align-items: center; gap: 7px;
+            background: transparent; border: 1px solid var(--color-border-light);
+            border-radius: var(--radius-full); padding: 9px 18px;
+            font-size: 12px; color: var(--color-text-muted); cursor: pointer;
+            font-family: inherit; transition: all 0.25s;
+        }
+        .btn-clear:hover { border-color: #ef4444; color: #ef4444; }
+
+        /* Empty state */
+        .empty-state {
+            display: none; flex-direction: column; align-items: center; justify-content: center;
+            padding: 100px var(--section-px);
+            text-align: center;
+        }
+        .empty-state__icon {
+            width: 80px; height: 80px;
+            border-radius: 50%; background: rgba(249,115,22,0.08);
+            border: 1px solid rgba(249,115,22,0.2);
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 28px; color: var(--color-orange-light);
+        }
+        .empty-state__title { font-family: 'Bebas Neue',sans-serif; font-size: 36px; margin-bottom: 12px; }
+        .empty-state__sub { font-size: 15px; color: var(--color-text-muted); font-weight: 300; max-width: 400px; line-height: 1.7; margin-bottom: 32px; }
+        .empty-state__links { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+        .empty-link {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--color-bg-3); border: 1px solid var(--color-border);
+            border-radius: var(--radius-full); padding: 11px 22px;
+            font-size: 13px; color: var(--color-text-muted); cursor: pointer;
+            font-family: inherit; transition: all 0.25s; text-decoration: none;
+        }
+        .empty-link:hover { border-color: var(--color-orange); color: var(--color-orange); }
+    </style>
+</head>
+<body data-page="yeu-thich">
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+    <div class="page-transition" id="pageTransition"></div>
+
+    <div class="toast" id="toast">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <polyline points="20 6 9 13 4 11"/><polyline points="4 11 9 20 20 6"/></svg>
+        <span id="toastMsg">Thông báo</span>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modal">
+        <div class="modal">
+            <div class="modal__img"><img src="" alt="" id="modalImg"/></div>
+            <div class="modal__body">
+                <button class="modal__close" id="modalClose">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                </button>
+                <span class="tag tag--orange" id="modalTag"></span>
+                <h2 class="modal__title" id="modalTitle"></h2>
+                <p class="modal__desc" id="modalDesc"></p>
+                <p class="modal__items-label">Chi tiết sản phẩm</p>
+                <ul class="modal__items" id="modalItems"></ul>
+                <button id="modalSaveBtn" class="btn btn--primary btn--full" onclick="saveOutfitLocal(window.currentOutfit)" style="margin-top:auto">
+                    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                    Lưu vào tủ đồ
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="nav" id="navbar">
+        <a class="nav__logo" href="./index.html">
+            <span class="nav__logo-style">STYLE</span><span class="nav__logo-mix">MIX</span>
+        </a>
+        <div class="nav__links">
+            <a href="./ao.html">Áo</a>
+            <a href="./quan.html">Quần</a>
+            <a href="./phu-kien.html">Phụ kiện</a>
+            <a href="./hot_hits.html">Hot Hits</a>
+            <a href="./yeu-thich.html">Yêu Thích</a>
+        </div>
+        <div class="nav__right">
+            <div class="search-bar">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <input type="text" id="searchInput" placeholder="Tìm trong yêu thích..."/>
+            </div>
+            <div class="nav__like-icon active" onclick="openSavedOutfits()" title="Tủ đồ yêu thích">
+                <svg width="16" height="16" fill="var(--color-orange)" stroke="var(--color-orange)" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                </svg>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="liked-hero">
+        <div class="liked-hero__content">
+            <span class="liked-hero__badge reveal">
+                <svg width="12" height="12" fill="var(--color-orange)" stroke="var(--color-orange)" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                </svg>
+                Tủ đồ của bạn
+            </span>
+            <h1 class="liked-hero__title reveal" style="transition-delay:.1s">
+                Outfits <span class="accent">Yêu Thích</span>
+            </h1>
+            <p class="liked-hero__sub reveal" style="transition-delay:.2s">Những outfit bạn đã lưu lại từ bộ sưu tập StyleMix</p>
+            <div class="liked-hero__count reveal" style="transition-delay:.3s">
+                <strong id="likedCount">0</strong> <span>outfit đã lưu</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toolbar -->
+    <div class="liked-toolbar">
+        <div class="liked-toolbar__inner">
+            <p class="toolbar__count">Hiển thị <strong id="productCount">0</strong> sản phẩm</p>
+            <div style="display:flex;gap:10px;align-items:center">
+                <button class="btn-clear" onclick="clearAllLiked()">
+                    <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6M14 11v6"/></svg>
+                    Xoá tất cả
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Color Filter Bar -->
+    <div class="color-filter-bar">
+        <div class="color-filter-bar__inner">
+            <span class="color-filter-bar__label">Màu sắc:</span>
+            <div id="colorFilterBar"></div>
+        </div>
+    </div>
+
+    <!-- Products Grid -->
+    <section class="products-section">
+        <div class="products-grid" id="likedGrid"></div>
+
+        <!-- Empty State -->
+        <div class="empty-state" id="emptyState">
+            <div class="empty-state__icon">
+                <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                </svg>
+            </div>
+            <h2 class="empty-state__title">Tủ đồ trống</h2>
+            <p class="empty-state__sub">Bạn chưa lưu outfit nào. Hãy khám phá các bộ sưu tập và nhấn ❤ để thêm vào tủ đồ của bạn!</p>
+            <div class="empty-state__links">
+                <a href="./ao.html" class="empty-link">
+                    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+                    Xem Áo
+                </a>
+                <a href="./quan.html" class="empty-link">
+                    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+                    Xem Quần
+                </a>
+                <a href="./hot_hits.html" class="empty-link">
+                    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+                    Hot Hits
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__grid reveal">
+                <div>
+                    <div class="footer__logo"><span class="accent">STYLE</span>MIX</div>
+                    <p class="footer__tagline">Nền tảng phối đồ hiện đại dành cho người trẻ yêu thích thời trang</p>
+                </div>
+                <div class="footer__col">
+                    <h4>Danh mục</h4>
+                    <a href="./ao.html">Áo</a><a href="./quan.html">Quần</a>
+                    <a href="./phu-kien.html">Phụ kiện</a><a href="#">Giày dép</a>
+                </div>
+                <div class="footer__col">
+                    <h4>Styles</h4>
+                    <a href="#">Streetwear</a><a href="#">Minimal</a>
+                    <a href="#">Vintage</a><a href="#">Sporty</a>
+                </div>
+                <div class="footer__col">
+                    <h4>Hỗ trợ</h4>
+                    <a href="#">Về chúng tôi</a><a href="#">Liên hệ</a>
+                    <a href="#">Điều khoản</a><a href="#">Bảo mật</a>
+                </div>
+            </div>
+            <div class="footer__bottom">© 2026 StyleMix. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/global.js"></script>
+    <script src="./assets/js/pages.js"></script>
+    <script>
+        // Search within liked
+        document.getElementById('searchInput').addEventListener('input', function() {
+            const kw = this.value.toLowerCase().trim();
+            const list = JSON.parse(localStorage.getItem('stylemix_liked_outfits') || '[]');
+            const filtered = kw ? list.filter(o =>
+                o.name.toLowerCase().includes(kw) ||
+                o.tag.toLowerCase().includes(kw) ||
+                (o.color || '').toLowerCase().includes(kw)
+            ) : list;
+            const grid = document.getElementById('likedGrid');
+            grid.innerHTML = '';
+            filtered.forEach((o, i) => { grid.appendChild(window.createOutfitCard(o, (i%4)*0.06)); });
+            window.initScrollReveal && window.initScrollReveal();
+            document.getElementById('productCount').textContent = filtered.length;
+        });
+    </script>
+</body>
+</html>

@@ -138,6 +138,7 @@ window.filterColor = function (el, color) {
 window.loadMore = function () {
     showToast('Đang tải thêm outfit...');
     setTimeout(() => showToast('Đã tải thêm 8 outfit mới!'), 1000);
+    
 };
 
 /* ── Trending Slider ──────────────────────────────────────── */

@@ -1,11 +1,11 @@
 [{
         "id": "a1",
         "img": "https://bizweb.dktcdn.net/100/502/737/products/o1cn010gy2vr23zmtt08mgq1776987.jpg?v=1724484098753",
-        "name": "Áo khoác trắng nhẹ",
+        "name": "Áo phao trắng nhẹ",
         "tag": "Minimal",
         "color": "white",
-        "desc": "Áo khoác trắng dáng dài, nhẹ nhàng phù hợp mọi phong cách.",
-        "items": ["Chất liệu polyester nhẹ", "Kiểu dáng oversize", "Màu trắng tinh", "Size S-XL"]
+        "desc": "Áo phao trắng dáng ngắn, nhẹ nhàng phù hợp mọi phong cách.",
+        "items": ["Chất liệu polyester nhẹ", "Kiểu dáng oversize", "Màu trắng tinh"]
     },
     {
         "id": "a2",
