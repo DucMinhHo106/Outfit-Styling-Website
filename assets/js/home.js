@@ -135,12 +135,6 @@ window.filterColor = function (el, color) {
     renderOutfits(list.length ? list : OUTFITS);
 };
 
-window.loadMore = function () {
-    showToast('Đang tải thêm outfit...');
-    setTimeout(() => showToast('Đã tải thêm 8 outfit mới!'), 1000);
-    
-};
-
 /* ── Trending Slider ──────────────────────────────────────── */
 (function initSlider() {
     const track = document.getElementById('trendingTrack');
