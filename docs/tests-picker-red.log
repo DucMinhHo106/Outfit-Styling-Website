@@ -9,10 +9,10 @@ not ok 1 - toggle a single item and change occasion without losing it
   error: |-
     Expected values to be strictly equal:
     + actual - expected
-    
+
     + 'undefined'
     - 'function'
-    
+
   code: 'ERR_ASSERTION'
   name: 'AssertionError'
   expected: 'function'
@@ -36,10 +36,10 @@ not ok 2 - clear selection preserves occasion and never mutates input
   error: |-
     Expected values to be strictly equal:
     + actual - expected
-    
+
     + 'undefined'
     - 'function'
-    
+
   code: 'ERR_ASSERTION'
   name: 'AssertionError'
   expected: 'function'

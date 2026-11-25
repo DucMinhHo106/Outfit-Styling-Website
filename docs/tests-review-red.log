@@ -33,10 +33,10 @@ not ok 5 - detail alternatives are available without a selected wardrobe
   error: |-
     Expected values to be strictly equal:
     + actual - expected
-    
+
     + 'undefined'
     - 'function'
-    
+
   code: 'ERR_ASSERTION'
   name: 'AssertionError'
   expected: 'function'
@@ -91,12 +91,12 @@ not ok 11 - failed local writes survive a document navigation through session fa
   error: |-
     Expected values to be strictly deep-equal:
     + actual - expected
-    
+
     + []
     - [
     -   'one'
     - ]
-    
+
   code: 'ERR_ASSERTION'
   name: 'AssertionError'
   expected:
@@ -122,12 +122,12 @@ not ok 12 - session fallback overrides stale local data in the next document
   error: |-
     Expected values to be strictly deep-equal:
     + actual - expected
-    
+
       [
     +   'old'
     -   'new'
       ]
-    
+
   code: 'ERR_ASSERTION'
   name: 'AssertionError'
   expected:
@@ -154,10 +154,10 @@ not ok 13 - fully blocked storage reports page-only mode for in-document favorit
   error: |-
     Expected values to be strictly equal:
     + actual - expected
-    
+
     + 'undefined'
     - 'function'
-    
+
   code: 'ERR_ASSERTION'
   name: 'AssertionError'
   expected: 'function'
@@ -181,9 +181,9 @@ not ok 14 - same-document fragment link never starts a full-page transition
   failureType: 'testCodeFailure'
   error: |-
     Expected values to be strictly equal:
-    
+
     true !== false
-    
+
   code: 'ERR_ASSERTION'
   name: 'AssertionError'
   expected: false
@@ -210,7 +210,7 @@ not ok 15 - all catalog pages bind their actual search input to the shared contr
   actual: |-
     <!DOCTYPE html>
     <html lang="vi">
-    
+
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -229,20 +229,20 @@ not ok 15 - all catalog pages bind their actual search input to the shared contr
       <meta property="og:type" content="website"/>
       <meta property="og:image" content="https://ducminhho106.github.io/Outfit-Styling-Website/assets/illustrations/social-preview.png"/>
     </head>
-    
+
     <body data-page="quan">
-    
+
         <div class="cursor" id="cursor"></div>
         <div class="cursor-follower" id="cursorFollower"></div>
         <div class="page-transition" id="pageTransition"></div>
-    
+
         <div class="toast" id="toast" role="status" aria-live="polite">
             <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <polyline points="20 6 9 13 4 11" />
                 <polyline points="4 11 9 20 20 6" /></svg>
             <span id="toastMsg">Thông báo</span>
         </div>
-    
+
         <div class="modal-overlay" id="modal">
             <div class="modal">
                 <div class="modal__img"><img src="" alt="" id="modalImg" /></div>
@@ -266,7 +266,7 @@ not ok 15 - all catalog pages bind their actual search input to the shared contr
                 </div>
             </div>
         </div>
-    
+
         <nav class="nav" id="navbar">
             <a class="nav__logo" href="./index.html">
                 <span class="nav__logo-style">STYLE</span><span class="nav__logo-mix">MIX</span>
@@ -276,7 +276,7 @@ not ok 15 - all catalog pages bind their actual search input to the shared contr
                 <a href="./ao.html">Áo</a>
                 <a href="./quan.html" class="active">Quần</a>
                 <a href="./phu-kien.html">Phụ kiện</a>
-    
+
                 <a href="./yeu-thich.html">Yêu Thích</a>
             </div>
             <div class="nav__right">
@@ -293,7 +293,7 @@ not ok 15 - all catalog pages bind their actual search input to the shared contr
                         </svg></button>
             </div>
         </nav>
-    
+
         <div class="page-hero page-hero--gradient-dark">
             <div class="page-hero__content">
                 <span class="page-hero__tag reveal">
@@ -306,7 +306,7 @@ not ok 15 - all catalog pages bind their actual search input to the shared contr
                 <p class="page-hero__sub reveal" style="transition-delay:.2s">Tìm kiếm quần phù hợp với mọi phong cách</p>
             </div>
         </div>
-    
+
         <div class="toolbar">
             <div class="toolbar__inner">
                 <p class="toolbar__count">Hiển thị <strong id="productCount">0</strong> sản phẩm</p>
@@ -319,8 +319,8 @@ not ok 15 - all catalog pages bind their actual search input to the shared contr
                 </button>
             </div>
         </div>
-    
-    
+
+
         <!-- Color Filter Bar -->
         <div class="color-filter-bar">
             <div class="color-filter-bar__inner">
@@ -328,11 +328,11 @@ not ok 15 - all catalog pages bind their actual search input to the shared contr
                 <div id="colorFilterBar"></div>
             </div>
         </div>
-    
+
         <section class="products-section">
             <div class="products-grid" id="quanGrid"></div>
         </section>
-    
+
         <footer class="footer">
             <div class="footer__inner">
                 <div class="footer__grid reveal">
@@ -354,15 +354,15 @@ not ok 15 - all catalog pages bind their actual search input to the shared contr
                 <div class="footer__bottom">© 2026 StyleMix. All rights reserved.</div>
             </div>
         </footer>
-    
+
         <script src="./assets/js/catalog-filter.js"></script>
       <script src="./assets/js/outfit-storage.js"></script>
       <script src="./assets/js/global.js"></script>
         <script src="./assets/js/pages.js"></script>
     </body>
-    
+
     </html>
-    
+
   operator: 'match'
   stack: |-
     TestContext.<anonymous> (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\review-regressions.test.cjs:13:16)
@@ -382,7 +382,7 @@ not ok 16 - favorites page never bypasses guarded storage with inline handlers
   failureType: 'testCodeFailure'
   error: |-
     The input was expected to not match the regular expression /localStorage|addEventListener\(['"]input/. Input:
-    
+
     '\n' +
       '        // Search within liked\n' +
       "        document.getElementById('searchInput').addEventListener('input', function() {\n" +
@@ -400,12 +400,12 @@ not ok 16 - favorites page never bypasses guarded storage with inline handlers
       "            document.getElementById('productCount').textContent = filtered.length;\n" +
       '        });\n' +
       '    '
-    
+
   code: 'ERR_ASSERTION'
   name: 'AssertionError'
   expected:
   actual: |-
-    
+
             // Search within liked
             document.getElementById('searchInput').addEventListener('input', function() {
                 const kw = this.value.toLowerCase().trim();
@@ -421,7 +421,7 @@ not ok 16 - favorites page never bypasses guarded storage with inline handlers
                 window.initScrollReveal && window.initScrollReveal();
                 document.getElementById('productCount').textContent = filtered.length;
             });
-        
+
   operator: 'doesNotMatch'
   stack: |-
     TestContext.<anonymous> (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\review-regressions.test.cjs:18:12)
@@ -441,9 +441,9 @@ not ok 17 - reference color filter stays next to reference gallery, after wardro
   failureType: 'testCodeFailure'
   error: |-
     The expression evaluated to a falsy value:
-    
+
       assert.ok(html.indexOf('class="color-filter"')>html.indexOf('id="outfitResults"'))
-    
+
   code: 'ERR_ASSERTION'
   name: 'AssertionError'
   expected: true

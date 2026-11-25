@@ -30,3 +30,5 @@ Final: minor (deferred): filter chip DOM construction for arbitrary imported col
 Final: Ruling: third-party image licensing was outside reviewer scope — retain existing external photos only for review and require owner confirmation before public release — cost if wrong: public release remains pending or old photos need replacement.
 Final: Ruling: physical-device validation was outside reviewer scope — browser checks at 360/1280 satisfy current responsive evidence, do not claim actual device coverage — cost if wrong: device-specific bugs may remain.
 Final: Ruling: production behavior was outside reviewer scope — provide isolated local preview and runtime archive, do not claim deployment — cost if wrong: public hosting must still be verified at release.
+
+Task 8: preview/package complete — scripts/package-preview.py creates a runtime-only ZIP with 71 site files plus README, CRC verified, hashes in output/stylemix/release-manifest.json. Public release pending integration choice and original image-source confirmation. Preview server 8017 retained deliberately for user review; disposable QA servers stopped at handoff.

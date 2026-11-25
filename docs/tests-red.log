@@ -9,10 +9,10 @@ not ok 1 - valid template and catalog accepted
   error: |-
     Expected values to be strictly equal:
     + actual - expected
-    
+
     + 'undefined'
     - 'function'
-    
+
   code: 'ERR_ASSERTION'
   name: 'AssertionError'
   expected: 'function'
@@ -36,10 +36,10 @@ not ok 2 - duplicate IDs, unknown items and absent sources rejected
   error: |-
     Expected values to be strictly equal:
     + actual - expected
-    
+
     + 'undefined'
     - 'function'
-    
+
   code: 'ERR_ASSERTION'
   name: 'AssertionError'
   expected: 'function'
@@ -65,10 +65,10 @@ not ok 3 - malformed catalogs and templates rejected without throwing
   error: |-
     Expected values to be strictly equal:
     + actual - expected
-    
+
     + 'undefined'
     - 'function'
-    
+
   code: 'ERR_ASSERTION'
   name: 'AssertionError'
   expected: 'function'
@@ -94,10 +94,10 @@ not ok 4 - all 24 published templates have local illustrations, valid references
   error: |-
     Expected values to be strictly equal:
     + actual - expected
-    
+
     + 'undefined'
     - 'function'
-    
+
   code: 'ERR_ASSERTION'
   name: 'AssertionError'
   expected: 'function'
@@ -123,10 +123,10 @@ not ok 5 - all essentials exact means ready; optional items not required
   error: |-
     Expected values to be strictly equal:
     + actual - expected
-    
+
     + 'undefined'
     - 'function'
-    
+
   code: 'ERR_ASSERTION'
   name: 'AssertionError'
   expected: 'function'
@@ -150,10 +150,10 @@ not ok 6 - one selected item still suggests but labels two missing slots
   error: |-
     Expected values to be strictly equal:
     + actual - expected
-    
+
     + 'undefined'
     - 'function'
-    
+
   code: 'ERR_ASSERTION'
   name: 'AssertionError'
   expected: 'function'
@@ -179,10 +179,10 @@ not ok 7 - only editorial alternatives qualify, with explicit substitutions
   error: |-
     Expected values to be strictly equal:
     + actual - expected
-    
+
     + 'undefined'
     - 'function'
-    
+
   code: 'ERR_ASSERTION'
   name: 'AssertionError'
   expected: 'function'
@@ -208,10 +208,10 @@ not ok 8 - several items in one group do not all need to be worn
   error: |-
     Expected values to be strictly equal:
     + actual - expected
-    
+
     + 'undefined'
     - 'function'
-    
+
   code: 'ERR_ASSERTION'
   name: 'AssertionError'
   expected: 'function'
@@ -237,10 +237,10 @@ not ok 9 - wrong occasion, no selection and unrelated items do not claim ready
   error: |-
     Expected values to be strictly equal:
     + actual - expected
-    
+
     + 'undefined'
     - 'function'
-    
+
   code: 'ERR_ASSERTION'
   name: 'AssertionError'
   expected: 'function'
@@ -266,10 +266,10 @@ not ok 10 - exact matches take priority and ties use stable editorial order
   error: |-
     Expected values to be strictly equal:
     + actual - expected
-    
+
     + 'undefined'
     - 'function'
-    
+
   code: 'ERR_ASSERTION'
   name: 'AssertionError'
   expected: 'function'
@@ -295,10 +295,10 @@ not ok 11 - one-piece dress needs only dress and shoes, no trousers
   error: |-
     Expected values to be strictly equal:
     + actual - expected
-    
+
     + 'undefined'
     - 'function'
-    
+
   code: 'ERR_ASSERTION'
   name: 'AssertionError'
   expected: 'function'
@@ -324,10 +324,10 @@ not ok 12 - unknown occasions and malformed selections fail closed
   error: |-
     Expected values to be strictly equal:
     + actual - expected
-    
+
     + 'undefined'
     - 'function'
-    
+
   code: 'ERR_ASSERTION'
   name: 'AssertionError'
   expected: 'function'
@@ -353,10 +353,10 @@ not ok 13 - selection survives a new store instance
   error: |-
     Expected values to be strictly equal:
     + actual - expected
-    
+
     + 'undefined'
     - 'function'
-    
+
   code: 'ERR_ASSERTION'
   name: 'AssertionError'
   expected: 'function'
@@ -380,10 +380,10 @@ not ok 14 - corrupt, wrong-shaped and future-version data recover safely
   error: |-
     Expected values to be strictly equal:
     + actual - expected
-    
+
     + 'undefined'
     - 'function'
-    
+
   code: 'ERR_ASSERTION'
   name: 'AssertionError'
   expected: 'function'
@@ -409,10 +409,10 @@ not ok 15 - blocked storage falls back to session memory and reports not persist
   error: |-
     Expected values to be strictly equal:
     + actual - expected
-    
+
     + 'undefined'
     - 'function'
-    
+
   code: 'ERR_ASSERTION'
   name: 'AssertionError'
   expected: 'function'
@@ -438,10 +438,10 @@ not ok 16 - after failed write, stale storage cannot overwrite session value
   error: |-
     Expected values to be strictly equal:
     + actual - expected
-    
+
     + 'undefined'
     - 'function'
-    
+
   code: 'ERR_ASSERTION'
   name: 'AssertionError'
   expected: 'function'
@@ -467,10 +467,10 @@ not ok 17 - selection removes duplicate IDs and rejects unknown occasion
   error: |-
     Expected values to be strictly equal:
     + actual - expected
-    
+
     + 'undefined'
     - 'function'
-    
+
   code: 'ERR_ASSERTION'
   name: 'AssertionError'
   expected: 'function'

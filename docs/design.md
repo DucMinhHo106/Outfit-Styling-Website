@@ -90,4 +90,4 @@ Tên biến/module, cấu trúc JSON cụ thể và lựa chọn thư viện ki�
 
 ## Trạng thái
 
-Đã chọn hướng sản phẩm; đã bổ sung yêu cầu giữ thiết kế hiện tại và bỏ Hot Hits. Bản thiết kế ban đầu đã qua rà soát khả năng lập kế hoạch, không có câu hỏi quan trọng còn thiếu. Tài liệu cập nhật đang chờ người dùng duyệt trước khi lập kế hoạch triển khai.
+Người dùng đã duyệt kế hoạch và yêu cầu triển khai từng bước, lưu tiến độ vào Notion. Bản nâng cấp đã được thực hiện trên nhánh riêng, có kiểm thử và review độc lập; xem progress.md và final-review.md để biết bằng chứng, giới hạn và các điểm còn lại. Chưa thay production.
