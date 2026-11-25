@@ -131,9 +131,15 @@ window.filterColor = function (el, color) {
     document.querySelectorAll('.color-pill').forEach(p => p.classList.remove('active'));
     el.classList.add('active');
     currentFilter = color;
-    const list = color === 'all' ? OUTFITS : OUTFITS.filter(o => o.color === color);
-    renderOutfits(list.length ? list : OUTFITS);
+    applyHomeFilters();
 };
+
+function applyHomeFilters() {
+    const list=window.CatalogFilter.filterItems(OUTFITS,{color:currentFilter,query:document.getElementById('homeSearch')?.value});
+    renderOutfits(list);
+    if(!list.length){const p=document.createElement('p');p.className='catalog-message';p.textContent='Không có outfit tham khảo với điều kiện này. Đổi màu hoặc từ khóa để thử lại.';document.getElementById('outfitGrid').append(p);}
+}
+document.getElementById('homeSearch')?.addEventListener('input',applyHomeFilters);
 
 /* ── Trending Slider ──────────────────────────────────────── */
 (function initSlider() {
@@ -168,10 +174,10 @@ window.filterColor = function (el, color) {
     window.slideMove = function (dir) {
         go((idx + dir + TOTAL) % TOTAL);
         clearInterval(timer);
-        timer = setInterval(() => window.slideMove(1), 4000);
+        if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches) timer = setInterval(() => window.slideMove(1), 4000);
     };
 
-    timer = setInterval(() => window.slideMove(1), 4000);
+    if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches) timer = setInterval(() => window.slideMove(1), 4000);
     window.addEventListener('resize', () => go(idx));
 })();
 

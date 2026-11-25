@@ -1,0 +1,497 @@
+TAP version 13
+# Subtest: valid template and catalog accepted
+not ok 1 - valid template and catalog accepted
+  ---
+  duration_ms: 2.6237
+  type: 'test'
+  location: 'C:\\Users\\LENOVO\\.codex\\.chatgpt-projects\\g-p-69ef37583ddc8191b82e124bf0f55e7f\\outfit-styling-upgrade\\tests\\outfit-data.test.cjs:5:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'undefined'
+    - 'function'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'function'
+  actual: 'undefined'
+  operator: 'strictEqual'
+  stack: |-
+    load (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\outfit-data.test.cjs:2:133)
+    TestContext.<anonymous> (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\outfit-data.test.cjs:5:61)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.start (node:internal/test_runner/test:944:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:296:17)
+  ...
+# Subtest: duplicate IDs, unknown items and absent sources rejected
+not ok 2 - duplicate IDs, unknown items and absent sources rejected
+  ---
+  duration_ms: 0.7538
+  type: 'test'
+  location: 'C:\\Users\\LENOVO\\.codex\\.chatgpt-projects\\g-p-69ef37583ddc8191b82e124bf0f55e7f\\outfit-styling-upgrade\\tests\\outfit-data.test.cjs:6:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'undefined'
+    - 'function'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'function'
+  actual: 'undefined'
+  operator: 'strictEqual'
+  stack: |-
+    load (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\outfit-data.test.cjs:2:133)
+    TestContext.<anonymous> (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\outfit-data.test.cjs:6:83)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+# Subtest: malformed catalogs and templates rejected without throwing
+not ok 3 - malformed catalogs and templates rejected without throwing
+  ---
+  duration_ms: 0.4005
+  type: 'test'
+  location: 'C:\\Users\\LENOVO\\.codex\\.chatgpt-projects\\g-p-69ef37583ddc8191b82e124bf0f55e7f\\outfit-styling-upgrade\\tests\\outfit-data.test.cjs:7:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'undefined'
+    - 'function'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'function'
+  actual: 'undefined'
+  operator: 'strictEqual'
+  stack: |-
+    load (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\outfit-data.test.cjs:2:133)
+    TestContext.<anonymous> (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\outfit-data.test.cjs:7:82)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: all 24 published templates have local illustrations, valid references and four occasions
+not ok 4 - all 24 published templates have local illustrations, valid references and four occasions
+  ---
+  duration_ms: 0.341
+  type: 'test'
+  location: 'C:\\Users\\LENOVO\\.codex\\.chatgpt-projects\\g-p-69ef37583ddc8191b82e124bf0f55e7f\\outfit-styling-upgrade\\tests\\outfit-data.test.cjs:8:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'undefined'
+    - 'function'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'function'
+  actual: 'undefined'
+  operator: 'strictEqual'
+  stack: |-
+    load (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\outfit-data.test.cjs:2:133)
+    TestContext.<anonymous> (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\outfit-data.test.cjs:8:112)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: all essentials exact means ready; optional items not required
+not ok 5 - all essentials exact means ready; optional items not required
+  ---
+  duration_ms: 2.1969
+  type: 'test'
+  location: 'C:\\Users\\LENOVO\\.codex\\.chatgpt-projects\\g-p-69ef37583ddc8191b82e124bf0f55e7f\\outfit-styling-upgrade\\tests\\outfit-matcher.test.cjs:4:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'undefined'
+    - 'function'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'function'
+  actual: 'undefined'
+  operator: 'strictEqual'
+  stack: |-
+    load (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\outfit-matcher.test.cjs:2:127)
+    TestContext.<anonymous> (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\outfit-matcher.test.cjs:4:87)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.start (node:internal/test_runner/test:944:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:296:17)
+  ...
+# Subtest: one selected item still suggests but labels two missing slots
+not ok 6 - one selected item still suggests but labels two missing slots
+  ---
+  duration_ms: 1.4279
+  type: 'test'
+  location: 'C:\\Users\\LENOVO\\.codex\\.chatgpt-projects\\g-p-69ef37583ddc8191b82e124bf0f55e7f\\outfit-styling-upgrade\\tests\\outfit-matcher.test.cjs:5:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'undefined'
+    - 'function'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'function'
+  actual: 'undefined'
+  operator: 'strictEqual'
+  stack: |-
+    load (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\outfit-matcher.test.cjs:2:127)
+    TestContext.<anonymous> (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\outfit-matcher.test.cjs:5:91)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+# Subtest: only editorial alternatives qualify, with explicit substitutions
+not ok 7 - only editorial alternatives qualify, with explicit substitutions
+  ---
+  duration_ms: 1.214
+  type: 'test'
+  location: 'C:\\Users\\LENOVO\\.codex\\.chatgpt-projects\\g-p-69ef37583ddc8191b82e124bf0f55e7f\\outfit-styling-upgrade\\tests\\outfit-matcher.test.cjs:6:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'undefined'
+    - 'function'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'function'
+  actual: 'undefined'
+  operator: 'strictEqual'
+  stack: |-
+    load (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\outfit-matcher.test.cjs:2:127)
+    TestContext.<anonymous> (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\outfit-matcher.test.cjs:6:91)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: several items in one group do not all need to be worn
+not ok 8 - several items in one group do not all need to be worn
+  ---
+  duration_ms: 0.6277
+  type: 'test'
+  location: 'C:\\Users\\LENOVO\\.codex\\.chatgpt-projects\\g-p-69ef37583ddc8191b82e124bf0f55e7f\\outfit-styling-upgrade\\tests\\outfit-matcher.test.cjs:7:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'undefined'
+    - 'function'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'function'
+  actual: 'undefined'
+  operator: 'strictEqual'
+  stack: |-
+    load (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\outfit-matcher.test.cjs:2:127)
+    TestContext.<anonymous> (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\outfit-matcher.test.cjs:7:79)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: wrong occasion, no selection and unrelated items do not claim ready
+not ok 9 - wrong occasion, no selection and unrelated items do not claim ready
+  ---
+  duration_ms: 0.9842
+  type: 'test'
+  location: 'C:\\Users\\LENOVO\\.codex\\.chatgpt-projects\\g-p-69ef37583ddc8191b82e124bf0f55e7f\\outfit-styling-upgrade\\tests\\outfit-matcher.test.cjs:8:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'undefined'
+    - 'function'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'function'
+  actual: 'undefined'
+  operator: 'strictEqual'
+  stack: |-
+    load (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\outfit-matcher.test.cjs:2:127)
+    TestContext.<anonymous> (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\outfit-matcher.test.cjs:8:93)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: exact matches take priority and ties use stable editorial order
+not ok 10 - exact matches take priority and ties use stable editorial order
+  ---
+  duration_ms: 2.1303
+  type: 'test'
+  location: 'C:\\Users\\LENOVO\\.codex\\.chatgpt-projects\\g-p-69ef37583ddc8191b82e124bf0f55e7f\\outfit-styling-upgrade\\tests\\outfit-matcher.test.cjs:9:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'undefined'
+    - 'function'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'function'
+  actual: 'undefined'
+  operator: 'strictEqual'
+  stack: |-
+    load (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\outfit-matcher.test.cjs:2:127)
+    TestContext.<anonymous> (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\outfit-matcher.test.cjs:9:89)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: one-piece dress needs only dress and shoes, no trousers
+not ok 11 - one-piece dress needs only dress and shoes, no trousers
+  ---
+  duration_ms: 0.8828
+  type: 'test'
+  location: 'C:\\Users\\LENOVO\\.codex\\.chatgpt-projects\\g-p-69ef37583ddc8191b82e124bf0f55e7f\\outfit-styling-upgrade\\tests\\outfit-matcher.test.cjs:10:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'undefined'
+    - 'function'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'function'
+  actual: 'undefined'
+  operator: 'strictEqual'
+  stack: |-
+    load (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\outfit-matcher.test.cjs:2:127)
+    TestContext.<anonymous> (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\outfit-matcher.test.cjs:10:207)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: unknown occasions and malformed selections fail closed
+not ok 12 - unknown occasions and malformed selections fail closed
+  ---
+  duration_ms: 0.3993
+  type: 'test'
+  location: 'C:\\Users\\LENOVO\\.codex\\.chatgpt-projects\\g-p-69ef37583ddc8191b82e124bf0f55e7f\\outfit-styling-upgrade\\tests\\outfit-matcher.test.cjs:11:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'undefined'
+    - 'function'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'function'
+  actual: 'undefined'
+  operator: 'strictEqual'
+  stack: |-
+    load (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\outfit-matcher.test.cjs:2:127)
+    TestContext.<anonymous> (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\outfit-matcher.test.cjs:11:81)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: selection survives a new store instance
+not ok 13 - selection survives a new store instance
+  ---
+  duration_ms: 1.483
+  type: 'test'
+  location: 'C:\\Users\\LENOVO\\.codex\\.chatgpt-projects\\g-p-69ef37583ddc8191b82e124bf0f55e7f\\outfit-styling-upgrade\\tests\\outfit-storage.test.cjs:4:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'undefined'
+    - 'function'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'function'
+  actual: 'undefined'
+  operator: 'strictEqual'
+  stack: |-
+    load (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\outfit-storage.test.cjs:2:127)
+    TestContext.<anonymous> (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\outfit-storage.test.cjs:4:63)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.start (node:internal/test_runner/test:944:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:296:17)
+  ...
+# Subtest: corrupt, wrong-shaped and future-version data recover safely
+not ok 14 - corrupt, wrong-shaped and future-version data recover safely
+  ---
+  duration_ms: 0.992
+  type: 'test'
+  location: 'C:\\Users\\LENOVO\\.codex\\.chatgpt-projects\\g-p-69ef37583ddc8191b82e124bf0f55e7f\\outfit-styling-upgrade\\tests\\outfit-storage.test.cjs:5:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'undefined'
+    - 'function'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'function'
+  actual: 'undefined'
+  operator: 'strictEqual'
+  stack: |-
+    load (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\outfit-storage.test.cjs:2:127)
+    TestContext.<anonymous> (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\outfit-storage.test.cjs:5:84)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+# Subtest: blocked storage falls back to session memory and reports not persisted
+not ok 15 - blocked storage falls back to session memory and reports not persisted
+  ---
+  duration_ms: 0.852
+  type: 'test'
+  location: 'C:\\Users\\LENOVO\\.codex\\.chatgpt-projects\\g-p-69ef37583ddc8191b82e124bf0f55e7f\\outfit-styling-upgrade\\tests\\outfit-storage.test.cjs:6:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'undefined'
+    - 'function'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'function'
+  actual: 'undefined'
+  operator: 'strictEqual'
+  stack: |-
+    load (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\outfit-storage.test.cjs:2:127)
+    TestContext.<anonymous> (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\outfit-storage.test.cjs:6:94)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: after failed write, stale storage cannot overwrite session value
+not ok 16 - after failed write, stale storage cannot overwrite session value
+  ---
+  duration_ms: 0.4088
+  type: 'test'
+  location: 'C:\\Users\\LENOVO\\.codex\\.chatgpt-projects\\g-p-69ef37583ddc8191b82e124bf0f55e7f\\outfit-styling-upgrade\\tests\\outfit-storage.test.cjs:7:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'undefined'
+    - 'function'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'function'
+  actual: 'undefined'
+  operator: 'strictEqual'
+  stack: |-
+    load (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\outfit-storage.test.cjs:2:127)
+    TestContext.<anonymous> (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\outfit-storage.test.cjs:7:90)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: selection removes duplicate IDs and rejects unknown occasion
+not ok 17 - selection removes duplicate IDs and rejects unknown occasion
+  ---
+  duration_ms: 0.3969
+  type: 'test'
+  location: 'C:\\Users\\LENOVO\\.codex\\.chatgpt-projects\\g-p-69ef37583ddc8191b82e124bf0f55e7f\\outfit-styling-upgrade\\tests\\outfit-storage.test.cjs:8:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'undefined'
+    - 'function'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'function'
+  actual: 'undefined'
+  operator: 'strictEqual'
+  stack: |-
+    load (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\outfit-storage.test.cjs:2:127)
+    TestContext.<anonymous> (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\outfit-storage.test.cjs:8:84)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+1..17
+# tests 17
+# suites 0
+# pass 0
+# fail 17
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 114.3972

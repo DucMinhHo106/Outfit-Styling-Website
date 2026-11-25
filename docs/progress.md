@@ -14,3 +14,4 @@ Ruling: New templates use original vector clothing illustrations rather than unv
 Task 2: complete — 3/3 regression tests PASS after RED; browser black + trang returned 0 and clear conditions. Hot Hits removed, old URL redirects to library. Favorites change events added; full persistence/UI review follows task 6.
 Task 3: complete — 24 templates, 21 catalog items, original SVG sources; 4 data tests RED-to-GREEN. Image files and normalized references checked.
 Task 4 matcher: complete — 8 matching tests RED-to-GREEN; exact, substitutions, missing, one-piece and unrelated/unknown selections checked.
+Tasks 5-6: complete — 23/23 tests PASS. Browser one shirt -> missing items; full work outfit -> ready; save -> reload -> remove immediately -> count 0. Mobile 360 and desktop 1280 screenshots reviewed; no horizontal overflow at 360. Modal instructions and focus restore checked.

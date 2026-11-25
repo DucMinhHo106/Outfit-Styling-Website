@@ -86,13 +86,18 @@
         .empty-link:hover { border-color: var(--color-orange); color: var(--color-orange); }
     </style>
   <link rel="stylesheet" href="./assets/css/wardrobe.css"/>
+  <meta name="description" content="Tìm bộ phối mẫu cơ bản từ những món bạn có. Gợi ý rõ đồ đã có, món thay thế và phần còn thiếu cho đi học, công sở hoặc đi chơi."/>
+  <meta property="og:title" content="Tủ đồ yêu thích — STYLEMIX"/>
+  <meta property="og:description" content="Tìm bộ phối mẫu cơ bản từ những món bạn có. Gợi ý rõ đồ đã có, món thay thế và phần còn thiếu cho đi học, công sở hoặc đi chơi."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://ducminhho106.github.io/Outfit-Styling-Website/assets/illustrations/social-preview.png"/>
 </head>
 <body data-page="yeu-thich">
     <div class="cursor" id="cursor"></div>
     <div class="cursor-follower" id="cursorFollower"></div>
     <div class="page-transition" id="pageTransition"></div>
 
-    <div class="toast" id="toast">
+    <div class="toast" id="toast" role="status" aria-live="polite">
         <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <polyline points="20 6 9 13 4 11"/><polyline points="4 11 9 20 20 6"/></svg>
         <span id="toastMsg">Thông báo</span>
@@ -103,7 +108,7 @@
         <div class="modal">
             <div class="modal__img"><img src="" alt="" id="modalImg"/></div>
             <div class="modal__body">
-                <button class="modal__close" id="modalClose">
+                <button class="modal__close" id="modalClose" aria-label="Đóng chi tiết">
                     <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
                 </button>
@@ -138,13 +143,12 @@
             <div class="search-bar">
                 <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                <input type="text" id="searchInput" placeholder="Tìm trong yêu thích..."/>
+                <input type="text" aria-label="Tìm trong bộ sưu tập" id="searchInput" placeholder="Tìm trong yêu thích..."/>
             </div>
-            <div class="nav__like-icon active" onclick="openSavedOutfits()" title="Tủ đồ yêu thích">
+            <button type="button" class="nav__like-icon active" aria-label="Mở bộ yêu thích" onclick="openSavedOutfits()" title="Tủ đồ yêu thích">
                 <svg width="16" height="16" fill="var(--color-orange)" stroke="var(--color-orange)" stroke-width="2" viewBox="0 0 24 24">
                     <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-                </svg>
-            </div>
+                </svg></button>
         </div>
     </nav>
 
@@ -227,17 +231,17 @@
                 <div class="footer__col">
                     <h4>Danh mục</h4>
                     <a href="./ao.html">Áo</a><a href="./quan.html">Quần</a>
-                    <a href="./phu-kien.html">Phụ kiện</a><a href="#">Giày dép</a>
+                    <a href="./phu-kien.html">Phụ kiện</a><a href="./index.html#wardrobe">Giày dép</a>
                 </div>
                 <div class="footer__col">
                     <h4>Styles</h4>
-                    <a href="#">Streetwear</a><a href="#">Minimal</a>
-                    <a href="#">Vintage</a><a href="#">Sporty</a>
+                    <a href="./index.html#style-streetwear">Streetwear</a><a href="./index.html#style-minimal">Minimal</a>
+                    <a href="./index.html#style-vintage">Vintage</a><a href="./index.html#style-sporty">Sporty</a>
                 </div>
                 <div class="footer__col">
                     <h4>Hỗ trợ</h4>
-                    <a href="#">Về chúng tôi</a><a href="#">Liên hệ</a>
-                    <a href="#">Điều khoản</a><a href="#">Bảo mật</a>
+                    <a href="./thong-tin.html#about">Về chúng tôi</a><a href="./thong-tin.html#contact">Liên hệ</a>
+                    <a href="./thong-tin.html#usage">Điều khoản</a><a href="./thong-tin.html#privacy">Bảo mật</a>
                 </div>
             </div>
             <div class="footer__bottom">© 2026 StyleMix. All rights reserved.</div>

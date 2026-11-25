@@ -7,7 +7,7 @@
 (function initCursor() {
     const dot = document.getElementById('cursor');
     const follower = document.getElementById('cursorFollower');
-    if (!dot || !follower) return;
+    if (!dot || !follower || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     let mx = 0, my = 0, fx = 0, fy = 0;
     document.addEventListener('mousemove', e => {
         mx = e.clientX; my = e.clientY;
@@ -87,6 +87,7 @@ window.showToast = showToast;
 
     window.openOutfitModal = function (o) {
         window.currentOutfit = o;
+        overlay.classList.toggle('template-modal', Boolean(o.requiredSlots));
         document.getElementById('modalImg').src = o.img;
         document.getElementById('modalImg').alt = o.name;
         document.getElementById('modalTag').textContent = o.tag;
@@ -98,6 +99,7 @@ window.showToast = showToast;
         open();
     };
     window.openStyleModal = function (key) {
+        overlay.classList.remove('template-modal');
         const data = window.STYLE_DATA && window.STYLE_DATA[key];
         if (!data) return;
         document.getElementById('modalImg').src = data.img;
@@ -250,6 +252,7 @@ window.openSavedOutfits = function () {
 })();
 
 /* ── Render outfit card ─────────────────────── */
+function escapeHtml(value) { return String(value || '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char])); }
 function createOutfitCard(o, delay) {
     delay = delay || 0;
     var div = document.createElement('div');
@@ -260,16 +263,17 @@ function createOutfitCard(o, delay) {
     var svgFill = liked ? 'fill:var(--color-orange);stroke:var(--color-orange)' : 'fill:none;stroke:currentColor';
     var likedClass = liked ? ' liked' : '';
     div.innerHTML =
-        '<img class="outfit-card__img" src="' + o.img + '" alt="' + o.name + '" loading="lazy"/>' +
+        '<img class="outfit-card__img" src="' + escapeHtml(o.img) + '" alt="' + escapeHtml(o.name) + '" loading="lazy"/>' +
         '<div class="outfit-card__overlay">' +
-          '<span class="outfit-card__tag">' + o.tag + '</span>' +
-          '<span class="outfit-card__name">' + o.name + '</span>' +
+          '<span class="outfit-card__tag">' + escapeHtml(o.tag) + '</span>' +
+          '<span class="outfit-card__name">' + escapeHtml(o.name) + '</span>' +
         '</div>' +
         '<button class="outfit-card__like' + likedClass + '" data-liked="' + liked + '" aria-label="Yêu thích">' +
           '<svg width="14" height="14" style="' + svgFill + '" stroke-width="2" viewBox="0 0 24 24">' +
             '<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>' +
           '</svg>' +
         '</button>';
+    const openButton=document.createElement('button');openButton.type='button';openButton.className='outfit-card__open';openButton.setAttribute('aria-label','Xem '+o.name);div.append(openButton);
     // Use closure to attach events — no inline onclick, no JSON in HTML
     (function(outfit, container) {
         var btn = container.querySelector('.outfit-card__like');
@@ -336,3 +340,9 @@ window.buildColorFilterBar = function (colors, gridId, dataRef) {
     }).join('');
     window.bindCursorHover && window.bindCursorHover();
 };
+
+/* Local fallback for unavailable images, including dynamically created cards. */
+document.addEventListener('error', function(event) {
+    const image=event.target;
+    if(image?.tagName==='IMG'&&!image.dataset.fallback){image.dataset.fallback='true';image.src='./assets/illustrations/image-unavailable.svg';}
+},true);

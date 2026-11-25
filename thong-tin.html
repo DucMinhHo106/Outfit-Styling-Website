@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thông tin sử dụng — STYLEMIX</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="./assets/css/global.css"/>
+  <link rel="stylesheet" href="./assets/css/home.css"/>
+  <link rel="stylesheet" href="./assets/css/wardrobe.css"/>
+  <meta name="description" content="Tìm bộ phối mẫu cơ bản từ những món bạn có. Gợi ý rõ đồ đã có, món thay thế và phần còn thiếu cho đi học, công sở hoặc đi chơi."/>
+  <meta property="og:title" content="Thông tin sử dụng — STYLEMIX"/>
+  <meta property="og:description" content="Tìm bộ phối mẫu cơ bản từ những món bạn có. Gợi ý rõ đồ đã có, món thay thế và phần còn thiếu cho đi học, công sở hoặc đi chơi."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://ducminhho106.github.io/Outfit-Styling-Website/assets/illustrations/social-preview.png"/>
+</head>
+<body>
+  <nav class="nav" id="navbar">
+    <a class="nav__logo" href="index.html">
+      <span class="nav__logo-style">STYLE</span><span class="nav__logo-mix">MIX</span>
+    </a>
+    <div class="nav__links">
+      <a href="./index.html#wardrobe">Phối đồ</a>
+      <a href="./ao.html">Áo</a>
+      <a href="./quan.html">Quần</a>
+      <a href="./phu-kien.html">Phụ kiện</a>
+      
+            <a href="./yeu-thich.html">Yêu Thích</a>
+    </div>
+    <div class="nav__right">
+      
+      <button type="button" class="nav__like-icon" aria-label="Mở bộ yêu thích" onclick="openSavedOutfits()">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+    </div>
+  </nav>
+<main class="section-inner" style="padding-top:110px">
+<section class="support-copy" id="about"><span class="tag tag--orange">StyleMix</span><h1 class="section-title">Thông tin <span class="accent">sử dụng</span></h1><p>Thư viện bộ phối mẫu cho người mới bắt đầu. Chọn hoàn cảnh và đồ đang có để xem cách mặc theo; mỗi gợi ý ghi rõ món đã có, thay thế và còn thiếu.</p></section>
+<section class="support-copy" id="contact"><h2>Góp ý cho dự án</h2><p>Bạn có thể báo lỗi hoặc góp ý qua trang Issues của dự án. Không đưa mật khẩu hoặc thông tin cá nhân vào báo lỗi.</p><a class="btn btn--ghost" href="https://github.com/DucMinhHo106/Outfit-Styling-Website/issues" target="_blank" rel="noopener noreferrer">Mở trang góp ý trên GitHub</a></section>
+<section class="support-copy" id="usage"><h2>Hướng dẫn và giới hạn</h2><p>Hình minh họa trong thư viện cơ bản thể hiện cách kết hợp loại đồ và màu sắc, không phải ảnh sản phẩm để mua. Kết quả chỉ đối chiếu các món bạn chọn, không đánh giá độ vừa vặn thực tế. Ưu tiên quy định trang phục ở trường, nơi làm việc và sự kiện.</p><p>Bạn có thể chọn một món để xem những phần cần kiểm tra thêm. Chỉ các bộ đủ món thiết yếu mới được ghi có thể mặc ngay.</p></section>
+<section class="support-copy" id="privacy"><h2>Dữ liệu trên trình duyệt</h2><p>Lựa chọn và bộ yêu thích lưu bằng localStorage trên trình duyệt hiện tại; không có tài khoản hoặc đồng bộ máy khác. Xóa dữ liệu website sẽ làm mất lựa chọn đã lưu. Khi trình duyệt chặn lưu trữ, website vẫn cho dùng trong phiên và thông báo chưa lưu lâu dài.</p><p>Ảnh tham khảo và font cũ có thể tải từ website bên ngoài. Các dịch vụ đó nhận yêu cầu tải tài nguyên từ trình duyệt. StyleMix không yêu cầu bạn cung cấp ảnh cá nhân hoặc số đo.</p><a class="btn btn--primary" href="./index.html#wardrobe">Chọn đồ và tìm bộ mẫu</a></section>
+</main>
+  <footer class="footer" style="margin-top:100px">
+    <div class="footer__inner">
+      <div class="footer__grid reveal">
+        <div><div class="footer__logo"><span class="accent">STYLE</span>MIX</div><p class="footer__tagline">Nền tảng phối đồ hiện đại dành cho người trẻ yêu thích thời trang</p></div>
+        <div class="footer__col"><h4>Danh mục</h4><a href="./ao.html">Áo</a><a href="./quan.html">Quần</a><a href="./phu-kien.html">Phụ kiện</a><a href="./index.html#wardrobe">Giày dép</a></div>
+        <div class="footer__col"><h4>Styles</h4><a href="./index.html#style-streetwear">Streetwear</a><a href="./index.html#style-minimal">Minimal</a><a href="./index.html#style-vintage">Vintage</a><a href="./index.html#style-sporty">Sporty</a></div>
+        <div class="footer__col"><h4>Hỗ trợ</h4><a href="./thong-tin.html#about">Về chúng tôi</a><a href="./thong-tin.html#contact">Liên hệ</a><a href="./thong-tin.html#usage">Điều khoản</a><a href="./thong-tin.html#privacy">Bảo mật</a></div>
+      </div>
+      <div class="footer__bottom">© 2026 StyleMix. All rights reserved.</div>
+    </div>
+  </footer>
+<script src="./assets/js/catalog-filter.js"></script><script src="./assets/js/outfit-storage.js"></script><script src="./assets/js/global.js"></script></body></html>

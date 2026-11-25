@@ -23,3 +23,8 @@ button:disabled{opacity:.5;cursor:default}button:focus-visible,a:focus-visible,s
 @media(max-width:600px){.wardrobe{padding:48px var(--section-px)}.template-grid{grid-template-columns:1fr}.wardrobe__controls{align-items:stretch}.wardrobe__controls label{width:100%}.wardrobe select{width:100%}.picker-items{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation:none!important;transition:none!important}.reveal,.reveal-left,.reveal-right,.reveal-scale{opacity:1!important;transform:none!important}.cursor,.cursor-follower{display:none!important}body{cursor:auto}}
 @media(hover:none){body{cursor:auto}.cursor,.cursor-follower{display:none}.outfit-card__overlay{opacity:1!important}}
+
+.template-modal .modal__img{min-height:0;display:flex;align-items:center;background:var(--color-bg-3)}
+.template-modal .modal__img img{height:auto;object-fit:contain}
+.outfit-card__open{position:absolute;inset:0;border:0;background:transparent;cursor:pointer;z-index:1}
+.outfit-card__like{z-index:2}

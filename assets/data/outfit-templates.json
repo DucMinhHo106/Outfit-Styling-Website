@@ -622,7 +622,7 @@
       {
         "id": "bottom",
         "acceptedItemIds": [
-          "trousers-black"
+          "trousers-gray"
         ],
         "substituteItemIds": []
       },
@@ -649,7 +649,7 @@
     "desc": "Bộ phối cơ bản từ những món dễ tìm. Hình minh họa cách kết hợp, không phải ảnh sản phẩm.",
     "items": [
       "Sơ mi trắng",
-      "Quần vải đen",
+      "Quần vải xám",
       "Loafer đen"
     ]
   },
@@ -705,7 +705,7 @@
   },
   {
     "id": "basic-presentation-3",
-    "title": "Sơ mi trắng và chân váy",
+    "title": "Sơ mi xanh và chân váy",
     "occasions": [
       "presentation"
     ],
@@ -715,7 +715,7 @@
       {
         "id": "top",
         "acceptedItemIds": [
-          "shirt-white"
+          "shirt-blue"
         ],
         "substituteItemIds": []
       },
@@ -743,12 +743,12 @@
     ],
     "editorialOrder": 14,
     "tag": "Cơ bản",
-    "name": "Sơ mi trắng và chân váy",
+    "name": "Sơ mi xanh và chân váy",
     "img": "./assets/illustrations/basic-presentation-3.svg",
-    "color": "white",
+    "color": "blue",
     "desc": "Bộ phối cơ bản từ những món dễ tìm. Hình minh họa cách kết hợp, không phải ảnh sản phẩm.",
     "items": [
-      "Sơ mi trắng",
+      "Sơ mi xanh nhạt",
       "Chân váy midi đen",
       "Giày bệt đen"
     ]
@@ -897,7 +897,7 @@
       {
         "id": "top",
         "acceptedItemIds": [
-          "tee-white"
+          "tee-gray"
         ],
         "substituteItemIds": []
       },
@@ -930,10 +930,10 @@
     "tag": "Cơ bản",
     "name": "Cuối tuần cơ bản",
     "img": "./assets/illustrations/basic-social-1.svg",
-    "color": "white",
+    "color": "gray",
     "desc": "Bộ phối cơ bản từ những món dễ tìm. Hình minh họa cách kết hợp, không phải ảnh sản phẩm.",
     "items": [
-      "Áo thun trắng",
+      "Áo thun xám",
       "Jeans xanh",
       "Sneaker trắng"
     ]
