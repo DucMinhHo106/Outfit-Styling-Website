@@ -108,7 +108,7 @@ const LIKED_KEY = 'stylemix_liked_outfits';
 function getLikedOutfits() {
     try { return JSON.parse(localStorage.getItem(LIKED_KEY)) || []; } catch { return []; }
 }
-function saveLikedList(list) { localStorage.setItem(LIKED_KEY, JSON.stringify(list)); }
+function saveLikedList(list) { localStorage.setItem(LIKED_KEY, JSON.stringify(list)); document.dispatchEvent(new Event('stylemix:likes-changed')); }
 function isOutfitLiked(id) { return getLikedOutfits().some(o => o.id === id); }
 window.isOutfitSaved = isOutfitLiked;
 
@@ -257,6 +257,7 @@ const COLOR_MAP = {
 window.filterByColor = function (btn, color, gridId) {
     document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
     btn.classList.add('active');
+    if (window.applyCatalogFilters) { window.applyCatalogFilters(color); return; }
     const data = window.__FILTER_DATA__ || [];
     const filtered = color === 'all' ? data : data.filter(p => {
         const c = p.color || '';
@@ -280,7 +281,7 @@ window.buildColorFilterBar = function (colors, gridId, dataRef) {
     bar.innerHTML = all.map((c, i) => {
         const info = COLOR_MAP[c] || { label: c, bg: '#888' };
         const borderCss = info.border ? 'border:1px solid ' + info.border + ';' : '';
-        return `<button class="filter-chip${i === 0 ? ' active' : ''}" onclick="filterByColor(this,'${c}','${gridId}')" title="${info.label}">
+        return `<button data-color="${c}" class="filter-chip${i === 0 ? ' active' : ''}" onclick="filterByColor(this,'${c}','${gridId}')" title="${info.label}">
             <span class="filter-chip__dot" style="background:${info.bg};${borderCss}"></span>${info.label}
         </button>`;
     }).join('');
