@@ -252,22 +252,5 @@
   <script src="./assets/js/outfit-storage.js"></script>
   <script src="./assets/js/global.js"></script>
     <script src="./assets/js/pages.js"></script>
-    <script>
-        // Search within liked
-        document.getElementById('searchInput').addEventListener('input', function() {
-            const kw = this.value.toLowerCase().trim();
-            const list = JSON.parse(localStorage.getItem('stylemix_liked_outfits') || '[]');
-            const filtered = kw ? list.filter(o =>
-                o.name.toLowerCase().includes(kw) ||
-                o.tag.toLowerCase().includes(kw) ||
-                (o.color || '').toLowerCase().includes(kw)
-            ) : list;
-            const grid = document.getElementById('likedGrid');
-            grid.innerHTML = '';
-            filtered.forEach((o, i) => { grid.appendChild(window.createOutfitCard(o, (i%4)*0.06)); });
-            window.initScrollReveal && window.initScrollReveal();
-            document.getElementById('productCount').textContent = filtered.length;
-        });
-    </script>
 </body>
 </html>

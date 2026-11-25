@@ -20,7 +20,7 @@
         function change(action){
             state=updateSelection(state,action);
             const persisted=store.set(root.OutfitStorage.key,{...state,version:1});
-            document.getElementById('selectionStorageNote').textContent=persisted?'Lựa chọn và bộ đã lưu chỉ nằm trên trình duyệt này.':'Trình duyệt chưa cho lưu lâu dài. Lựa chọn hiện tại vẫn dùng được trong phiên này.';
+            document.getElementById('selectionStorageNote').textContent=persisted?'Lựa chọn và bộ đã lưu chỉ nằm trên trình duyệt này.':store.mode(root.OutfitStorage.key)==='session'?'Chưa lưu lâu dài; lựa chọn được giữ trong tab này đến khi đóng tab.':'Trình duyệt chặn lưu trữ. Lựa chọn chỉ giữ trên trang hiện tại, sẽ mất khi tải lại hoặc rời trang.';
             renderSelection();renderResults();
         }
         function renderSelection(){
@@ -91,6 +91,7 @@
                 const responses=await Promise.all(['item-catalog','outfit-templates'].map(async name=>{const response=await fetch('./assets/data/'+name+'.json');if(!response.ok)throw new Error('HTTP '+response.status);return response.json();}));
                 [catalog,templates]=responses;
                 if(root.OutfitData.validateTemplates(templates,catalog).length)throw new Error('Thư viện không hợp lệ');
+                templates=templates.map(template=>({...template,alternativeNotes:root.OutfitData.describeAlternatives(template,catalog)}));
                 itemsById=new Map(catalog.map(x=>[x.id,x]));templatesById=new Map(templates.map(x=>[x.id,x]));state.selectedItemIds=state.selectedItemIds.filter(id=>itemsById.has(id));
                 makePicker();renderSelection();renderResults();find.disabled=false;
             }catch{status.textContent='Chưa tải được thư viện. Hãy kiểm tra kết nối và thử lại.';retry.hidden=false;}

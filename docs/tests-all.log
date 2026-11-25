@@ -2,147 +2,195 @@ TAP version 13
 # Subtest: search and color intersect rather than replace each other
 ok 1 - search and color intersect rather than replace each other
   ---
-  duration_ms: 2.9305
+  duration_ms: 2.9037
   type: 'test'
   ...
 # Subtest: Vietnamese accents, localized color names and unknown words
 ok 2 - Vietnamese accents, localized color names and unknown words
   ---
-  duration_ms: 1.1433
+  duration_ms: 2.5144
   type: 'test'
   ...
 # Subtest: saving and removing publishes a change for the favorites list
 ok 3 - saving and removing publishes a change for the favorites list
   ---
-  duration_ms: 4.667
+  duration_ms: 3.5165
   type: 'test'
   ...
 # Subtest: blocked storage still allows saving and removing within the session
 ok 4 - blocked storage still allows saving and removing within the session
   ---
-  duration_ms: 4.446
+  duration_ms: 3.5463
   type: 'test'
   ...
 # Subtest: valid template and catalog accepted
 ok 5 - valid template and catalog accepted
   ---
-  duration_ms: 4.584
+  duration_ms: 3.8762
   type: 'test'
   ...
 # Subtest: duplicate IDs, unknown items and absent sources rejected
 ok 6 - duplicate IDs, unknown items and absent sources rejected
   ---
-  duration_ms: 0.543
+  duration_ms: 0.9123
   type: 'test'
   ...
 # Subtest: malformed catalogs and templates rejected without throwing
 ok 7 - malformed catalogs and templates rejected without throwing
   ---
-  duration_ms: 0.6173
+  duration_ms: 1.1864
   type: 'test'
   ...
 # Subtest: all 24 published templates have local illustrations, valid references and four occasions
 ok 8 - all 24 published templates have local illustrations, valid references and four occasions
   ---
-  duration_ms: 12.7259
+  duration_ms: 19.408
+  type: 'test'
+  ...
+# Subtest: detail alternatives are available without a selected wardrobe
+ok 9 - detail alternatives are available without a selected wardrobe
+  ---
+  duration_ms: 1.6442
   type: 'test'
   ...
 # Subtest: all essentials exact means ready; optional items not required
-ok 9 - all essentials exact means ready; optional items not required
+ok 10 - all essentials exact means ready; optional items not required
   ---
-  duration_ms: 2.8703
+  duration_ms: 3.3714
   type: 'test'
   ...
 # Subtest: one selected item still suggests but labels two missing slots
-ok 10 - one selected item still suggests but labels two missing slots
+ok 11 - one selected item still suggests but labels two missing slots
   ---
-  duration_ms: 1.0418
+  duration_ms: 2.9876
   type: 'test'
   ...
 # Subtest: only editorial alternatives qualify, with explicit substitutions
-ok 11 - only editorial alternatives qualify, with explicit substitutions
+ok 12 - only editorial alternatives qualify, with explicit substitutions
   ---
-  duration_ms: 0.884
+  duration_ms: 1.3455
   type: 'test'
   ...
 # Subtest: several items in one group do not all need to be worn
-ok 12 - several items in one group do not all need to be worn
+ok 13 - several items in one group do not all need to be worn
   ---
-  duration_ms: 0.5638
+  duration_ms: 1.034
   type: 'test'
   ...
 # Subtest: wrong occasion, no selection and unrelated items do not claim ready
-ok 13 - wrong occasion, no selection and unrelated items do not claim ready
+ok 14 - wrong occasion, no selection and unrelated items do not claim ready
   ---
-  duration_ms: 1.1559
+  duration_ms: 3.9635
   type: 'test'
   ...
 # Subtest: exact matches take priority and ties use stable editorial order
-ok 14 - exact matches take priority and ties use stable editorial order
+ok 15 - exact matches take priority and ties use stable editorial order
   ---
-  duration_ms: 0.4599
+  duration_ms: 1.0919
   type: 'test'
   ...
 # Subtest: one-piece dress needs only dress and shoes, no trousers
-ok 15 - one-piece dress needs only dress and shoes, no trousers
+ok 16 - one-piece dress needs only dress and shoes, no trousers
   ---
-  duration_ms: 0.432
+  duration_ms: 1.2287
   type: 'test'
   ...
 # Subtest: unknown occasions and malformed selections fail closed
-ok 16 - unknown occasions and malformed selections fail closed
+ok 17 - unknown occasions and malformed selections fail closed
   ---
-  duration_ms: 0.6883
+  duration_ms: 1.9832
   type: 'test'
   ...
 # Subtest: toggle a single item and change occasion without losing it
-ok 17 - toggle a single item and change occasion without losing it
+ok 18 - toggle a single item and change occasion without losing it
   ---
-  duration_ms: 3.5233
+  duration_ms: 6.8245
   type: 'test'
   ...
 # Subtest: clear selection preserves occasion and never mutates input
-ok 18 - clear selection preserves occasion and never mutates input
+ok 19 - clear selection preserves occasion and never mutates input
   ---
-  duration_ms: 0.6564
+  duration_ms: 1.1608
   type: 'test'
   ...
 # Subtest: selection survives a new store instance
-ok 19 - selection survives a new store instance
+ok 20 - selection survives a new store instance
   ---
-  duration_ms: 5.5513
+  duration_ms: 7.1703
   type: 'test'
   ...
 # Subtest: corrupt, wrong-shaped and future-version data recover safely
-ok 20 - corrupt, wrong-shaped and future-version data recover safely
+ok 21 - corrupt, wrong-shaped and future-version data recover safely
   ---
-  duration_ms: 1.58
+  duration_ms: 1.1802
   type: 'test'
   ...
 # Subtest: blocked storage falls back to session memory and reports not persisted
-ok 21 - blocked storage falls back to session memory and reports not persisted
+ok 22 - blocked storage falls back to session memory and reports not persisted
   ---
-  duration_ms: 0.6902
+  duration_ms: 0.515
   type: 'test'
   ...
 # Subtest: after failed write, stale storage cannot overwrite session value
-ok 22 - after failed write, stale storage cannot overwrite session value
+ok 23 - after failed write, stale storage cannot overwrite session value
   ---
-  duration_ms: 0.4428
+  duration_ms: 0.503
   type: 'test'
   ...
 # Subtest: selection removes duplicate IDs and rejects unknown occasion
-ok 23 - selection removes duplicate IDs and rejects unknown occasion
+ok 24 - selection removes duplicate IDs and rejects unknown occasion
   ---
-  duration_ms: 0.474
+  duration_ms: 1.5251
   type: 'test'
   ...
-1..23
-# tests 23
+# Subtest: failed local writes survive a document navigation through session fallback
+ok 25 - failed local writes survive a document navigation through session fallback
+  ---
+  duration_ms: 0.7934
+  type: 'test'
+  ...
+# Subtest: session fallback overrides stale local data in the next document
+ok 26 - session fallback overrides stale local data in the next document
+  ---
+  duration_ms: 0.8962
+  type: 'test'
+  ...
+# Subtest: fully blocked storage reports page-only mode for in-document favorites
+ok 27 - fully blocked storage reports page-only mode for in-document favorites
+  ---
+  duration_ms: 1.0552
+  type: 'test'
+  ...
+# Subtest: same-document fragment link never starts a full-page transition
+ok 28 - same-document fragment link never starts a full-page transition
+  ---
+  duration_ms: 2.6156
+  type: 'test'
+  ...
+# Subtest: all catalog pages bind their actual search input to the shared controller
+ok 29 - all catalog pages bind their actual search input to the shared controller
+  ---
+  duration_ms: 1.9111
+  type: 'test'
+  ...
+# Subtest: favorites page never bypasses guarded storage with inline handlers
+ok 30 - favorites page never bypasses guarded storage with inline handlers
+  ---
+  duration_ms: 0.912
+  type: 'test'
+  ...
+# Subtest: reference color filter stays next to reference gallery, after wardrobe suggestions
+ok 31 - reference color filter stays next to reference gallery, after wardrobe suggestions
+  ---
+  duration_ms: 0.5858
+  type: 'test'
+  ...
+1..31
+# tests 31
 # suites 0
-# pass 23
+# pass 31
 # fail 0
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 182.1261
+# duration_ms 221.5634

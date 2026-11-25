@@ -81,7 +81,7 @@ window.showToast = showToast;
         let box=document.getElementById('modalGuidance');
         if(!box){box=document.createElement('div');box.id='modalGuidance';box.className='modal__guidance';document.getElementById('modalItems').after(box);}
         box.replaceChildren();
-        for(const line of [...(outfit.fitNotes||[]),...(outfit.instructions||[])]){const p=document.createElement('p');p.textContent=line;box.append(p);}
+        for(const line of [...(outfit.fitNotes||[]),...(outfit.alternativeNotes||[]),...(outfit.instructions||[])]){const p=document.createElement('p');p.textContent=line;box.append(p);}
         if(outfit.imageSource){const p=document.createElement('p');p.textContent='Hình minh họa phối đồ do StyleMix tạo.';box.append(p);}
     }
 
@@ -229,6 +229,7 @@ window.likeOutfit = function (btn, event, outfit) {
 window.openSavedOutfits = function () {
     const list = getLikedOutfits();
     if (list.length === 0) { showToast('Tủ đồ trống! Hãy tim outfit yêu thích ♥'); return; }
+    if (window.OutfitStorage?.store.mode(LIKED_KEY) === 'memory') { showPageFavorites(); return; }
     const pt = document.getElementById('pageTransition');
     if (pt) { pt.style.transform = 'scaleY(1)'; pt.style.transformOrigin = 'bottom'; setTimeout(() => { window.location.href = './yeu-thich.html'; }, 380); }
     else window.location.href = './yeu-thich.html';
@@ -241,7 +242,13 @@ window.openSavedOutfits = function () {
     document.querySelectorAll('a[href]:not([target="_blank"])').forEach(a => {
         const href = a.getAttribute('href');
         if (!href || href.startsWith('#') || href.startsWith('mailto') || href.startsWith('tel')) return;
+        const destination = new URL(href, location.href);
+        const current = new URL(location.href);
+        if (destination.origin === current.origin && destination.pathname === current.pathname && destination.search === current.search && destination.hash) return;
         a.addEventListener('click', e => {
+            if (destination.pathname.endsWith('/yeu-thich.html') && window.OutfitStorage?.store.mode(LIKED_KEY) === 'memory' && getLikedOutfits().length) {
+                e.preventDefault(); showPageFavorites(); return;
+            }
             e.preventDefault();
             pt.style.transform = 'scaleY(1)';
             pt.style.transformOrigin = 'bottom';
@@ -250,6 +257,28 @@ window.openSavedOutfits = function () {
     });
     window.addEventListener('pageshow', () => { pt.style.transformOrigin = 'top'; pt.style.transform = 'scaleY(0)'; });
 })();
+
+/* When all browser storage is blocked, keep favorites usable on this page. */
+function showPageFavorites() {
+    let dialog=document.getElementById('pageFavorites');
+    if(!dialog){dialog=document.createElement('dialog');dialog.id='pageFavorites';dialog.className='session-favorites';dialog.setAttribute('aria-label','Bộ đã lưu trên trang hiện tại');document.body.append(dialog);}
+    dialog.replaceChildren();
+    const title=document.createElement('h2');title.textContent='Bộ đã lưu trên trang này';dialog.append(title);
+    const note=document.createElement('p');note.textContent='Trình duyệt chặn mọi lưu trữ. Danh sách này sẽ mất khi tải lại hoặc rời trang.';dialog.append(note);
+    const close=document.createElement('button');close.className='btn btn--ghost';close.textContent='Đóng';close.addEventListener('click',()=>dialog.close());dialog.append(close);
+    const list=getLikedOutfits();
+    if(!list.length){const p=document.createElement('p');p.textContent='Chưa có bộ đã lưu.';dialog.append(p);}
+    for(const outfit of list){
+        const article=document.createElement('article');article.className='template-card';
+        const image=document.createElement('img');image.src=outfit.img;image.alt=outfit.name;
+        const body=document.createElement('div');body.className='template-card__body';
+        const heading=document.createElement('h3');heading.textContent=outfit.name;body.append(heading);
+        for(const line of [...outfit.items,...(outfit.alternativeNotes||[]),...(outfit.instructions||[])]){const p=document.createElement('p');p.textContent=line;body.append(p);}
+        const remove=document.createElement('button');remove.className='btn btn--ghost';remove.textContent='Bỏ lưu '+outfit.name;remove.addEventListener('click',()=>{saveOutfitLocal(outfit);showPageFavorites();});body.append(remove);article.append(image,body);dialog.append(article);
+    }
+    if(!dialog.open)dialog.showModal();
+    close.focus();
+}
 
 /* ── Render outfit card ─────────────────────── */
 function escapeHtml(value) { return String(value || '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char])); }

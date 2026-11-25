@@ -24,6 +24,11 @@
         }
         return errors;
     }
-    root.OutfitData={validateTemplates,occasions};
+    function describeAlternatives(template,catalog){
+        const items=new Map(catalog.map(item=>[item.id,item.name]));
+        return template.requiredSlots.filter(slot=>slot.substituteItemIds?.length).map(slot=>
+            'Có thể thay '+slot.acceptedItemIds.map(id=>items.get(id)).join(' hoặc ')+' bằng '+slot.substituteItemIds.map(id=>items.get(id)).join(' hoặc ')+' (chưa xác nhận bạn có món thay thế).');
+    }
+    root.OutfitData={validateTemplates,describeAlternatives,occasions};
     if(typeof module!=='undefined')module.exports=root.OutfitData;
 })(typeof window!=='undefined'?window:globalThis);

@@ -1,0 +1,469 @@
+TAP version 13
+# Subtest: valid template and catalog accepted
+ok 1 - valid template and catalog accepted
+  ---
+  duration_ms: 3.5663
+  type: 'test'
+  ...
+# Subtest: duplicate IDs, unknown items and absent sources rejected
+ok 2 - duplicate IDs, unknown items and absent sources rejected
+  ---
+  duration_ms: 0.6784
+  type: 'test'
+  ...
+# Subtest: malformed catalogs and templates rejected without throwing
+ok 3 - malformed catalogs and templates rejected without throwing
+  ---
+  duration_ms: 0.6136
+  type: 'test'
+  ...
+# Subtest: all 24 published templates have local illustrations, valid references and four occasions
+ok 4 - all 24 published templates have local illustrations, valid references and four occasions
+  ---
+  duration_ms: 16.0955
+  type: 'test'
+  ...
+# Subtest: detail alternatives are available without a selected wardrobe
+not ok 5 - detail alternatives are available without a selected wardrobe
+  ---
+  duration_ms: 1.6789
+  type: 'test'
+  location: 'C:\\Users\\LENOVO\\.codex\\.chatgpt-projects\\g-p-69ef37583ddc8191b82e124bf0f55e7f\\outfit-styling-upgrade\\tests\\outfit-data.test.cjs:9:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'undefined'
+    - 'function'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'function'
+  actual: 'undefined'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\outfit-data.test.cjs:9:172)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: selection survives a new store instance
+ok 6 - selection survives a new store instance
+  ---
+  duration_ms: 7.5444
+  type: 'test'
+  ...
+# Subtest: corrupt, wrong-shaped and future-version data recover safely
+ok 7 - corrupt, wrong-shaped and future-version data recover safely
+  ---
+  duration_ms: 1.0419
+  type: 'test'
+  ...
+# Subtest: blocked storage falls back to session memory and reports not persisted
+ok 8 - blocked storage falls back to session memory and reports not persisted
+  ---
+  duration_ms: 0.8076
+  type: 'test'
+  ...
+# Subtest: after failed write, stale storage cannot overwrite session value
+ok 9 - after failed write, stale storage cannot overwrite session value
+  ---
+  duration_ms: 1.0745
+  type: 'test'
+  ...
+# Subtest: selection removes duplicate IDs and rejects unknown occasion
+ok 10 - selection removes duplicate IDs and rejects unknown occasion
+  ---
+  duration_ms: 1.8251
+  type: 'test'
+  ...
+# Subtest: failed local writes survive a document navigation through session fallback
+not ok 11 - failed local writes survive a document navigation through session fallback
+  ---
+  duration_ms: 1.3965
+  type: 'test'
+  location: 'C:\\Users\\LENOVO\\.codex\\.chatgpt-projects\\g-p-69ef37583ddc8191b82e124bf0f55e7f\\outfit-styling-upgrade\\tests\\outfit-storage.test.cjs:9:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+    + []
+    - [
+    -   'one'
+    - ]
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0: 'one'
+  actual:
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\outfit-storage.test.cjs:9:263)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: session fallback overrides stale local data in the next document
+not ok 12 - session fallback overrides stale local data in the next document
+  ---
+  duration_ms: 1.4622
+  type: 'test'
+  location: 'C:\\Users\\LENOVO\\.codex\\.chatgpt-projects\\g-p-69ef37583ddc8191b82e124bf0f55e7f\\outfit-styling-upgrade\\tests\\outfit-storage.test.cjs:10:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      [
+    +   'old'
+    -   'new'
+      ]
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0: 'new'
+  actual:
+    0: 'old'
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\outfit-storage.test.cjs:10:235)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: fully blocked storage reports page-only mode for in-document favorites
+not ok 13 - fully blocked storage reports page-only mode for in-document favorites
+  ---
+  duration_ms: 0.9458
+  type: 'test'
+  location: 'C:\\Users\\LENOVO\\.codex\\.chatgpt-projects\\g-p-69ef37583ddc8191b82e124bf0f55e7f\\outfit-styling-upgrade\\tests\\outfit-storage.test.cjs:11:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'undefined'
+    - 'function'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'function'
+  actual: 'undefined'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\outfit-storage.test.cjs:11:252)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: same-document fragment link never starts a full-page transition
+not ok 14 - same-document fragment link never starts a full-page transition
+  ---
+  duration_ms: 2.4464
+  type: 'test'
+  location: 'C:\\Users\\LENOVO\\.codex\\.chatgpt-projects\\g-p-69ef37583ddc8191b82e124bf0f55e7f\\outfit-styling-upgrade\\tests\\review-regressions.test.cjs:3:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    true !== false
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: false
+  actual: true
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\review-regressions.test.cjs:8:84)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.start (node:internal/test_runner/test:944:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:296:17)
+  ...
+# Subtest: all catalog pages bind their actual search input to the shared controller
+not ok 15 - all catalog pages bind their actual search input to the shared controller
+  ---
+  duration_ms: 1.0519
+  type: 'test'
+  location: 'C:\\Users\\LENOVO\\.codex\\.chatgpt-projects\\g-p-69ef37583ddc8191b82e124bf0f55e7f\\outfit-styling-upgrade\\tests\\review-regressions.test.cjs:10:1'
+  failureType: 'testCodeFailure'
+  error: 'quan search binding'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual: |-
+    <!DOCTYPE html>
+    <html lang="vi">
+    
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Quần — STYLEMIX</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap"
+            rel="stylesheet" />
+        <link rel="stylesheet" href="./assets/css/global.css" />
+        <link rel="stylesheet" href="./assets/css/pages.css" />
+      <link rel="stylesheet" href="./assets/css/wardrobe.css"/>
+      <meta name="description" content="Tìm bộ phối mẫu cơ bản từ những món bạn có. Gợi ý rõ đồ đã có, món thay thế và phần còn thiếu cho đi học, công sở hoặc đi chơi."/>
+      <meta property="og:title" content="Quần — STYLEMIX"/>
+      <meta property="og:description" content="Tìm bộ phối mẫu cơ bản từ những món bạn có. Gợi ý rõ đồ đã có, món thay thế và phần còn thiếu cho đi học, công sở hoặc đi chơi."/>
+      <meta property="og:type" content="website"/>
+      <meta property="og:image" content="https://ducminhho106.github.io/Outfit-Styling-Website/assets/illustrations/social-preview.png"/>
+    </head>
+    
+    <body data-page="quan">
+    
+        <div class="cursor" id="cursor"></div>
+        <div class="cursor-follower" id="cursorFollower"></div>
+        <div class="page-transition" id="pageTransition"></div>
+    
+        <div class="toast" id="toast" role="status" aria-live="polite">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polyline points="20 6 9 13 4 11" />
+                <polyline points="4 11 9 20 20 6" /></svg>
+            <span id="toastMsg">Thông báo</span>
+        </div>
+    
+        <div class="modal-overlay" id="modal">
+            <div class="modal">
+                <div class="modal__img"><img src="" alt="" id="modalImg" /></div>
+                <div class="modal__body">
+                    <button class="modal__close" id="modalClose" aria-label="Đóng chi tiết">
+                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <line x1="18" y1="6" x2="6" y2="18" />
+                            <line x1="6" y1="6" x2="18" y2="18" /></svg>
+                    </button>
+                    <span class="tag tag--orange" id="modalTag"></span>
+                    <h2 class="modal__title" id="modalTitle"></h2>
+                    <p class="modal__desc" id="modalDesc"></p>
+                    <p class="modal__items-label">Chi tiết sản phẩm</p>
+                    <ul class="modal__items" id="modalItems"></ul>
+                    <button id="modalSaveBtn" class="btn btn--primary btn--full" onclick="saveOutfitLocal(window.currentOutfit)"
+                        style="margin-top:auto">
+                        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" /></svg>
+                        Lưu vào tủ đồ
+                    </button>
+                </div>
+            </div>
+        </div>
+    
+        <nav class="nav" id="navbar">
+            <a class="nav__logo" href="./index.html">
+                <span class="nav__logo-style">STYLE</span><span class="nav__logo-mix">MIX</span>
+            </a>
+            <div class="nav__links">
+          <a href="./index.html#wardrobe">Phối đồ</a>
+                <a href="./ao.html">Áo</a>
+                <a href="./quan.html" class="active">Quần</a>
+                <a href="./phu-kien.html">Phụ kiện</a>
+    
+                <a href="./yeu-thich.html">Yêu Thích</a>
+            </div>
+            <div class="nav__right">
+                <div class="search-bar">
+                    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="8" />
+                        <line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>
+                    <input type="text" placeholder="Tìm outfit, item, màu sắc..." />
+                </div>
+                <button type="button" class="nav__like-icon" aria-label="Mở bộ yêu thích" onclick="openSavedOutfits()">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path
+                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                        </svg></button>
+            </div>
+        </nav>
+    
+        <div class="page-hero page-hero--gradient-dark">
+            <div class="page-hero__content">
+                <span class="page-hero__tag reveal">
+                    <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" />
+                        <line x1="7" y1="7" x2="7.01" y2="7" /></svg>
+                    Danh mục
+                </span>
+                <h1 class="page-hero__title reveal" style="transition-delay:.1s">Quần</h1>
+                <p class="page-hero__sub reveal" style="transition-delay:.2s">Tìm kiếm quần phù hợp với mọi phong cách</p>
+            </div>
+        </div>
+    
+        <div class="toolbar">
+            <div class="toolbar__inner">
+                <p class="toolbar__count">Hiển thị <strong id="productCount">0</strong> sản phẩm</p>
+                <button class="filter-btn" onclick="showToast('Bộ lọc đang được phát triển!')">
+                    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <line x1="4" y1="6" x2="20" y2="6" />
+                        <line x1="8" y1="12" x2="16" y2="12" />
+                        <line x1="12" y1="18" x2="12" y2="18" /></svg>
+                    Bộ lọc
+                </button>
+            </div>
+        </div>
+    
+    
+        <!-- Color Filter Bar -->
+        <div class="color-filter-bar">
+            <div class="color-filter-bar__inner">
+                <span class="color-filter-bar__label">Màu sắc:</span>
+                <div id="colorFilterBar"></div>
+            </div>
+        </div>
+    
+        <section class="products-section">
+            <div class="products-grid" id="quanGrid"></div>
+        </section>
+    
+        <footer class="footer">
+            <div class="footer__inner">
+                <div class="footer__grid reveal">
+                    <div>
+                        <div class="footer__logo"><span class="accent">STYLE</span>MIX</div>
+                        <p class="footer__tagline">Nền tảng phối đồ hiện đại dành cho người trẻ yêu thích thời trang</p>
+                    </div>
+                    <div class="footer__col">
+                        <h4>Danh mục</h4><a href="./ao.html">Áo</a><a href="./quan.html">Quần</a><a href="./phu-kien.html">Phụ
+                            kiện</a><a href="./index.html#wardrobe">Giày dép</a>
+                    </div>
+                    <div class="footer__col">
+                        <h4>Styles</h4><a href="./index.html#style-streetwear">Streetwear</a><a href="./index.html#style-minimal">Minimal</a><a href="./index.html#style-vintage">Vintage</a><a href="./index.html#style-sporty">Sporty</a>
+                    </div>
+                    <div class="footer__col">
+                        <h4>Hỗ trợ</h4><a href="./thong-tin.html#about">Về chúng tôi</a><a href="./thong-tin.html#contact">Liên hệ</a><a href="./thong-tin.html#usage">Điều khoản</a><a href="./thong-tin.html#privacy">Bảo mật</a>
+                    </div>
+                </div>
+                <div class="footer__bottom">© 2026 StyleMix. All rights reserved.</div>
+            </div>
+        </footer>
+    
+        <script src="./assets/js/catalog-filter.js"></script>
+      <script src="./assets/js/outfit-storage.js"></script>
+      <script src="./assets/js/global.js"></script>
+        <script src="./assets/js/pages.js"></script>
+    </body>
+    
+    </html>
+    
+  operator: 'match'
+  stack: |-
+    TestContext.<anonymous> (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\review-regressions.test.cjs:13:16)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+# Subtest: favorites page never bypasses guarded storage with inline handlers
+not ok 16 - favorites page never bypasses guarded storage with inline handlers
+  ---
+  duration_ms: 1.8204
+  type: 'test'
+  location: 'C:\\Users\\LENOVO\\.codex\\.chatgpt-projects\\g-p-69ef37583ddc8191b82e124bf0f55e7f\\outfit-styling-upgrade\\tests\\review-regressions.test.cjs:16:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    The input was expected to not match the regular expression /localStorage|addEventListener\(['"]input/. Input:
+    
+    '\n' +
+      '        // Search within liked\n' +
+      "        document.getElementById('searchInput').addEventListener('input', function() {\n" +
+      '            const kw = this.value.toLowerCase().trim();\n' +
+      "            const list = JSON.parse(localStorage.getItem('stylemix_liked_outfits') || '[]');\n" +
+      '            const filtered = kw ? list.filter(o =>\n' +
+      '                o.name.toLowerCase().includes(kw) ||\n' +
+      '                o.tag.toLowerCase().includes(kw) ||\n' +
+      "                (o.color || '').toLowerCase().includes(kw)\n" +
+      '            ) : list;\n' +
+      "            const grid = document.getElementById('likedGrid');\n" +
+      "            grid.innerHTML = '';\n" +
+      '            filtered.forEach((o, i) => { grid.appendChild(window.createOutfitCard(o, (i%4)*0.06)); });\n' +
+      '            window.initScrollReveal && window.initScrollReveal();\n' +
+      "            document.getElementById('productCount').textContent = filtered.length;\n" +
+      '        });\n' +
+      '    '
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual: |-
+    
+            // Search within liked
+            document.getElementById('searchInput').addEventListener('input', function() {
+                const kw = this.value.toLowerCase().trim();
+                const list = JSON.parse(localStorage.getItem('stylemix_liked_outfits') || '[]');
+                const filtered = kw ? list.filter(o =>
+                    o.name.toLowerCase().includes(kw) ||
+                    o.tag.toLowerCase().includes(kw) ||
+                    (o.color || '').toLowerCase().includes(kw)
+                ) : list;
+                const grid = document.getElementById('likedGrid');
+                grid.innerHTML = '';
+                filtered.forEach((o, i) => { grid.appendChild(window.createOutfitCard(o, (i%4)*0.06)); });
+                window.initScrollReveal && window.initScrollReveal();
+                document.getElementById('productCount').textContent = filtered.length;
+            });
+        
+  operator: 'doesNotMatch'
+  stack: |-
+    TestContext.<anonymous> (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\review-regressions.test.cjs:18:12)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: reference color filter stays next to reference gallery, after wardrobe suggestions
+not ok 17 - reference color filter stays next to reference gallery, after wardrobe suggestions
+  ---
+  duration_ms: 5.3414
+  type: 'test'
+  location: 'C:\\Users\\LENOVO\\.codex\\.chatgpt-projects\\g-p-69ef37583ddc8191b82e124bf0f55e7f\\outfit-styling-upgrade\\tests\\review-regressions.test.cjs:20:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    The expression evaluated to a falsy value:
+    
+      assert.ok(html.indexOf('class="color-filter"')>html.indexOf('id="outfitResults"'))
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    TestContext.<anonymous> (C:\Users\LENOVO\.codex\.chatgpt-projects\g-p-69ef37583ddc8191b82e124bf0f55e7f\outfit-styling-upgrade\tests\review-regressions.test.cjs:21:76)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+1..17
+# tests 17
+# suites 0
+# pass 9
+# fail 8
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 145.9055

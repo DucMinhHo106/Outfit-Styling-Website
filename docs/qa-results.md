@@ -18,3 +18,7 @@ Giữ giao diện tối/cam, logo, font, hero, danh mục và kiểu thẻ hiệ
 Ảnh thư viện cơ bản là 45 SVG gốc (21 món, 24 bộ) với nguồn được ghi trong dữ liệu; ảnh chia sẻ PNG tự tạo. Các ảnh tham khảo/hero cũ vẫn tải từ bên thứ ba, chưa có bằng chứng quyền sử dụng trong repo; cần chủ dự án xác nhận nguồn phù hợp trước public release. Chưa kiểm tra trên thiết bị iOS/Android thật hoặc mọi trình duyệt.
 
 Bản nâng cấp đang chạy local phục vụ duyệt. Bản công khai GitHub Pages vẫn là bản cũ cho tới khi có bước phát hành rõ ràng.
+
+## Sau review độc lập
+
+Đã sửa 5 điểm Important, bổ sung hồi quy RED→GREEN; bộ test đạt 31/31. Chi tiết tại final-review.md. Đã thử sandbox chặn cả localStorage và sessionStorage: lưu và xem bộ trong dialog cùng trang hoạt động, có thông báo dữ liệu chỉ giữ trên trang hiện tại. Đã thử server giả lập lỗi 503 lần đầu: thông báo tải lỗi và nút thử lại khôi phục thư viện. Modal Tab/Shift+Tab/Escape và hai ô tìm kiếm danh mục còn lại đã kiểm tra trên browser.

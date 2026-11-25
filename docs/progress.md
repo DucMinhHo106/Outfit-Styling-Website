@@ -15,3 +15,18 @@ Task 2: complete — 3/3 regression tests PASS after RED; browser black + trang 
 Task 3: complete — 24 templates, 21 catalog items, original SVG sources; 4 data tests RED-to-GREEN. Image files and normalized references checked.
 Task 4 matcher: complete — 8 matching tests RED-to-GREEN; exact, substitutions, missing, one-piece and unrelated/unknown selections checked.
 Tasks 5-6: complete — 23/23 tests PASS. Browser one shirt -> missing items; full work outfit -> ready; save -> reload -> remove immediately -> count 0. Mobile 360 and desktop 1280 screenshots reviewed; no horizontal overflow at 360. Modal instructions and focus restore checked.
+
+Task 7: complete — independent review found 5 Important issues; all addressed in one regression fix pass, RED→GREEN. Final suite 31/31; 7 pages/156 local refs/0 errors. Detailed findings/disposition in docs/final-review.md.
+
+Final: fixed same-document transition — same-document fragment regression RED→GREEN.
+Final: fixed dead catalog searches and duplicate unsafe favorites handler — HTML wiring/inline storage regressions RED→GREEN; browser search verified.
+Final: fixed storage fallback lost on document change — cross-document/session/stale-local/page-only regressions RED→GREEN; fully blocked browser dialog verified.
+Final: fixed missing editorial alternatives in detail — describeAlternatives regression RED→GREEN; browser empty-wardrobe detail verified.
+Final: fixed misleading filter placement — gallery adjacency regression RED→GREEN.
+
+Final: minor (deferred): support page native cursor and empty-favorites feedback.
+Final: minor (deferred): filter chip DOM construction for arbitrary imported colors (no current public arbitrary input).
+
+Final: Ruling: third-party image licensing was outside reviewer scope — retain existing external photos only for review and require owner confirmation before public release — cost if wrong: public release remains pending or old photos need replacement.
+Final: Ruling: physical-device validation was outside reviewer scope — browser checks at 360/1280 satisfy current responsive evidence, do not claim actual device coverage — cost if wrong: device-specific bugs may remain.
+Final: Ruling: production behavior was outside reviewer scope — provide isolated local preview and runtime archive, do not claim deployment — cost if wrong: public hosting must still be verified at release.
