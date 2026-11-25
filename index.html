@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>STYLEMIX — Mix &amp; Match Your Style</title>
+  <title>StyleMIX — Phối từ đồ bạn có</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="./assets/css/global.css"/>
-  <link rel="stylesheet" href="./assets/css/home.css"/>
-  <link rel="stylesheet" href="./assets/css/wardrobe.css"/>
+  <link rel="stylesheet" href="./assets/css/global.css?v=20261126"/>
+  <link rel="stylesheet" href="./assets/css/home.css?v=20261126"/>
+  <link rel="stylesheet" href="./assets/css/wardrobe.css?v=20261126"/>
   <meta name="description" content="Tìm bộ phối mẫu cơ bản từ những món bạn có. Gợi ý rõ đồ đã có, món thay thế và phần còn thiếu cho đi học, công sở hoặc đi chơi."/>
-  <meta property="og:title" content="STYLEMIX — Mix &amp; Match Your Style"/>
+  <meta property="og:title" content="StyleMIX — Mix &amp; Match Your Style"/>
   <meta property="og:description" content="Tìm bộ phối mẫu cơ bản từ những món bạn có. Gợi ý rõ đồ đã có, món thay thế và phần còn thiếu cho đi học, công sở hoặc đi chơi."/>
   <meta property="og:type" content="website"/>
   <meta property="og:image" content="https://ducminhho106.github.io/Outfit-Styling-Website/assets/illustrations/social-preview.png"/>
@@ -49,13 +49,13 @@
 
   <nav class="nav" id="navbar">
     <a class="nav__logo" href="index.html">
-      <span class="nav__logo-style">STYLE</span><span class="nav__logo-mix">MIX</span>
+      <span class="nav__logo-style">Style</span><span class="nav__logo-mix">MIX</span>
     </a>
     <div class="nav__links">
       <a href="./index.html#wardrobe">Phối đồ</a>
       <a href="./ao.html">Áo</a>
       <a href="./quan.html">Quần</a>
-      <a href="./phu-kien.html">Phụ kiện</a>
+      <a href="./ao-khoac.html">Áo khoác</a>
 
             <a href="./yeu-thich.html">Yêu Thích</a>
     </div>
@@ -83,7 +83,7 @@
       <p class="hero__sub reveal" style="transition-delay:.22s">Tìm bộ phối cơ bản từ những món bạn đang có</p>
       <div class="hero__ctas reveal" style="transition-delay:.32s">
         <button class="btn btn--primary" onclick="document.getElementById('wardrobe').scrollIntoView({behavior:'smooth'})"><span>Khám phá ngay</span><span>→</span></button>
-        <button class="btn btn--ghost" onclick="document.getElementById('trending').scrollIntoView({behavior:'smooth'})">Xem trending</button>
+        <button class="btn btn--ghost" onclick="document.getElementById('trending').scrollIntoView({behavior:'smooth'})">Xem phong cách</button>
       </div>
     </div>
     <div class="hero__scroll"><div class="hero__scroll-line"></div>Scroll</div>
@@ -93,7 +93,7 @@
     <div class="section-inner">
       <div class="wardrobe__header"><span class="tag tag--orange">Phối từ đồ bạn có</span>
         <h2 class="section-title" id="wardrobeTitle">Hôm nay <span class="accent">mặc gì?</span></h2>
-        <p>Chọn nơi bạn đến và một vài món trong tủ. StyleMix tìm bộ mẫu cơ bản và chỉ rõ món đã có, món thay thế hoặc còn thiếu.</p>
+        <p>Chọn nơi bạn đến và một vài món trong tủ. StyleMIX tìm bộ mẫu cơ bản và chỉ rõ món đã có, món thay thế hoặc còn thiếu.</p>
       </div>
       <div class="wardrobe__controls">
         <label for="outfitOccasion">Bạn chuẩn bị đi đâu?<select id="outfitOccasion"><option value="school">Đi học</option><option value="work">Đi làm</option><option value="presentation">Thuyết trình / phỏng vấn</option><option value="social">Đi chơi</option></select></label>
@@ -112,14 +112,7 @@
   <section class="color-filter">
     <div class="color-filter__inner reveal">
       <span class="color-filter__label">Màu outfit tham khảo:</span>
-      <div class="color-filter__pills">
-        <button class="color-pill active" onclick="filterColor(this,'all')"><div class="color-dot" style="background:transparent;border:1.5px solid #666"></div>Tất cả</button>
-        <button class="color-pill" onclick="filterColor(this,'white')"><div class="color-dot" style="background:#fff;border:1px solid #555"></div>Trắng</button>
-        <button class="color-pill" onclick="filterColor(this,'red')"><div class="color-dot" style="background:#EF4444"></div>Đỏ</button>
-        <button class="color-pill" onclick="filterColor(this,'orange')"><div class="color-dot" style="background:#F97316"></div>Cam</button>
-        <button class="color-pill" onclick="filterColor(this,'blue')"><div class="color-dot" style="background:#3B82F6"></div>Xanh</button>
-        <button class="color-pill" onclick="filterColor(this,'brown')"><div class="color-dot" style="background:#92400E"></div>Nâu</button>
-      </div>
+      <div class="color-filter__pills" id="homeColorPills"></div>
     </div>
   </section>
 
@@ -138,26 +131,26 @@
   <section class="trending" id="trending">
     <div class="section-inner">
       <div class="trending__header reveal">
-        <h2 class="section-title">Trending <span class="accent">Styles</span></h2>
-        <p class="trending__sub">Khám phá các phong cách thời trang đang làm mưa làm gió</p>
+        <h2 class="section-title">Khám phá <span class="accent">Styles</span></h2>
+        <p class="trending__sub">Các cách phối cơ bản để áp dụng vào tủ đồ hằng ngày</p>
       </div>
       <div class="trending__slider reveal">
         <div class="trending__track" id="trendingTrack">
           <div class="trending__slide" id="style-streetwear">
-            <div class="slide__content"><span class="tag tag--red">Trending</span><h3 class="slide__title">STREETWEAR<br/>BOLD</h3><p class="slide__desc">Phong cách đường phố năng động, tự do, thể hiện cá tính mạnh mẽ với những item oversized và màu sắc táo bạo.</p><button class="btn btn--sm" onclick="openStyleModal('streetwear')">Khám phá style này →</button></div>
-            <div class="slide__img"><img src="https://cdn.tcdulichtphcm.vn/upload/4-2024/images/2024-11-28/1732785817-gu-thoi-trang-cua-son-tung-11.jpg" alt="Streetwear" loading="lazy"/></div>
+            <div class="slide__content"><span class="tag tag--red">Phong cách</span><h3 class="slide__title">STREETWEAR<br/>BOLD</h3><p class="slide__desc">Phong cách đường phố năng động, tự do, thể hiện cá tính mạnh mẽ với những item oversized và màu sắc táo bạo.</p><button class="btn btn--sm" onclick="openStyleModal('streetwear')">Khám phá style này →</button></div>
+            <div class="slide__img"><img src="./assets/photos/black-jeans-hoodie.jpg" alt="Streetwear" loading="lazy"/></div>
           </div>
           <div class="trending__slide" id="style-minimal">
-            <div class="slide__content"><span class="tag tag--red">Trending</span><h3 class="slide__title">MINIMAL<br/>CHIC</h3><p class="slide__desc">Tối giản nhưng tinh tế — những tông màu trung tính kết hợp cắt may hoàn hảo tạo nên vẻ đẹp vượt thời gian.</p><button class="btn btn--sm" onclick="openStyleModal('minimal')">Khám phá style này →</button></div>
-            <div class="slide__img"><img src="https://www.stylebysavina.com/wp-content/uploads/2023/09/minimal-style.jpg" alt="Minimal" loading="lazy"/></div>
+            <div class="slide__content"><span class="tag tag--red">Phong cách</span><h3 class="slide__title">MINIMAL<br/>CHIC</h3><p class="slide__desc">Tối giản nhưng tinh tế — những tông màu trung tính kết hợp cắt may hoàn hảo tạo nên vẻ đẹp vượt thời gian.</p><button class="btn btn--sm" onclick="openStyleModal('minimal')">Khám phá style này →</button></div>
+            <div class="slide__img"><img src="./assets/photos/white-shirt-black-trousers.jpg" alt="Minimal" loading="lazy"/></div>
           </div>
           <div class="trending__slide" id="style-vintage">
-            <div class="slide__content"><span class="tag tag--red">Trending</span><h3 class="slide__title">VINTAGE<br/>REVIVAL</h3><p class="slide__desc">Phong cách vintage hoài cổ trở lại mạnh mẽ với các hoạ tiết retro và chất liệu denim cổ điển đầy cuốn hút.</p><button class="btn btn--sm" onclick="openStyleModal('vintage')">Khám phá style này →</button></div>
-            <div class="slide__img"><img src="https://media.routine.vn/prod/media/phong-cach-vintage-la-gi-2.webp" alt="Vintage" loading="lazy"/></div>
+            <div class="slide__content"><span class="tag tag--red">Phong cách</span><h3 class="slide__title">VINTAGE<br/>REVIVAL</h3><p class="slide__desc">Phong cách vintage hoài cổ trở lại mạnh mẽ với các hoạ tiết retro và chất liệu denim cổ điển đầy cuốn hút.</p><button class="btn btn--sm" onclick="openStyleModal('vintage')">Khám phá style này →</button></div>
+            <div class="slide__img"><img src="./assets/photos/beige-trousers-brown-jacket.jpg" alt="Vintage" loading="lazy"/></div>
           </div>
           <div class="trending__slide" id="style-sporty">
-            <div class="slide__content"><span class="tag tag--red">Trending</span><h3 class="slide__title">SPORTY<br/>LUXE</h3><p class="slide__desc">Kết hợp giữa phong cách thể thao hiện đại và luxury fashion — năng động nhưng vẫn sang trọng mọi lúc mọi nơi.</p><button class="btn btn--sm" onclick="openStyleModal('sporty')">Khám phá style này →</button></div>
-            <div class="slide__img"><img src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-m0bd0srefogf1f.webp" alt="Sporty" loading="lazy"/></div>
+            <div class="slide__content"><span class="tag tag--red">Phong cách</span><h3 class="slide__title">SPORTY<br/>LUXE</h3><p class="slide__desc">Kết hợp giữa phong cách thể thao hiện đại và luxury fashion — năng động nhưng vẫn sang trọng mọi lúc mọi nơi.</p><button class="btn btn--sm" onclick="openStyleModal('sporty')">Khám phá style này →</button></div>
+            <div class="slide__img"><img src="./assets/photos/white-hoodie-blue-jeans.jpg" alt="Sporty" loading="lazy"/></div>
           </div>
         </div>
       </div>
@@ -181,21 +174,22 @@
   <footer class="footer" style="margin-top:100px">
     <div class="footer__inner">
       <div class="footer__grid reveal">
-        <div><div class="footer__logo"><span class="accent">STYLE</span>MIX</div><p class="footer__tagline">Nền tảng phối đồ hiện đại dành cho người trẻ yêu thích thời trang</p></div>
-        <div class="footer__col"><h4>Danh mục</h4><a href="./ao.html">Áo</a><a href="./quan.html">Quần</a><a href="./phu-kien.html">Phụ kiện</a><a href="./index.html#wardrobe">Giày dép</a></div>
+        <div><div class="footer__logo"><span class="accent">Style</span>MIX</div><p class="footer__tagline">Thư viện outfit toàn thân, gợi ý từ quần áo bạn đang có</p></div>
+        <div class="footer__col"><h4>Danh mục</h4><a href="./ao.html">Áo</a><a href="./quan.html">Quần</a><a href="./ao-khoac.html">Áo khoác</a><a href="./index.html#wardrobe">Chọn đồ đang có</a></div>
         <div class="footer__col"><h4>Styles</h4><a href="./index.html#style-streetwear">Streetwear</a><a href="./index.html#style-minimal">Minimal</a><a href="./index.html#style-vintage">Vintage</a><a href="./index.html#style-sporty">Sporty</a></div>
         <div class="footer__col"><h4>Hỗ trợ</h4><a href="./thong-tin.html#about">Về chúng tôi</a><a href="./thong-tin.html#contact">Liên hệ</a><a href="./thong-tin.html#usage">Điều khoản</a><a href="./thong-tin.html#privacy">Bảo mật</a></div>
       </div>
-      <div class="footer__bottom">© 2026 StyleMix. All rights reserved.</div>
+      <div class="footer__bottom">© 2026 StyleMIX. All rights reserved.</div>
     </div>
   </footer>
 
-  <script src="./assets/js/catalog-filter.js"></script>
-  <script src="./assets/js/outfit-storage.js"></script>
-  <script src="./assets/js/global.js"></script>
-  <script src="./assets/js/home.js"></script>
-  <script src="./assets/js/outfit-data.js"></script>
-  <script src="./assets/js/outfit-matcher.js"></script>
-  <script src="./assets/js/outfit-picker.js"></script>
+  <script src="./assets/js/catalog-filter.js?v=20261126"></script>
+  <script src="./assets/js/outfit-storage.js?v=20261126"></script>
+  <script src="./assets/js/global.js?v=20261126"></script>
+  <script src="./assets/js/home.js?v=20261126"></script>
+  <script src="./assets/js/admin-core.js?v=20261126"></script>
+  <script src="./assets/js/outfit-data.js?v=20261126"></script>
+  <script src="./assets/js/outfit-matcher.js?v=20261126"></script>
+  <script src="./assets/js/outfit-picker.js?v=20261126"></script>
 </body>
 </html>

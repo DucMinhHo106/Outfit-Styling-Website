@@ -1,37 +1,92 @@
-[{
-        "id": "q1",
-        "img": "https://i.pinimg.com/736x/23/3e/9f/233e9f0924274d2c74cccd8ab816ced8.jpg",
-        "name": "Quần Denim",
-        "tag": "Minimal",
-        "color": "blue",
-        "desc": "Quần ống rộng màu xanh, điểm nhấn sắc nét cho tổng thể outfit.",
-        "items": ["Denim Outfits", "Ống rộng", "Cạp cao thun", "Màu xanh bền màu"]
-    },
-    {
-        "id": "q2",
-        "img": "https://www.acfc.com.vn/acfc_wp/wp-content/uploads/2025/06/quan-kaki-nam-instagram-819x1024.webp",
-        "name": "Quần kaki",
-        "tag": "Vintage",
-        "color": "brown",
-        "desc": "Quần kaki vintage, dáng cao eo cổ điển đầy cuốn hút.",
-        "items": ["Cotton 100%", "Cạp cao", "Ống vừa", "Acid wash"]
-    },
-    {
-        "id": "q3",
-        "img": "https://down-vn.img.susercontent.com/file/sg-11134201-824jd-mfhyquu279xmab.webp",
-        "name": "Quần trắng basic",
-        "tag": "Minimal",
-        "color": "white",
-        "desc": "Quần trắng thanh lịch, dễ phối và luôn on-trend.",
-        "items": ["Cotton", "Dáng straight", "Cạp vừa", "Trắng tinh khôi"]
-    },
-    {
-        "id": "q4",
-        "img": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lqcvevggsg5u41.webp",
-        "name": "Quần da nâu earth",
-        "tag": "Vintage",
-        "color": "brown",
-        "desc": "Quần da tông nâu đất, mang hơi thở vintage đầy cá tính.",
-        "items": ["Da PU cao cấp", "Ống đứng", "Cạp cao", "Nâu chocolate"]
-    }
+[
+  {
+    "id": "trousers-black",
+    "name": "Quần vải đen",
+    "category": "pants",
+    "type": "trousers",
+    "color": "black",
+    "hex": "#303034",
+    "image": "./assets/photos/black-trousers.jpg",
+    "img": "./assets/photos/black-trousers.jpg",
+    "sourceUrl": "https://www.pinterest.com/pin/661325526579466558/",
+    "tag": "Quần vải",
+    "desc": "Ảnh outfit thật có quần vải đen. Chọn món theo loại và màu bạn đang có; không cần đúng thương hiệu trong ảnh.",
+    "items": [
+      "Quần vải đen",
+      "Ảnh toàn thân để nhìn tổng thể phối đồ",
+      "Màu có thể khác nhẹ theo ánh sáng; chất liệu chưa xác minh"
+    ]
+  },
+  {
+    "id": "jeans-black",
+    "name": "Quần jeans đen",
+    "category": "pants",
+    "type": "jeans",
+    "color": "black",
+    "hex": "#343438",
+    "image": "./assets/photos/black-jeans-hoodie.jpg",
+    "img": "./assets/photos/black-jeans-hoodie.jpg",
+    "sourceUrl": "https://www.pinterest.com/pin/1131036893952756050/",
+    "tag": "Quần jeans",
+    "desc": "Ảnh outfit thật có quần jeans đen. Chọn món theo loại và màu bạn đang có; không cần đúng thương hiệu trong ảnh.",
+    "items": [
+      "Quần jeans đen",
+      "Ảnh toàn thân để nhìn tổng thể phối đồ",
+      "Màu có thể khác nhẹ theo ánh sáng; chất liệu chưa xác minh"
+    ]
+  },
+  {
+    "id": "jeans-blue",
+    "name": "Quần jeans xanh biển",
+    "category": "pants",
+    "type": "jeans",
+    "color": "blue",
+    "hex": "#6484a1",
+    "image": "./assets/photos/blue-jeans-green-tee.jpg",
+    "img": "./assets/photos/blue-jeans-green-tee.jpg",
+    "sourceUrl": "https://www.pinterest.com/pin/915497430526409091/",
+    "tag": "Quần jeans",
+    "desc": "Ảnh outfit thật có quần jeans xanh biển. Chọn món theo loại và màu bạn đang có; không cần đúng thương hiệu trong ảnh.",
+    "items": [
+      "Quần jeans xanh biển",
+      "Ảnh toàn thân để nhìn tổng thể phối đồ",
+      "Màu có thể khác nhẹ theo ánh sáng; chất liệu chưa xác minh"
+    ]
+  },
+  {
+    "id": "trousers-beige",
+    "name": "Quần vải be",
+    "category": "pants",
+    "type": "trousers",
+    "color": "beige",
+    "hex": "#c4ae8b",
+    "image": "./assets/photos/beige-trousers-brown-jacket.jpg",
+    "img": "./assets/photos/beige-trousers-brown-jacket.jpg",
+    "sourceUrl": "https://www.pinterest.com/pin/1130122100274089024/",
+    "tag": "Quần vải",
+    "desc": "Ảnh outfit thật có quần vải be. Chọn món theo loại và màu bạn đang có; không cần đúng thương hiệu trong ảnh.",
+    "items": [
+      "Quần vải be",
+      "Ảnh toàn thân để nhìn tổng thể phối đồ",
+      "Màu có thể khác nhẹ theo ánh sáng; chất liệu chưa xác minh"
+    ]
+  },
+  {
+    "id": "trousers-gray",
+    "name": "Quần vải xám",
+    "category": "pants",
+    "type": "trousers",
+    "color": "gray",
+    "hex": "#96969c",
+    "image": "./assets/photos/gray-trousers-black-tee.jpg",
+    "img": "./assets/photos/gray-trousers-black-tee.jpg",
+    "sourceUrl": "https://www.pinterest.com/pin/706642997874745107/",
+    "tag": "Quần vải",
+    "desc": "Ảnh outfit thật có quần vải xám. Chọn món theo loại và màu bạn đang có; không cần đúng thương hiệu trong ảnh.",
+    "items": [
+      "Quần vải xám",
+      "Ảnh toàn thân để nhìn tổng thể phối đồ",
+      "Màu có thể khác nhẹ theo ánh sáng; chất liệu chưa xác minh"
+    ]
+  }
 ]

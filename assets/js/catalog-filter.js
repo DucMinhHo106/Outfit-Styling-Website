@@ -1,7 +1,7 @@
 (function(root){
     'use strict';
     const labels={white:'trắng',black:'đen',gray:'xám',blue:'xanh dương',brown:'nâu',red:'đỏ',orange:'cam',green:'xanh lá',pink:'hồng'};
-    const normalize=value=>String(value||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/đ/g,'d').toLowerCase().trim();
+    const normalize=value=>String(value||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/đ/g,'d').trim();
     function filterItems(items,state={}){
         const query=normalize(state.query),color=state.color||'all';
         return items.filter(item=>{
@@ -10,6 +10,9 @@
             return (color==='all'||colors.includes(color))&&(!query||words.includes(query));
         });
     }
-    root.CatalogFilter={filterItems,normalize};
+    function filterGarments(items,state={}){
+        return items.filter(item=>(!state.category||item.category===state.category)&&(!state.color||state.color==='all'||item.color===state.color)&&(!state.type||state.type==='all'||item.type===state.type));
+    }
+    root.CatalogFilter={filterItems,filterGarments,normalize};
     if(typeof module!=='undefined')module.exports=root.CatalogFilter;
 })(typeof window!=='undefined'?window:globalThis);

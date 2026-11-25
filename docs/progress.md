@@ -32,3 +32,9 @@ Final: Ruling: physical-device validation was outside reviewer scope — browser
 Final: Ruling: production behavior was outside reviewer scope — provide isolated local preview and runtime archive, do not claim deployment — cost if wrong: public hosting must still be verified at release.
 
 Task 8: preview/package complete — scripts/package-preview.py creates a runtime-only ZIP with 71 site files plus README, CRC verified, hashes in output/stylemix/release-manifest.json. Public release pending integration choice and original image-source confirmation. Preview server 8017 retained deliberately for user review; disposable QA servers stopped at handoff.
+
+## Nâng cấp ảnh thật — kiểm tra trước phát hành
+Yêu cầu mới thay thế lựa chọn SVG của bản duyệt: 12 ảnh Pinterest toàn thân, 17 món, quần → áo → áo khoác, màu → loại. Không nhóm phụ kiện/giày. Giữ nền tối/cam, bố cục và hero, đổi tên StyleMIX; ảnh mới thay dữ liệu đang dùng.
+Admin CLIP cục bộ đã chạy trên browser: ảnh quần đen trả 5 nhãn ứng viên; sửa chọn quần tây đen và duyệt thành công 1 bản ghi. Không tự xuất bản; xuất JSON bàn giao cùng ảnh. Ảnh mới phải có nguồn, xác nhận toàn thân và nhãn đã duyệt.
+Review độc lập phát hiện 3 Important: sai nhãn áo xám/thiếu áo trong, màu home chỉ xét món đầu, modal cắt ảnh. Đã sửa; hồi quy FAIL→PASS, suite 47/47, static 9 HTML/169 refs/0 lỗi. Đã kiểm tra mobile360 không tràn ngang và desktop1280, quần jeans xanh riêng trả 5 bộ còn thiếu áo. Giữ server8017 phục vụ kiểm tra.
+Người dùng đã yêu cầu merge main, push repo cũ và deploy trực tiếp; lựa chọn chờ duyệt trước đây không còn áp dụng. Giới hạn quyền ảnh được ghi rõ nguồn, chưa xác minh giấy phép; không khẳng định ảnh thuộc sở hữu StyleMIX.

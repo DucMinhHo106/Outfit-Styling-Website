@@ -22,3 +22,6 @@ Independent reviewer: gpt-6.2-astra, base af034f1 through 5b328ea, read-only. In
 ## Reviewer boundaries
 
 Image licensing, physical mobile devices and production behavior were not judged by the reviewer. Original external photo sources are retained for local review; owner confirmation of image rights remains a release requirement. Browser responsive tests are not physical-device tests. The existing GitHub Pages production site was not changed.
+
+## Review bổ sung ảnh thật / admin
+Reviewer đọc toàn bộ diff so với54c5f33, kiểm ảnh và chạy suite. Ba Important đã xử lý: sơ mi khoác xám thay nhãn blazer và bổ sung áo trong trắng; màu outfit chứa mọi màu của món thiết yếu; modal chung dùng contain. Thêm 3 hồi quy, quan sát FAIL→PASS. Các minor đã sửa: xóa nguồn/tên khi đổi ảnh, README cập nhật, downloader giữ timestamp và gắn duyệt với hash đã đối chiếu. Browser CLIP chạy thành công; không xem đó là tự phân loại chính xác hoặc quyền ảnh đã xác minh.

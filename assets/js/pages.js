@@ -1,23 +1,29 @@
 'use strict';
 document.addEventListener('DOMContentLoaded',function(){
     const page=document.body.dataset.page;
-    const config={ao:['ao','aoGrid'],quan:['quan','quanGrid'],'phu-kien':['phu-kien','featuredGrid'],'yeu-thich':[null,'likedGrid']}[page];
+    const config={ao:['ao','aoGrid'],quan:['quan','quanGrid'],'ao-khoac':['ao-khoac','outerwearGrid'],'yeu-thich':[null,'likedGrid']}[page];
     if(!config)return;
     const grid=document.getElementById(config[1]);
     const search=document.getElementById('searchInput');
-    let data=[],color='all';
+    let data=[],color='all',type='all';
+    const typeSelect=document.createElement('select');typeSelect.setAttribute('aria-label','Loại trang phục');typeSelect.className='category-type';
+    const typeLabel=document.createElement('label');typeLabel.className='category-type-label';typeLabel.textContent='Loại ';typeLabel.append(typeSelect);
+    document.querySelector('.toolbar__inner')?.append(typeLabel);typeSelect.addEventListener('change',()=>{type=typeSelect.value;render();});
     function message(text,retry){
         grid.replaceChildren();const box=document.createElement('div');box.className='catalog-message';
         const p=document.createElement('p');p.textContent=text;box.append(p);
         const button=document.createElement('button');button.className='btn btn--ghost';button.textContent=retry?'Thử lại':'Xóa điều kiện';
-        button.addEventListener('click',retry||(()=>{color='all';if(search)search.value='';buildColors();render();}));box.append(button);grid.append(box);
+        button.addEventListener('click',retry||(()=>{color='all';type='all';typeSelect.value='all';if(search)search.value='';buildColors();render();}));box.append(button);grid.append(box);
     }
     function buildColors(){
         window.buildColorFilterBar([...new Set(data.flatMap(x=>[x.color||''].flat()).filter(Boolean))],config[1],data);
         document.querySelectorAll('#colorFilterBar .filter-chip').forEach(btn=>btn.classList.toggle('active',btn.dataset.color===color));
+        const previous=type;typeSelect.replaceChildren();
+        for(const value of ['all',...new Set(data.map(item=>item.type).filter(Boolean))]){const option=document.createElement('option');option.value=value;option.textContent=value==='all'?'Tất cả':data.find(item=>item.type===value)?.tag||value;typeSelect.append(option);}
+        typeSelect.value=[...typeSelect.options].some(option=>option.value===previous)?previous:'all';type=typeSelect.value;
     }
     function render(){
-        const filtered=window.CatalogFilter.filterItems(data,{query:search?.value,color});
+        const filtered=window.CatalogFilter.filterGarments(window.CatalogFilter.filterItems(data,{query:search?.value,color}),{type});
         const count=document.getElementById('productCount');if(count)count.textContent=filtered.length;
         const likedCount=document.getElementById('likedCount');if(likedCount)likedCount.textContent=data.length;
         const empty=document.getElementById('emptyState');if(empty)empty.style.display=data.length?'none':'flex';

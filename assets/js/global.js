@@ -7,7 +7,7 @@
 (function initCursor() {
     const dot = document.getElementById('cursor');
     const follower = document.getElementById('cursorFollower');
-    if (!dot || !follower || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (!dot || !follower || window.matchMedia('(prefers-reduced-motion: reduce)').matches) { if(document.body) document.body.style.cursor='auto'; return; }
     let mx = 0, my = 0, fx = 0, fy = 0;
     document.addEventListener('mousemove', e => {
         mx = e.clientX; my = e.clientY;
@@ -82,7 +82,9 @@ window.showToast = showToast;
         if(!box){box=document.createElement('div');box.id='modalGuidance';box.className='modal__guidance';document.getElementById('modalItems').after(box);}
         box.replaceChildren();
         for(const line of [...(outfit.fitNotes||[]),...(outfit.alternativeNotes||[]),...(outfit.instructions||[])]){const p=document.createElement('p');p.textContent=line;box.append(p);}
-        if(outfit.imageSource){const p=document.createElement('p');p.textContent='Hình minh họa phối đồ do StyleMix tạo.';box.append(p);}
+        if(outfit.sourceUrl && /^https:\/\/www\.pinterest\.com\/pin\/\d+\/$/.test(outfit.sourceUrl)){
+            const p=document.createElement('p'),link=document.createElement('a');link.href=outfit.sourceUrl;link.target='_blank';link.rel='noopener noreferrer';link.textContent='Xem ảnh và Pin nguồn trên Pinterest';p.append(link);box.append(p);
+        } else if(outfit.imageSource){const p=document.createElement('p');p.textContent='Ảnh minh họa từ dữ liệu StyleMIX.';box.append(p);}
     }
 
     window.openOutfitModal = function (o) {
@@ -106,7 +108,7 @@ window.showToast = showToast;
         document.getElementById('modalTag').textContent = data.tag;
         document.getElementById('modalTitle').textContent = data.title;
         document.getElementById('modalDesc').textContent = data.desc;
-        renderItems(data.items || []); renderGuidance({});
+        renderItems(data.items || []); renderGuidance(data);
         window.currentOutfit = null; document.getElementById('modalSaveBtn').hidden = true;
         open();
     };
@@ -330,6 +332,9 @@ const COLOR_MAP = {
     orange: { label: 'Cam',    bg: '#f97316' },
     red:    { label: 'Đỏ',     bg: '#ef4444' },
     gray:   { label: 'Xám',    bg: '#6b7280' },
+    beige:  { label: 'Be',     bg: '#c4ae8b' },
+    cream:  { label: 'Kem',    bg: '#dbcbb5' },
+    navy:   { label: 'Xanh navy', bg: '#31405d' },
     green:  { label: 'Xanh lá', bg: '#10b981' },
     pink:   { label: 'Hồng',   bg: '#ec4899' },
     yellow: { label: 'Vàng',   bg: '#eab308' },

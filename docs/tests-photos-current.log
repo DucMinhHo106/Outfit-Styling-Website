@@ -1,0 +1,292 @@
+TAP version 13
+# Subtest: library photo resolves a safe same-origin photo and preserves source
+ok 1 - library photo resolves a safe same-origin photo and preserves source
+  ---
+  duration_ms: 2.686
+  type: 'test'
+  ...
+# Subtest: library photo rejects arbitrary URLs, traversal and unsafe sources
+ok 2 - library photo rejects arbitrary URLs, traversal and unsafe sources
+  ---
+  duration_ms: 0.8691
+  type: 'test'
+  ...
+# Subtest: candidate generation follows pants, tops, outerwear and excludes unrelated groups
+ok 3 - candidate generation follows pants, tops, outerwear and excludes unrelated groups
+  ---
+  duration_ms: 1.915
+  type: 'test'
+  ...
+# Subtest: maps only finite known model results in selected group and ranks top candidates
+ok 4 - maps only finite known model results in selected group and ranks top candidates
+  ---
+  duration_ms: 0.6826
+  type: 'test'
+  ...
+# Subtest: a beige vest can be suggested and reviewed only in outerwear
+ok 5 - a beige vest can be suggested and reviewed only in outerwear
+  ---
+  duration_ms: 1.7334
+  type: 'test'
+  ...
+# Subtest: source accepts HTTPS Pinterest pin URLs and rejects unsafe or misleading URLs
+ok 6 - source accepts HTTPS Pinterest pin URLs and rejects unsafe or misleading URLs
+  ---
+  duration_ms: 0.9708
+  type: 'test'
+  ...
+# Subtest: export requires explicit approval, full-body/source confirmation and known labels
+ok 7 - export requires explicit approval, full-body/source confirmation and known labels
+  ---
+  duration_ms: 0.5996
+  type: 'test'
+  ...
+# Subtest: export emits reviewed version 1 data and strips session URLs or extra fields
+ok 8 - export emits reviewed version 1 data and strips session URLs or extra fields
+  ---
+  duration_ms: 0.3892
+  type: 'test'
+  ...
+# Subtest: local upload accepts supported image MIME up to 12 MiB and rejects unsafe inputs
+ok 9 - local upload accepts supported image MIME up to 12 MiB and rejects unsafe inputs
+  ---
+  duration_ms: 0.6089
+  type: 'test'
+  ...
+# Subtest: search and color intersect rather than replace each other
+ok 10 - search and color intersect rather than replace each other
+  ---
+  duration_ms: 2.7277
+  type: 'test'
+  ...
+# Subtest: Vietnamese accents, localized color names and unknown words
+ok 11 - Vietnamese accents, localized color names and unknown words
+  ---
+  duration_ms: 1.8387
+  type: 'test'
+  ...
+# Subtest: apparel category color and garment type apply together
+ok 12 - apparel category color and garment type apply together
+  ---
+  duration_ms: 1.1757
+  type: 'test'
+  ...
+# Subtest: uppercase Vietnamese D-stroke normalizes like lowercase
+ok 13 - uppercase Vietnamese D-stroke normalizes like lowercase
+  ---
+  duration_ms: 1.9246
+  type: 'test'
+  ...
+# Subtest: saving and removing publishes a change for the favorites list
+ok 14 - saving and removing publishes a change for the favorites list
+  ---
+  duration_ms: 3.8771
+  type: 'test'
+  ...
+# Subtest: blocked storage still allows saving and removing within the session
+ok 15 - blocked storage still allows saving and removing within the session
+  ---
+  duration_ms: 2.8165
+  type: 'test'
+  ...
+# Subtest: valid template and catalog accepted
+ok 16 - valid template and catalog accepted
+  ---
+  duration_ms: 4.3091
+  type: 'test'
+  ...
+# Subtest: duplicate IDs, unknown items and absent sources rejected
+ok 17 - duplicate IDs, unknown items and absent sources rejected
+  ---
+  duration_ms: 0.6532
+  type: 'test'
+  ...
+# Subtest: malformed catalogs and templates rejected without throwing
+ok 18 - malformed catalogs and templates rejected without throwing
+  ---
+  duration_ms: 0.7742
+  type: 'test'
+  ...
+# Subtest: all selected photo templates have local images, valid references and four occasions
+ok 19 - all selected photo templates have local images, valid references and four occasions
+  ---
+  duration_ms: 11.0516
+  type: 'test'
+  ...
+# Subtest: detail alternatives are available without a selected wardrobe
+ok 20 - detail alternatives are available without a selected wardrobe
+  ---
+  duration_ms: 0.5877
+  type: 'test'
+  ...
+# Subtest: all essentials exact means ready; optional items not required
+ok 21 - all essentials exact means ready; optional items not required
+  ---
+  duration_ms: 3.4935
+  type: 'test'
+  ...
+# Subtest: one selected item still suggests but labels two missing slots
+ok 22 - one selected item still suggests but labels two missing slots
+  ---
+  duration_ms: 0.975
+  type: 'test'
+  ...
+# Subtest: only editorial alternatives qualify, with explicit substitutions
+ok 23 - only editorial alternatives qualify, with explicit substitutions
+  ---
+  duration_ms: 0.4924
+  type: 'test'
+  ...
+# Subtest: several items in one group do not all need to be worn
+ok 24 - several items in one group do not all need to be worn
+  ---
+  duration_ms: 0.621
+  type: 'test'
+  ...
+# Subtest: wrong occasion, no selection and unrelated items do not claim ready
+ok 25 - wrong occasion, no selection and unrelated items do not claim ready
+  ---
+  duration_ms: 1.8425
+  type: 'test'
+  ...
+# Subtest: exact matches take priority and ties use stable editorial order
+ok 26 - exact matches take priority and ties use stable editorial order
+  ---
+  duration_ms: 0.8925
+  type: 'test'
+  ...
+# Subtest: one-piece dress needs only dress and shoes, no trousers
+ok 27 - one-piece dress needs only dress and shoes, no trousers
+  ---
+  duration_ms: 1.0937
+  type: 'test'
+  ...
+# Subtest: unknown occasions and malformed selections fail closed
+ok 28 - unknown occasions and malformed selections fail closed
+  ---
+  duration_ms: 1.3847
+  type: 'test'
+  ...
+# Subtest: toggle a single item and change occasion without losing it
+ok 29 - toggle a single item and change occasion without losing it
+  ---
+  duration_ms: 4.6587
+  type: 'test'
+  ...
+# Subtest: clear selection preserves occasion and never mutates input
+ok 30 - clear selection preserves occasion and never mutates input
+  ---
+  duration_ms: 1.333
+  type: 'test'
+  ...
+# Subtest: selection survives a new store instance
+ok 31 - selection survives a new store instance
+  ---
+  duration_ms: 4.577
+  type: 'test'
+  ...
+# Subtest: corrupt, wrong-shaped and future-version data recover safely
+ok 32 - corrupt, wrong-shaped and future-version data recover safely
+  ---
+  duration_ms: 0.7867
+  type: 'test'
+  ...
+# Subtest: blocked storage falls back to session memory and reports not persisted
+ok 33 - blocked storage falls back to session memory and reports not persisted
+  ---
+  duration_ms: 0.8059
+  type: 'test'
+  ...
+# Subtest: after failed write, stale storage cannot overwrite session value
+ok 34 - after failed write, stale storage cannot overwrite session value
+  ---
+  duration_ms: 0.4954
+  type: 'test'
+  ...
+# Subtest: selection removes duplicate IDs and rejects unknown occasion
+ok 35 - selection removes duplicate IDs and rejects unknown occasion
+  ---
+  duration_ms: 1.2674
+  type: 'test'
+  ...
+# Subtest: failed local writes survive a document navigation through session fallback
+ok 36 - failed local writes survive a document navigation through session fallback
+  ---
+  duration_ms: 0.4624
+  type: 'test'
+  ...
+# Subtest: session fallback overrides stale local data in the next document
+ok 37 - session fallback overrides stale local data in the next document
+  ---
+  duration_ms: 0.4628
+  type: 'test'
+  ...
+# Subtest: fully blocked storage reports page-only mode for in-document favorites
+ok 38 - fully blocked storage reports page-only mode for in-document favorites
+  ---
+  duration_ms: 0.3941
+  type: 'test'
+  ...
+# Subtest: layered gray shirt outfit also requires the visible white inner top
+ok 39 - layered gray shirt outfit also requires the visible white inner top
+  ---
+  duration_ms: 2.0623
+  type: 'test'
+  ...
+# Subtest: home colors include every visible catalog garment color
+ok 40 - home colors include every visible catalog garment color
+  ---
+  duration_ms: 4.4045
+  type: 'test'
+  ...
+# Subtest: every photo modal preserves the whole image
+ok 41 - every photo modal preserves the whole image
+  ---
+  duration_ms: 0.602
+  type: 'test'
+  ...
+# Subtest: live catalog uses source-linked real photos and apparel groups only
+ok 42 - live catalog uses source-linked real photos and apparel groups only
+  ---
+  duration_ms: 9.8787
+  type: 'test'
+  ...
+# Subtest: every template uses a full-body photo and no accessory or shoe requirement
+ok 43 - every template uses a full-body photo and no accessory or shoe requirement
+  ---
+  duration_ms: 0.4686
+  type: 'test'
+  ...
+# Subtest: same-document fragment link never starts a full-page transition
+ok 44 - same-document fragment link never starts a full-page transition
+  ---
+  duration_ms: 5.0934
+  type: 'test'
+  ...
+# Subtest: all catalog pages bind their actual search input to the shared controller
+ok 45 - all catalog pages bind their actual search input to the shared controller
+  ---
+  duration_ms: 2.3481
+  type: 'test'
+  ...
+# Subtest: favorites page never bypasses guarded storage with inline handlers
+ok 46 - favorites page never bypasses guarded storage with inline handlers
+  ---
+  duration_ms: 0.7473
+  type: 'test'
+  ...
+# Subtest: reference color filter stays next to reference gallery, after wardrobe suggestions
+ok 47 - reference color filter stays next to reference gallery, after wardrobe suggestions
+  ---
+  duration_ms: 0.5297
+  type: 'test'
+  ...
+1..47
+# tests 47
+# suites 0
+# pass 47
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 214.9891

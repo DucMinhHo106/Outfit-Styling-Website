@@ -7,13 +7,13 @@
 .wardrobe select{background:var(--color-bg-3);color:var(--color-text);border:1px solid var(--color-border-light);border-radius:var(--radius-sm);font:inherit;padding:12px 34px 12px 14px;min-width:220px;max-width:100%}
 .picker-group{border:1px solid var(--color-border);border-radius:var(--radius-md);margin:12px 0;background:var(--color-bg-2)}
 .picker-group summary{cursor:pointer;padding:15px 20px;font-size:16px}
-.picker-items{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px;padding:0 16px 16px}
+.picker-items{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:12px;padding:0 16px 16px}
 .picker-item{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:12px 8px;background:var(--color-bg-3);border:1px solid var(--color-border);border-radius:var(--radius-sm);color:var(--color-text);font:inherit;font-size:14px;cursor:pointer}
-.picker-item img{width:70px;height:70px;object-fit:contain}.picker-item.active{border-color:var(--color-orange);background:rgba(249,115,22,.12)}
+.picker-item img{width:100%;height:225px;object-fit:contain}.picker-item.active{border-color:var(--color-orange);background:rgba(249,115,22,.12)}
 .selected-items{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0;min-height:10px}.wardrobe-note{color:var(--color-text-muted);font-size:14px;margin:14px 0}
 #outfitResults{scroll-margin-top:85px}.result-heading{font-size:22px;margin:30px 0 18px}.template-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
 .template-card{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-md);overflow:hidden}
-.template-card>img{width:100%;height:auto;aspect-ratio:660/410;object-fit:contain;background:var(--color-bg-3)}
+.template-card>img{width:100%;height:auto;aspect-ratio:2/3;object-fit:contain;background:var(--color-bg-3)}
 .template-card__body{padding:18px}.template-card h4{font-size:18px;font-weight:500;margin-bottom:12px}.template-card__note{font-size:14px;color:var(--color-text-muted);margin:8px 0}
 .template-card__actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.template-card__actions .btn{font-size:14px;padding:9px 14px}
 .modal__guidance{font-size:14px;color:var(--color-text-muted);margin:14px 0}.modal__guidance p{margin:8px 0}.modal__guidance strong{color:var(--color-text)}
@@ -30,3 +30,7 @@ button:disabled{opacity:.5;cursor:default}button:focus-visible,a:focus-visible,s
 .outfit-card__like{z-index:2}
 
 .session-favorites{background:var(--color-bg-2);color:var(--color-text);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:auto;padding:24px;width:min(760px,92vw);max-height:88vh;overflow:auto}.session-favorites::backdrop{background:rgba(0,0,0,.88)}.session-favorites>p,.session-favorites>button{margin:12px 0}.session-favorites article{margin:18px 0}
+.picker-filters{display:flex;gap:16px;flex-wrap:wrap;padding:0 16px 16px}.picker-filters label{display:grid;gap:6px;font-size:14px;flex:1;min-width:120px}.wardrobe .picker-filters select{min-width:0;width:100%}
+.category-type{background:var(--color-bg-3);color:var(--color-text);border:1px solid var(--color-border-light);border-radius:var(--radius-sm);font:inherit;padding:8px 12px;max-width:100%}.category-type-label{font-size:14px}.toolbar__inner{flex-wrap:wrap;gap:12px}
+.outfit-card__img,.slide__img img{object-fit:contain!important;background:var(--color-bg-3)}
+.modal__guidance a{color:var(--color-orange);text-decoration:underline}

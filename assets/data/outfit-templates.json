@@ -1,951 +1,18 @@
 [
   {
-    "id": "basic-school-1",
-    "title": "Đi học gọn gàng",
+    "id": "photo-black-trousers",
+    "title": "Áo thun đen và quần vải đen",
+    "name": "Áo thun đen và quần vải đen",
     "occasions": [
-      "school"
-    ],
-    "image": "./assets/illustrations/basic-school-1.svg",
-    "imageSource": "StyleMix original vector illustration — created for this project",
-    "requiredSlots": [
-      {
-        "id": "top",
-        "acceptedItemIds": [
-          "tee-white"
-        ],
-        "substituteItemIds": []
-      },
-      {
-        "id": "bottom",
-        "acceptedItemIds": [
-          "jeans-blue"
-        ],
-        "substituteItemIds": [
-          "jeans-black"
-        ]
-      },
-      {
-        "id": "shoes",
-        "acceptedItemIds": [
-          "sneakers-white"
-        ],
-        "substituteItemIds": [
-          "sneakers-black"
-        ]
-      }
-    ],
-    "optionalItems": [],
-    "instructions": [
-      "Giữ trang phục sạch, phẳng và chọn phom vừa người; không cần đúng thương hiệu trong mẫu.",
-      "Ưu tiên quy định đồng phục của trường; mẫu này chỉ dùng vào ngày được mặc tự do.",
-      "Phụ kiện tùy chọn: một chiếc đồng hồ hoặc túi đơn giản; không cần thêm để hoàn thành bộ."
-    ],
-    "editorialOrder": 0,
-    "tag": "Cơ bản",
-    "name": "Đi học gọn gàng",
-    "img": "./assets/illustrations/basic-school-1.svg",
-    "color": "white",
-    "desc": "Bộ phối cơ bản từ những món dễ tìm. Hình minh họa cách kết hợp, không phải ảnh sản phẩm.",
-    "items": [
-      "Áo thun trắng",
-      "Jeans xanh",
-      "Sneaker trắng"
-    ]
-  },
-  {
-    "id": "basic-school-2",
-    "title": "Polo và kaki",
-    "occasions": [
-      "school"
-    ],
-    "image": "./assets/illustrations/basic-school-2.svg",
-    "imageSource": "StyleMix original vector illustration — created for this project",
-    "requiredSlots": [
-      {
-        "id": "top",
-        "acceptedItemIds": [
-          "polo-navy"
-        ],
-        "substituteItemIds": []
-      },
-      {
-        "id": "bottom",
-        "acceptedItemIds": [
-          "chinos-beige"
-        ],
-        "substituteItemIds": []
-      },
-      {
-        "id": "shoes",
-        "acceptedItemIds": [
-          "sneakers-white"
-        ],
-        "substituteItemIds": [
-          "sneakers-black"
-        ]
-      }
-    ],
-    "optionalItems": [],
-    "instructions": [
-      "Giữ trang phục sạch, phẳng và chọn phom vừa người; không cần đúng thương hiệu trong mẫu.",
-      "Ưu tiên quy định đồng phục của trường; mẫu này chỉ dùng vào ngày được mặc tự do.",
-      "Phụ kiện tùy chọn: một chiếc đồng hồ hoặc túi đơn giản; không cần thêm để hoàn thành bộ."
-    ],
-    "editorialOrder": 1,
-    "tag": "Cơ bản",
-    "name": "Polo và kaki",
-    "img": "./assets/illustrations/basic-school-2.svg",
-    "color": "navy",
-    "desc": "Bộ phối cơ bản từ những món dễ tìm. Hình minh họa cách kết hợp, không phải ảnh sản phẩm.",
-    "items": [
-      "Polo xanh navy",
-      "Quần kaki be",
-      "Sneaker trắng"
-    ]
-  },
-  {
-    "id": "basic-school-3",
-    "title": "Sơ mi xanh dễ mặc",
-    "occasions": [
-      "school"
-    ],
-    "image": "./assets/illustrations/basic-school-3.svg",
-    "imageSource": "StyleMix original vector illustration — created for this project",
-    "requiredSlots": [
-      {
-        "id": "top",
-        "acceptedItemIds": [
-          "shirt-blue"
-        ],
-        "substituteItemIds": []
-      },
-      {
-        "id": "bottom",
-        "acceptedItemIds": [
-          "jeans-black"
-        ],
-        "substituteItemIds": []
-      },
-      {
-        "id": "shoes",
-        "acceptedItemIds": [
-          "sneakers-white"
-        ],
-        "substituteItemIds": [
-          "sneakers-black"
-        ]
-      }
-    ],
-    "optionalItems": [],
-    "instructions": [
-      "Giữ trang phục sạch, phẳng và chọn phom vừa người; không cần đúng thương hiệu trong mẫu.",
-      "Sơ vin gọn nếu muốn chỉn chu; tay áo có thể xắn nhẹ khi hoàn cảnh cho phép.",
-      "Ưu tiên quy định đồng phục của trường; mẫu này chỉ dùng vào ngày được mặc tự do.",
-      "Phụ kiện tùy chọn: một chiếc đồng hồ hoặc túi đơn giản; không cần thêm để hoàn thành bộ."
-    ],
-    "editorialOrder": 2,
-    "tag": "Cơ bản",
-    "name": "Sơ mi xanh dễ mặc",
-    "img": "./assets/illustrations/basic-school-3.svg",
-    "color": "blue",
-    "desc": "Bộ phối cơ bản từ những món dễ tìm. Hình minh họa cách kết hợp, không phải ảnh sản phẩm.",
-    "items": [
-      "Sơ mi xanh nhạt",
-      "Jeans đen",
-      "Sneaker trắng"
-    ]
-  },
-  {
-    "id": "basic-school-4",
-    "title": "Tối giản đen trắng",
-    "occasions": [
-      "school"
-    ],
-    "image": "./assets/illustrations/basic-school-4.svg",
-    "imageSource": "StyleMix original vector illustration — created for this project",
-    "requiredSlots": [
-      {
-        "id": "top",
-        "acceptedItemIds": [
-          "tee-white"
-        ],
-        "substituteItemIds": []
-      },
-      {
-        "id": "bottom",
-        "acceptedItemIds": [
-          "jeans-black"
-        ],
-        "substituteItemIds": []
-      },
-      {
-        "id": "shoes",
-        "acceptedItemIds": [
-          "sneakers-black"
-        ],
-        "substituteItemIds": []
-      }
-    ],
-    "optionalItems": [],
-    "instructions": [
-      "Giữ trang phục sạch, phẳng và chọn phom vừa người; không cần đúng thương hiệu trong mẫu.",
-      "Ưu tiên quy định đồng phục của trường; mẫu này chỉ dùng vào ngày được mặc tự do.",
-      "Phụ kiện tùy chọn: một chiếc đồng hồ hoặc túi đơn giản; không cần thêm để hoàn thành bộ."
-    ],
-    "editorialOrder": 3,
-    "tag": "Cơ bản",
-    "name": "Tối giản đen trắng",
-    "img": "./assets/illustrations/basic-school-4.svg",
-    "color": "white",
-    "desc": "Bộ phối cơ bản từ những món dễ tìm. Hình minh họa cách kết hợp, không phải ảnh sản phẩm.",
-    "items": [
-      "Áo thun trắng",
-      "Jeans đen",
-      "Sneaker đen"
-    ]
-  },
-  {
-    "id": "basic-school-5",
-    "title": "Sơ mi và chân váy",
-    "occasions": [
-      "school"
-    ],
-    "image": "./assets/illustrations/basic-school-5.svg",
-    "imageSource": "StyleMix original vector illustration — created for this project",
-    "requiredSlots": [
-      {
-        "id": "top",
-        "acceptedItemIds": [
-          "shirt-white"
-        ],
-        "substituteItemIds": []
-      },
-      {
-        "id": "bottom",
-        "acceptedItemIds": [
-          "skirt-black"
-        ],
-        "substituteItemIds": []
-      },
-      {
-        "id": "shoes",
-        "acceptedItemIds": [
-          "flats-black"
-        ],
-        "substituteItemIds": []
-      }
-    ],
-    "optionalItems": [],
-    "instructions": [
-      "Giữ trang phục sạch, phẳng và chọn phom vừa người; không cần đúng thương hiệu trong mẫu.",
-      "Sơ vin gọn nếu muốn chỉn chu; tay áo có thể xắn nhẹ khi hoàn cảnh cho phép.",
-      "Ưu tiên quy định đồng phục của trường; mẫu này chỉ dùng vào ngày được mặc tự do.",
-      "Phụ kiện tùy chọn: một chiếc đồng hồ hoặc túi đơn giản; không cần thêm để hoàn thành bộ."
-    ],
-    "editorialOrder": 4,
-    "tag": "Cơ bản",
-    "name": "Sơ mi và chân váy",
-    "img": "./assets/illustrations/basic-school-5.svg",
-    "color": "white",
-    "desc": "Bộ phối cơ bản từ những món dễ tìm. Hình minh họa cách kết hợp, không phải ảnh sản phẩm.",
-    "items": [
-      "Sơ mi trắng",
-      "Chân váy midi đen",
-      "Giày bệt đen"
-    ]
-  },
-  {
-    "id": "basic-school-6",
-    "title": "Áo thun và chân váy midi",
-    "occasions": [
-      "school"
-    ],
-    "image": "./assets/illustrations/basic-school-6.svg",
-    "imageSource": "StyleMix original vector illustration — created for this project",
-    "requiredSlots": [
-      {
-        "id": "top",
-        "acceptedItemIds": [
-          "tee-gray"
-        ],
-        "substituteItemIds": []
-      },
-      {
-        "id": "bottom",
-        "acceptedItemIds": [
-          "skirt-beige"
-        ],
-        "substituteItemIds": []
-      },
-      {
-        "id": "shoes",
-        "acceptedItemIds": [
-          "sneakers-white"
-        ],
-        "substituteItemIds": [
-          "sneakers-black"
-        ]
-      }
-    ],
-    "optionalItems": [],
-    "instructions": [
-      "Giữ trang phục sạch, phẳng và chọn phom vừa người; không cần đúng thương hiệu trong mẫu.",
-      "Ưu tiên quy định đồng phục của trường; mẫu này chỉ dùng vào ngày được mặc tự do.",
-      "Phụ kiện tùy chọn: một chiếc đồng hồ hoặc túi đơn giản; không cần thêm để hoàn thành bộ."
-    ],
-    "editorialOrder": 5,
-    "tag": "Cơ bản",
-    "name": "Áo thun và chân váy midi",
-    "img": "./assets/illustrations/basic-school-6.svg",
-    "color": "gray",
-    "desc": "Bộ phối cơ bản từ những món dễ tìm. Hình minh họa cách kết hợp, không phải ảnh sản phẩm.",
-    "items": [
-      "Áo thun xám",
-      "Chân váy midi be",
-      "Sneaker trắng"
-    ]
-  },
-  {
-    "id": "basic-work-1",
-    "title": "Công sở đen trắng",
-    "occasions": [
-      "work"
-    ],
-    "image": "./assets/illustrations/basic-work-1.svg",
-    "imageSource": "StyleMix original vector illustration — created for this project",
-    "requiredSlots": [
-      {
-        "id": "top",
-        "acceptedItemIds": [
-          "shirt-white"
-        ],
-        "substituteItemIds": []
-      },
-      {
-        "id": "bottom",
-        "acceptedItemIds": [
-          "trousers-black"
-        ],
-        "substituteItemIds": []
-      },
-      {
-        "id": "shoes",
-        "acceptedItemIds": [
-          "loafers-black"
-        ],
-        "substituteItemIds": [
-          "flats-black"
-        ]
-      }
-    ],
-    "optionalItems": [],
-    "instructions": [
-      "Giữ trang phục sạch, phẳng và chọn phom vừa người; không cần đúng thương hiệu trong mẫu.",
-      "Sơ vin gọn nếu muốn chỉn chu; tay áo có thể xắn nhẹ khi hoàn cảnh cho phép.",
-      "Kiểm tra quy định trang phục nơi làm việc; sneaker chỉ phù hợp môi trường cho phép ăn mặc thoải mái.",
-      "Phụ kiện tùy chọn: một chiếc đồng hồ hoặc túi đơn giản; không cần thêm để hoàn thành bộ."
-    ],
-    "editorialOrder": 6,
-    "tag": "Cơ bản",
-    "name": "Công sở đen trắng",
-    "img": "./assets/illustrations/basic-work-1.svg",
-    "color": "white",
-    "desc": "Bộ phối cơ bản từ những món dễ tìm. Hình minh họa cách kết hợp, không phải ảnh sản phẩm.",
-    "items": [
-      "Sơ mi trắng",
-      "Quần vải đen",
-      "Loafer đen"
-    ]
-  },
-  {
-    "id": "basic-work-2",
-    "title": "Xanh nhạt và xám",
-    "occasions": [
-      "work"
-    ],
-    "image": "./assets/illustrations/basic-work-2.svg",
-    "imageSource": "StyleMix original vector illustration — created for this project",
-    "requiredSlots": [
-      {
-        "id": "top",
-        "acceptedItemIds": [
-          "shirt-blue"
-        ],
-        "substituteItemIds": []
-      },
-      {
-        "id": "bottom",
-        "acceptedItemIds": [
-          "trousers-gray"
-        ],
-        "substituteItemIds": []
-      },
-      {
-        "id": "shoes",
-        "acceptedItemIds": [
-          "loafers-black"
-        ],
-        "substituteItemIds": [
-          "flats-black"
-        ]
-      }
-    ],
-    "optionalItems": [],
-    "instructions": [
-      "Giữ trang phục sạch, phẳng và chọn phom vừa người; không cần đúng thương hiệu trong mẫu.",
-      "Sơ vin gọn nếu muốn chỉn chu; tay áo có thể xắn nhẹ khi hoàn cảnh cho phép.",
-      "Kiểm tra quy định trang phục nơi làm việc; sneaker chỉ phù hợp môi trường cho phép ăn mặc thoải mái.",
-      "Phụ kiện tùy chọn: một chiếc đồng hồ hoặc túi đơn giản; không cần thêm để hoàn thành bộ."
-    ],
-    "editorialOrder": 7,
-    "tag": "Cơ bản",
-    "name": "Xanh nhạt và xám",
-    "img": "./assets/illustrations/basic-work-2.svg",
-    "color": "blue",
-    "desc": "Bộ phối cơ bản từ những món dễ tìm. Hình minh họa cách kết hợp, không phải ảnh sản phẩm.",
-    "items": [
-      "Sơ mi xanh nhạt",
-      "Quần vải xám",
-      "Loafer đen"
-    ]
-  },
-  {
-    "id": "basic-work-3",
-    "title": "Polo công sở thoải mái",
-    "occasions": [
-      "work"
-    ],
-    "image": "./assets/illustrations/basic-work-3.svg",
-    "imageSource": "StyleMix original vector illustration — created for this project",
-    "requiredSlots": [
-      {
-        "id": "top",
-        "acceptedItemIds": [
-          "polo-navy"
-        ],
-        "substituteItemIds": []
-      },
-      {
-        "id": "bottom",
-        "acceptedItemIds": [
-          "chinos-beige"
-        ],
-        "substituteItemIds": []
-      },
-      {
-        "id": "shoes",
-        "acceptedItemIds": [
-          "loafers-black"
-        ],
-        "substituteItemIds": [
-          "flats-black"
-        ]
-      }
-    ],
-    "optionalItems": [],
-    "instructions": [
-      "Giữ trang phục sạch, phẳng và chọn phom vừa người; không cần đúng thương hiệu trong mẫu.",
-      "Kiểm tra quy định trang phục nơi làm việc; sneaker chỉ phù hợp môi trường cho phép ăn mặc thoải mái.",
-      "Phụ kiện tùy chọn: một chiếc đồng hồ hoặc túi đơn giản; không cần thêm để hoàn thành bộ."
-    ],
-    "editorialOrder": 8,
-    "tag": "Cơ bản",
-    "name": "Polo công sở thoải mái",
-    "img": "./assets/illustrations/basic-work-3.svg",
-    "color": "navy",
-    "desc": "Bộ phối cơ bản từ những món dễ tìm. Hình minh họa cách kết hợp, không phải ảnh sản phẩm.",
-    "items": [
-      "Polo xanh navy",
-      "Quần kaki be",
-      "Loafer đen"
-    ]
-  },
-  {
-    "id": "basic-work-4",
-    "title": "Sơ mi kem thanh lịch",
-    "occasions": [
-      "work"
-    ],
-    "image": "./assets/illustrations/basic-work-4.svg",
-    "imageSource": "StyleMix original vector illustration — created for this project",
-    "requiredSlots": [
-      {
-        "id": "top",
-        "acceptedItemIds": [
-          "shirt-cream"
-        ],
-        "substituteItemIds": []
-      },
-      {
-        "id": "bottom",
-        "acceptedItemIds": [
-          "skirt-black"
-        ],
-        "substituteItemIds": []
-      },
-      {
-        "id": "shoes",
-        "acceptedItemIds": [
-          "flats-black"
-        ],
-        "substituteItemIds": []
-      }
-    ],
-    "optionalItems": [],
-    "instructions": [
-      "Giữ trang phục sạch, phẳng và chọn phom vừa người; không cần đúng thương hiệu trong mẫu.",
-      "Sơ vin gọn nếu muốn chỉn chu; tay áo có thể xắn nhẹ khi hoàn cảnh cho phép.",
-      "Kiểm tra quy định trang phục nơi làm việc; sneaker chỉ phù hợp môi trường cho phép ăn mặc thoải mái.",
-      "Phụ kiện tùy chọn: một chiếc đồng hồ hoặc túi đơn giản; không cần thêm để hoàn thành bộ."
-    ],
-    "editorialOrder": 9,
-    "tag": "Cơ bản",
-    "name": "Sơ mi kem thanh lịch",
-    "img": "./assets/illustrations/basic-work-4.svg",
-    "color": "cream",
-    "desc": "Bộ phối cơ bản từ những món dễ tìm. Hình minh họa cách kết hợp, không phải ảnh sản phẩm.",
-    "items": [
-      "Sơ mi kem",
-      "Chân váy midi đen",
-      "Giày bệt đen"
-    ]
-  },
-  {
-    "id": "basic-work-5",
-    "title": "Đầm navy đơn giản",
-    "occasions": [
-      "work"
-    ],
-    "image": "./assets/illustrations/basic-work-5.svg",
-    "imageSource": "StyleMix original vector illustration — created for this project",
-    "requiredSlots": [
-      {
-        "id": "dress",
-        "acceptedItemIds": [
-          "dress-navy"
-        ],
-        "substituteItemIds": []
-      },
-      {
-        "id": "shoes",
-        "acceptedItemIds": [
-          "flats-black"
-        ],
-        "substituteItemIds": []
-      }
-    ],
-    "optionalItems": [],
-    "instructions": [
-      "Giữ trang phục sạch, phẳng và chọn phom vừa người; không cần đúng thương hiệu trong mẫu.",
-      "Kiểm tra quy định trang phục nơi làm việc; sneaker chỉ phù hợp môi trường cho phép ăn mặc thoải mái.",
-      "Phụ kiện tùy chọn: một chiếc đồng hồ hoặc túi đơn giản; không cần thêm để hoàn thành bộ."
-    ],
-    "editorialOrder": 10,
-    "tag": "Cơ bản",
-    "name": "Đầm navy đơn giản",
-    "img": "./assets/illustrations/basic-work-5.svg",
-    "color": "navy",
-    "desc": "Bộ phối cơ bản từ những món dễ tìm. Hình minh họa cách kết hợp, không phải ảnh sản phẩm.",
-    "items": [
-      "Đầm liền xanh navy",
-      "Giày bệt đen"
-    ]
-  },
-  {
-    "id": "basic-work-6",
-    "title": "Sơ mi trắng và quần xám",
-    "occasions": [
-      "work"
-    ],
-    "image": "./assets/illustrations/basic-work-6.svg",
-    "imageSource": "StyleMix original vector illustration — created for this project",
-    "requiredSlots": [
-      {
-        "id": "top",
-        "acceptedItemIds": [
-          "shirt-white"
-        ],
-        "substituteItemIds": []
-      },
-      {
-        "id": "bottom",
-        "acceptedItemIds": [
-          "trousers-gray"
-        ],
-        "substituteItemIds": []
-      },
-      {
-        "id": "shoes",
-        "acceptedItemIds": [
-          "sneakers-white"
-        ],
-        "substituteItemIds": [
-          "sneakers-black"
-        ]
-      }
-    ],
-    "optionalItems": [],
-    "instructions": [
-      "Giữ trang phục sạch, phẳng và chọn phom vừa người; không cần đúng thương hiệu trong mẫu.",
-      "Sơ vin gọn nếu muốn chỉn chu; tay áo có thể xắn nhẹ khi hoàn cảnh cho phép.",
-      "Kiểm tra quy định trang phục nơi làm việc; sneaker chỉ phù hợp môi trường cho phép ăn mặc thoải mái.",
-      "Phụ kiện tùy chọn: một chiếc đồng hồ hoặc túi đơn giản; không cần thêm để hoàn thành bộ."
-    ],
-    "editorialOrder": 11,
-    "tag": "Cơ bản",
-    "name": "Sơ mi trắng và quần xám",
-    "img": "./assets/illustrations/basic-work-6.svg",
-    "color": "white",
-    "desc": "Bộ phối cơ bản từ những món dễ tìm. Hình minh họa cách kết hợp, không phải ảnh sản phẩm.",
-    "items": [
-      "Sơ mi trắng",
-      "Quần vải xám",
-      "Sneaker trắng"
-    ]
-  },
-  {
-    "id": "basic-presentation-1",
-    "title": "Thuyết trình cơ bản",
-    "occasions": [
-      "presentation"
-    ],
-    "image": "./assets/illustrations/basic-presentation-1.svg",
-    "imageSource": "StyleMix original vector illustration — created for this project",
-    "requiredSlots": [
-      {
-        "id": "top",
-        "acceptedItemIds": [
-          "shirt-white"
-        ],
-        "substituteItemIds": []
-      },
-      {
-        "id": "bottom",
-        "acceptedItemIds": [
-          "trousers-gray"
-        ],
-        "substituteItemIds": []
-      },
-      {
-        "id": "shoes",
-        "acceptedItemIds": [
-          "loafers-black"
-        ],
-        "substituteItemIds": []
-      }
-    ],
-    "optionalItems": [],
-    "instructions": [
-      "Giữ trang phục sạch, phẳng và chọn phom vừa người; không cần đúng thương hiệu trong mẫu.",
-      "Sơ vin gọn nếu muốn chỉn chu; tay áo có thể xắn nhẹ khi hoàn cảnh cho phép.",
-      "Ưu tiên giày kín mũi và trang phục vừa vặn; hỏi trước quy định của buổi phỏng vấn hoặc thuyết trình.",
-      "Phụ kiện tùy chọn: một chiếc đồng hồ hoặc túi đơn giản; không cần thêm để hoàn thành bộ."
-    ],
-    "editorialOrder": 12,
-    "tag": "Cơ bản",
-    "name": "Thuyết trình cơ bản",
-    "img": "./assets/illustrations/basic-presentation-1.svg",
-    "color": "white",
-    "desc": "Bộ phối cơ bản từ những món dễ tìm. Hình minh họa cách kết hợp, không phải ảnh sản phẩm.",
-    "items": [
-      "Sơ mi trắng",
-      "Quần vải xám",
-      "Loafer đen"
-    ]
-  },
-  {
-    "id": "basic-presentation-2",
-    "title": "Sơ mi xanh chỉn chu",
-    "occasions": [
-      "presentation"
-    ],
-    "image": "./assets/illustrations/basic-presentation-2.svg",
-    "imageSource": "StyleMix original vector illustration — created for this project",
-    "requiredSlots": [
-      {
-        "id": "top",
-        "acceptedItemIds": [
-          "shirt-blue"
-        ],
-        "substituteItemIds": []
-      },
-      {
-        "id": "bottom",
-        "acceptedItemIds": [
-          "trousers-black"
-        ],
-        "substituteItemIds": []
-      },
-      {
-        "id": "shoes",
-        "acceptedItemIds": [
-          "loafers-black"
-        ],
-        "substituteItemIds": []
-      }
-    ],
-    "optionalItems": [],
-    "instructions": [
-      "Giữ trang phục sạch, phẳng và chọn phom vừa người; không cần đúng thương hiệu trong mẫu.",
-      "Sơ vin gọn nếu muốn chỉn chu; tay áo có thể xắn nhẹ khi hoàn cảnh cho phép.",
-      "Ưu tiên giày kín mũi và trang phục vừa vặn; hỏi trước quy định của buổi phỏng vấn hoặc thuyết trình.",
-      "Phụ kiện tùy chọn: một chiếc đồng hồ hoặc túi đơn giản; không cần thêm để hoàn thành bộ."
-    ],
-    "editorialOrder": 13,
-    "tag": "Cơ bản",
-    "name": "Sơ mi xanh chỉn chu",
-    "img": "./assets/illustrations/basic-presentation-2.svg",
-    "color": "blue",
-    "desc": "Bộ phối cơ bản từ những món dễ tìm. Hình minh họa cách kết hợp, không phải ảnh sản phẩm.",
-    "items": [
-      "Sơ mi xanh nhạt",
-      "Quần vải đen",
-      "Loafer đen"
-    ]
-  },
-  {
-    "id": "basic-presentation-3",
-    "title": "Sơ mi xanh và chân váy",
-    "occasions": [
-      "presentation"
-    ],
-    "image": "./assets/illustrations/basic-presentation-3.svg",
-    "imageSource": "StyleMix original vector illustration — created for this project",
-    "requiredSlots": [
-      {
-        "id": "top",
-        "acceptedItemIds": [
-          "shirt-blue"
-        ],
-        "substituteItemIds": []
-      },
-      {
-        "id": "bottom",
-        "acceptedItemIds": [
-          "skirt-black"
-        ],
-        "substituteItemIds": []
-      },
-      {
-        "id": "shoes",
-        "acceptedItemIds": [
-          "flats-black"
-        ],
-        "substituteItemIds": []
-      }
-    ],
-    "optionalItems": [],
-    "instructions": [
-      "Giữ trang phục sạch, phẳng và chọn phom vừa người; không cần đúng thương hiệu trong mẫu.",
-      "Sơ vin gọn nếu muốn chỉn chu; tay áo có thể xắn nhẹ khi hoàn cảnh cho phép.",
-      "Ưu tiên giày kín mũi và trang phục vừa vặn; hỏi trước quy định của buổi phỏng vấn hoặc thuyết trình.",
-      "Phụ kiện tùy chọn: một chiếc đồng hồ hoặc túi đơn giản; không cần thêm để hoàn thành bộ."
-    ],
-    "editorialOrder": 14,
-    "tag": "Cơ bản",
-    "name": "Sơ mi xanh và chân váy",
-    "img": "./assets/illustrations/basic-presentation-3.svg",
-    "color": "blue",
-    "desc": "Bộ phối cơ bản từ những món dễ tìm. Hình minh họa cách kết hợp, không phải ảnh sản phẩm.",
-    "items": [
-      "Sơ mi xanh nhạt",
-      "Chân váy midi đen",
-      "Giày bệt đen"
-    ]
-  },
-  {
-    "id": "basic-presentation-4",
-    "title": "Tông kem và đen",
-    "occasions": [
-      "presentation"
-    ],
-    "image": "./assets/illustrations/basic-presentation-4.svg",
-    "imageSource": "StyleMix original vector illustration — created for this project",
-    "requiredSlots": [
-      {
-        "id": "top",
-        "acceptedItemIds": [
-          "shirt-cream"
-        ],
-        "substituteItemIds": []
-      },
-      {
-        "id": "bottom",
-        "acceptedItemIds": [
-          "trousers-black"
-        ],
-        "substituteItemIds": []
-      },
-      {
-        "id": "shoes",
-        "acceptedItemIds": [
-          "loafers-black"
-        ],
-        "substituteItemIds": []
-      }
-    ],
-    "optionalItems": [],
-    "instructions": [
-      "Giữ trang phục sạch, phẳng và chọn phom vừa người; không cần đúng thương hiệu trong mẫu.",
-      "Sơ vin gọn nếu muốn chỉn chu; tay áo có thể xắn nhẹ khi hoàn cảnh cho phép.",
-      "Ưu tiên giày kín mũi và trang phục vừa vặn; hỏi trước quy định của buổi phỏng vấn hoặc thuyết trình.",
-      "Phụ kiện tùy chọn: một chiếc đồng hồ hoặc túi đơn giản; không cần thêm để hoàn thành bộ."
-    ],
-    "editorialOrder": 15,
-    "tag": "Cơ bản",
-    "name": "Tông kem và đen",
-    "img": "./assets/illustrations/basic-presentation-4.svg",
-    "color": "cream",
-    "desc": "Bộ phối cơ bản từ những món dễ tìm. Hình minh họa cách kết hợp, không phải ảnh sản phẩm.",
-    "items": [
-      "Sơ mi kem",
-      "Quần vải đen",
-      "Loafer đen"
-    ]
-  },
-  {
-    "id": "basic-presentation-5",
-    "title": "Đầm navy trang nhã",
-    "occasions": [
-      "presentation"
-    ],
-    "image": "./assets/illustrations/basic-presentation-5.svg",
-    "imageSource": "StyleMix original vector illustration — created for this project",
-    "requiredSlots": [
-      {
-        "id": "dress",
-        "acceptedItemIds": [
-          "dress-navy"
-        ],
-        "substituteItemIds": []
-      },
-      {
-        "id": "shoes",
-        "acceptedItemIds": [
-          "loafers-black"
-        ],
-        "substituteItemIds": []
-      }
-    ],
-    "optionalItems": [],
-    "instructions": [
-      "Giữ trang phục sạch, phẳng và chọn phom vừa người; không cần đúng thương hiệu trong mẫu.",
-      "Ưu tiên giày kín mũi và trang phục vừa vặn; hỏi trước quy định của buổi phỏng vấn hoặc thuyết trình.",
-      "Phụ kiện tùy chọn: một chiếc đồng hồ hoặc túi đơn giản; không cần thêm để hoàn thành bộ."
-    ],
-    "editorialOrder": 16,
-    "tag": "Cơ bản",
-    "name": "Đầm navy trang nhã",
-    "img": "./assets/illustrations/basic-presentation-5.svg",
-    "color": "navy",
-    "desc": "Bộ phối cơ bản từ những món dễ tìm. Hình minh họa cách kết hợp, không phải ảnh sản phẩm.",
-    "items": [
-      "Đầm liền xanh navy",
-      "Loafer đen"
-    ]
-  },
-  {
-    "id": "basic-presentation-6",
-    "title": "Đầm đen gọn gàng",
-    "occasions": [
-      "presentation"
-    ],
-    "image": "./assets/illustrations/basic-presentation-6.svg",
-    "imageSource": "StyleMix original vector illustration — created for this project",
-    "requiredSlots": [
-      {
-        "id": "dress",
-        "acceptedItemIds": [
-          "dress-black"
-        ],
-        "substituteItemIds": []
-      },
-      {
-        "id": "shoes",
-        "acceptedItemIds": [
-          "flats-black"
-        ],
-        "substituteItemIds": []
-      }
-    ],
-    "optionalItems": [],
-    "instructions": [
-      "Giữ trang phục sạch, phẳng và chọn phom vừa người; không cần đúng thương hiệu trong mẫu.",
-      "Ưu tiên giày kín mũi và trang phục vừa vặn; hỏi trước quy định của buổi phỏng vấn hoặc thuyết trình.",
-      "Phụ kiện tùy chọn: một chiếc đồng hồ hoặc túi đơn giản; không cần thêm để hoàn thành bộ."
-    ],
-    "editorialOrder": 17,
-    "tag": "Cơ bản",
-    "name": "Đầm đen gọn gàng",
-    "img": "./assets/illustrations/basic-presentation-6.svg",
-    "color": "black",
-    "desc": "Bộ phối cơ bản từ những món dễ tìm. Hình minh họa cách kết hợp, không phải ảnh sản phẩm.",
-    "items": [
-      "Đầm liền đen",
-      "Giày bệt đen"
-    ]
-  },
-  {
-    "id": "basic-social-1",
-    "title": "Cuối tuần cơ bản",
-    "occasions": [
+      "school",
+      "work",
       "social"
     ],
-    "image": "./assets/illustrations/basic-social-1.svg",
-    "imageSource": "StyleMix original vector illustration — created for this project",
-    "requiredSlots": [
-      {
-        "id": "top",
-        "acceptedItemIds": [
-          "tee-gray"
-        ],
-        "substituteItemIds": []
-      },
-      {
-        "id": "bottom",
-        "acceptedItemIds": [
-          "jeans-blue"
-        ],
-        "substituteItemIds": [
-          "jeans-black"
-        ]
-      },
-      {
-        "id": "shoes",
-        "acceptedItemIds": [
-          "sneakers-white"
-        ],
-        "substituteItemIds": [
-          "sneakers-black"
-        ]
-      }
-    ],
-    "optionalItems": [],
-    "instructions": [
-      "Giữ trang phục sạch, phẳng và chọn phom vừa người; không cần đúng thương hiệu trong mẫu.",
-      "Giữ bảng màu đơn giản và chọn giày thuận tiện cho quãng đường đi bộ.",
-      "Phụ kiện tùy chọn: một chiếc đồng hồ hoặc túi đơn giản; không cần thêm để hoàn thành bộ."
-    ],
-    "editorialOrder": 18,
-    "tag": "Cơ bản",
-    "name": "Cuối tuần cơ bản",
-    "img": "./assets/illustrations/basic-social-1.svg",
-    "color": "gray",
-    "desc": "Bộ phối cơ bản từ những món dễ tìm. Hình minh họa cách kết hợp, không phải ảnh sản phẩm.",
-    "items": [
-      "Áo thun xám",
-      "Jeans xanh",
-      "Sneaker trắng"
-    ]
-  },
-  {
-    "id": "basic-social-2",
-    "title": "Đen và kaki be",
-    "occasions": [
-      "social"
-    ],
-    "image": "./assets/illustrations/basic-social-2.svg",
-    "imageSource": "StyleMix original vector illustration — created for this project",
+    "image": "./assets/photos/black-trousers.jpg",
+    "img": "./assets/photos/black-trousers.jpg",
+    "imageSource": "https://www.pinterest.com/pin/661325526579466558/",
+    "sourceUrl": "https://www.pinterest.com/pin/661325526579466558/",
+    "fullBodyReviewed": true,
     "requiredSlots": [
       {
         "id": "top",
@@ -957,51 +24,104 @@
       {
         "id": "bottom",
         "acceptedItemIds": [
-          "chinos-beige"
+          "trousers-black"
         ],
         "substituteItemIds": []
-      },
-      {
-        "id": "shoes",
-        "acceptedItemIds": [
-          "sneakers-white"
-        ],
-        "substituteItemIds": [
-          "sneakers-black"
-        ]
       }
     ],
     "optionalItems": [],
     "instructions": [
-      "Giữ trang phục sạch, phẳng và chọn phom vừa người; không cần đúng thương hiệu trong mẫu.",
-      "Giữ bảng màu đơn giản và chọn giày thuận tiện cho quãng đường đi bộ.",
-      "Phụ kiện tùy chọn: một chiếc đồng hồ hoặc túi đơn giản; không cần thêm để hoàn thành bộ."
+      "Ảnh cho thấy toàn bộ outfit. Đối chiếu loại và màu từng món với tủ đồ; không cần mua đúng sản phẩm hoặc thương hiệu trong ảnh.",
+      "Đi học: chỉ áp dụng vào ngày trường cho mặc tự do; ưu tiên quy định đồng phục của trường.",
+      "Đi làm: kiểm tra quy định công sở; áo thun, jeans hoặc sneaker chỉ phù hợp nơi cho ăn mặc thoải mái.",
+      "Giày và phụ kiện trong ảnh chỉ giúp hình dung tổng thể; không phải điều kiện lọc hoặc món bắt buộc trong ứng dụng."
     ],
-    "editorialOrder": 19,
-    "tag": "Cơ bản",
-    "name": "Đen và kaki be",
-    "img": "./assets/illustrations/basic-social-2.svg",
-    "color": "black",
-    "desc": "Bộ phối cơ bản từ những món dễ tìm. Hình minh họa cách kết hợp, không phải ảnh sản phẩm.",
+    "editorialOrder": 0,
+    "tag": "Phối đồ cơ bản",
+    "color": [
+      "black"
+    ],
+    "desc": "Outfit toàn thân được tuyển chọn từ Pinterest. Nhãn màu và loại đồ đã đối chiếu với ảnh; nguồn ảnh ở phần chi tiết.",
     "items": [
       "Áo thun đen",
-      "Quần kaki be",
-      "Sneaker trắng"
+      "Quần vải đen"
     ]
   },
   {
-    "id": "basic-social-3",
-    "title": "Polo và jeans",
+    "id": "photo-black-jeans-hoodie",
+    "title": "Hoodie đen và jeans đen",
+    "name": "Hoodie đen và jeans đen",
     "occasions": [
+      "school",
       "social"
     ],
-    "image": "./assets/illustrations/basic-social-3.svg",
-    "imageSource": "StyleMix original vector illustration — created for this project",
+    "image": "./assets/photos/black-jeans-hoodie.jpg",
+    "img": "./assets/photos/black-jeans-hoodie.jpg",
+    "imageSource": "https://www.pinterest.com/pin/1131036893952756050/",
+    "sourceUrl": "https://www.pinterest.com/pin/1131036893952756050/",
+    "fullBodyReviewed": true,
     "requiredSlots": [
       {
         "id": "top",
         "acceptedItemIds": [
-          "polo-black"
+          "tee-white"
+        ],
+        "substituteItemIds": [
+          "tee-black"
+        ]
+      },
+      {
+        "id": "bottom",
+        "acceptedItemIds": [
+          "jeans-black"
+        ],
+        "substituteItemIds": []
+      },
+      {
+        "id": "outerwear",
+        "acceptedItemIds": [
+          "hoodie-black"
+        ],
+        "substituteItemIds": []
+      }
+    ],
+    "optionalItems": [],
+    "instructions": [
+      "Ảnh cho thấy toàn bộ outfit. Đối chiếu loại và màu từng món với tủ đồ; không cần mua đúng sản phẩm hoặc thương hiệu trong ảnh.",
+      "Đi học: chỉ áp dụng vào ngày trường cho mặc tự do; ưu tiên quy định đồng phục của trường.",
+      "Giày và phụ kiện trong ảnh chỉ giúp hình dung tổng thể; không phải điều kiện lọc hoặc món bắt buộc trong ứng dụng."
+    ],
+    "editorialOrder": 1,
+    "tag": "Phối đồ cơ bản",
+    "color": [
+      "white",
+      "black"
+    ],
+    "desc": "Outfit toàn thân được tuyển chọn từ Pinterest. Nhãn màu và loại đồ đã đối chiếu với ảnh; nguồn ảnh ở phần chi tiết.",
+    "items": [
+      "Áo thun trắng",
+      "Quần jeans đen",
+      "Áo khoác hoodie đen"
+    ]
+  },
+  {
+    "id": "photo-blue-jeans-green-tee",
+    "title": "Áo thun xanh lá và jeans xanh",
+    "name": "Áo thun xanh lá và jeans xanh",
+    "occasions": [
+      "school",
+      "social"
+    ],
+    "image": "./assets/photos/blue-jeans-green-tee.jpg",
+    "img": "./assets/photos/blue-jeans-green-tee.jpg",
+    "imageSource": "https://www.pinterest.com/pin/915497430526409091/",
+    "sourceUrl": "https://www.pinterest.com/pin/915497430526409091/",
+    "fullBodyReviewed": true,
+    "requiredSlots": [
+      {
+        "id": "top",
+        "acceptedItemIds": [
+          "tee-green"
         ],
         "substituteItemIds": []
       },
@@ -1013,175 +133,510 @@
         "substituteItemIds": [
           "jeans-black"
         ]
-      },
-      {
-        "id": "shoes",
-        "acceptedItemIds": [
-          "sneakers-black"
-        ],
-        "substituteItemIds": []
       }
     ],
     "optionalItems": [],
     "instructions": [
-      "Giữ trang phục sạch, phẳng và chọn phom vừa người; không cần đúng thương hiệu trong mẫu.",
-      "Giữ bảng màu đơn giản và chọn giày thuận tiện cho quãng đường đi bộ.",
-      "Phụ kiện tùy chọn: một chiếc đồng hồ hoặc túi đơn giản; không cần thêm để hoàn thành bộ."
+      "Ảnh cho thấy toàn bộ outfit. Đối chiếu loại và màu từng món với tủ đồ; không cần mua đúng sản phẩm hoặc thương hiệu trong ảnh.",
+      "Đi học: chỉ áp dụng vào ngày trường cho mặc tự do; ưu tiên quy định đồng phục của trường.",
+      "Giày và phụ kiện trong ảnh chỉ giúp hình dung tổng thể; không phải điều kiện lọc hoặc món bắt buộc trong ứng dụng."
     ],
-    "editorialOrder": 20,
-    "tag": "Cơ bản",
-    "name": "Polo và jeans",
-    "img": "./assets/illustrations/basic-social-3.svg",
-    "color": "black",
-    "desc": "Bộ phối cơ bản từ những món dễ tìm. Hình minh họa cách kết hợp, không phải ảnh sản phẩm.",
+    "editorialOrder": 2,
+    "tag": "Phối đồ cơ bản",
+    "color": [
+      "green",
+      "blue"
+    ],
+    "desc": "Outfit toàn thân được tuyển chọn từ Pinterest. Nhãn màu và loại đồ đã đối chiếu với ảnh; nguồn ảnh ở phần chi tiết.",
     "items": [
-      "Polo đen",
-      "Jeans xanh",
-      "Sneaker đen"
+      "Áo thun xanh lá",
+      "Quần jeans xanh biển"
     ]
   },
   {
-    "id": "basic-social-4",
-    "title": "Sơ mi kem cuối tuần",
+    "id": "photo-blue-jeans-white-shirt",
+    "title": "Sơ mi trắng và jeans xanh",
+    "name": "Sơ mi trắng và jeans xanh",
     "occasions": [
+      "school",
+      "work",
       "social"
     ],
-    "image": "./assets/illustrations/basic-social-4.svg",
-    "imageSource": "StyleMix original vector illustration — created for this project",
+    "image": "./assets/photos/blue-jeans-white-shirt.jpg",
+    "img": "./assets/photos/blue-jeans-white-shirt.jpg",
+    "imageSource": "https://www.pinterest.com/pin/1084241679075528265/",
+    "sourceUrl": "https://www.pinterest.com/pin/1084241679075528265/",
+    "fullBodyReviewed": true,
     "requiredSlots": [
       {
         "id": "top",
         "acceptedItemIds": [
-          "shirt-cream"
+          "shirt-white"
         ],
         "substituteItemIds": []
       },
       {
         "id": "bottom",
         "acceptedItemIds": [
-          "jeans-black"
-        ],
-        "substituteItemIds": []
-      },
-      {
-        "id": "shoes",
-        "acceptedItemIds": [
-          "sneakers-white"
+          "jeans-blue"
         ],
         "substituteItemIds": [
-          "sneakers-black"
+          "jeans-black"
         ]
       }
     ],
     "optionalItems": [],
     "instructions": [
-      "Giữ trang phục sạch, phẳng và chọn phom vừa người; không cần đúng thương hiệu trong mẫu.",
-      "Sơ vin gọn nếu muốn chỉn chu; tay áo có thể xắn nhẹ khi hoàn cảnh cho phép.",
-      "Giữ bảng màu đơn giản và chọn giày thuận tiện cho quãng đường đi bộ.",
-      "Phụ kiện tùy chọn: một chiếc đồng hồ hoặc túi đơn giản; không cần thêm để hoàn thành bộ."
+      "Ảnh cho thấy toàn bộ outfit. Đối chiếu loại và màu từng món với tủ đồ; không cần mua đúng sản phẩm hoặc thương hiệu trong ảnh.",
+      "Sơ vin gọn nếu muốn chỉn chu; có thể thả áo khi phù hợp với phom quần và hoàn cảnh.",
+      "Đi học: chỉ áp dụng vào ngày trường cho mặc tự do; ưu tiên quy định đồng phục của trường.",
+      "Đi làm: kiểm tra quy định công sở; áo thun, jeans hoặc sneaker chỉ phù hợp nơi cho ăn mặc thoải mái.",
+      "Giày và phụ kiện trong ảnh chỉ giúp hình dung tổng thể; không phải điều kiện lọc hoặc món bắt buộc trong ứng dụng."
     ],
-    "editorialOrder": 21,
-    "tag": "Cơ bản",
-    "name": "Sơ mi kem cuối tuần",
-    "img": "./assets/illustrations/basic-social-4.svg",
-    "color": "cream",
-    "desc": "Bộ phối cơ bản từ những món dễ tìm. Hình minh họa cách kết hợp, không phải ảnh sản phẩm.",
+    "editorialOrder": 3,
+    "tag": "Phối đồ cơ bản",
+    "color": [
+      "white",
+      "blue"
+    ],
+    "desc": "Outfit toàn thân được tuyển chọn từ Pinterest. Nhãn màu và loại đồ đã đối chiếu với ảnh; nguồn ảnh ở phần chi tiết.",
     "items": [
-      "Sơ mi kem",
-      "Jeans đen",
-      "Sneaker trắng"
+      "Áo sơ mi trắng",
+      "Quần jeans xanh biển"
     ]
   },
   {
-    "id": "basic-social-5",
-    "title": "Chân váy nhẹ nhàng",
+    "id": "photo-beige-trousers-brown-jacket",
+    "title": "Áo khoác nâu và quần vải be",
+    "name": "Áo khoác nâu và quần vải be",
     "occasions": [
+      "school",
+      "work",
       "social"
     ],
-    "image": "./assets/illustrations/basic-social-5.svg",
-    "imageSource": "StyleMix original vector illustration — created for this project",
+    "image": "./assets/photos/beige-trousers-brown-jacket.jpg",
+    "img": "./assets/photos/beige-trousers-brown-jacket.jpg",
+    "imageSource": "https://www.pinterest.com/pin/1130122100274089024/",
+    "sourceUrl": "https://www.pinterest.com/pin/1130122100274089024/",
+    "fullBodyReviewed": true,
+    "requiredSlots": [
+      {
+        "id": "top",
+        "acceptedItemIds": [
+          "shirt-black"
+        ],
+        "substituteItemIds": []
+      },
+      {
+        "id": "bottom",
+        "acceptedItemIds": [
+          "trousers-beige"
+        ],
+        "substituteItemIds": []
+      },
+      {
+        "id": "outerwear",
+        "acceptedItemIds": [
+          "jacket-brown"
+        ],
+        "substituteItemIds": []
+      }
+    ],
+    "optionalItems": [],
+    "instructions": [
+      "Ảnh cho thấy toàn bộ outfit. Đối chiếu loại và màu từng món với tủ đồ; không cần mua đúng sản phẩm hoặc thương hiệu trong ảnh.",
+      "Sơ vin gọn nếu muốn chỉn chu; có thể thả áo khi phù hợp với phom quần và hoàn cảnh.",
+      "Đi học: chỉ áp dụng vào ngày trường cho mặc tự do; ưu tiên quy định đồng phục của trường.",
+      "Đi làm: kiểm tra quy định công sở; áo thun, jeans hoặc sneaker chỉ phù hợp nơi cho ăn mặc thoải mái.",
+      "Giày và phụ kiện trong ảnh chỉ giúp hình dung tổng thể; không phải điều kiện lọc hoặc món bắt buộc trong ứng dụng."
+    ],
+    "editorialOrder": 4,
+    "tag": "Phối đồ cơ bản",
+    "color": [
+      "black",
+      "beige",
+      "brown"
+    ],
+    "desc": "Outfit toàn thân được tuyển chọn từ Pinterest. Nhãn màu và loại đồ đã đối chiếu với ảnh; nguồn ảnh ở phần chi tiết.",
+    "items": [
+      "Áo sơ mi đen",
+      "Quần vải be",
+      "Áo khoác nâu"
+    ]
+  },
+  {
+    "id": "photo-beige-trousers-vest",
+    "title": "Sơ mi trắng, gile be và quần be",
+    "name": "Sơ mi trắng, gile be và quần be",
+    "occasions": [
+      "school",
+      "work",
+      "presentation"
+    ],
+    "image": "./assets/photos/beige-trousers-vest.jpg",
+    "img": "./assets/photos/beige-trousers-vest.jpg",
+    "imageSource": "https://www.pinterest.com/pin/1089167491167358065/",
+    "sourceUrl": "https://www.pinterest.com/pin/1089167491167358065/",
+    "fullBodyReviewed": true,
+    "requiredSlots": [
+      {
+        "id": "top",
+        "acceptedItemIds": [
+          "shirt-white"
+        ],
+        "substituteItemIds": []
+      },
+      {
+        "id": "bottom",
+        "acceptedItemIds": [
+          "trousers-beige"
+        ],
+        "substituteItemIds": []
+      },
+      {
+        "id": "outerwear",
+        "acceptedItemIds": [
+          "vest-beige"
+        ],
+        "substituteItemIds": []
+      }
+    ],
+    "optionalItems": [],
+    "instructions": [
+      "Ảnh cho thấy toàn bộ outfit. Đối chiếu loại và màu từng món với tủ đồ; không cần mua đúng sản phẩm hoặc thương hiệu trong ảnh.",
+      "Sơ vin gọn nếu muốn chỉn chu; có thể thả áo khi phù hợp với phom quần và hoàn cảnh.",
+      "Đi học: chỉ áp dụng vào ngày trường cho mặc tự do; ưu tiên quy định đồng phục của trường.",
+      "Đi làm: kiểm tra quy định công sở; áo thun, jeans hoặc sneaker chỉ phù hợp nơi cho ăn mặc thoải mái.",
+      "Thuyết trình hoặc phỏng vấn: ưu tiên trang phục phẳng, vừa vặn và phù hợp mức trang trọng của buổi gặp.",
+      "Giày và phụ kiện trong ảnh chỉ giúp hình dung tổng thể; không phải điều kiện lọc hoặc món bắt buộc trong ứng dụng."
+    ],
+    "editorialOrder": 5,
+    "tag": "Phối đồ cơ bản",
+    "color": [
+      "white",
+      "beige"
+    ],
+    "desc": "Outfit toàn thân được tuyển chọn từ Pinterest. Nhãn màu và loại đồ đã đối chiếu với ảnh; nguồn ảnh ở phần chi tiết.",
+    "items": [
+      "Áo sơ mi trắng",
+      "Quần vải be",
+      "Áo gile be"
+    ]
+  },
+  {
+    "id": "photo-gray-trousers-black-tee",
+    "title": "Áo thun đen và quần vải xám",
+    "name": "Áo thun đen và quần vải xám",
+    "occasions": [
+      "school",
+      "work",
+      "social"
+    ],
+    "image": "./assets/photos/gray-trousers-black-tee.jpg",
+    "img": "./assets/photos/gray-trousers-black-tee.jpg",
+    "imageSource": "https://www.pinterest.com/pin/706642997874745107/",
+    "sourceUrl": "https://www.pinterest.com/pin/706642997874745107/",
+    "fullBodyReviewed": true,
+    "requiredSlots": [
+      {
+        "id": "top",
+        "acceptedItemIds": [
+          "tee-black"
+        ],
+        "substituteItemIds": []
+      },
+      {
+        "id": "bottom",
+        "acceptedItemIds": [
+          "trousers-gray"
+        ],
+        "substituteItemIds": []
+      }
+    ],
+    "optionalItems": [],
+    "instructions": [
+      "Ảnh cho thấy toàn bộ outfit. Đối chiếu loại và màu từng món với tủ đồ; không cần mua đúng sản phẩm hoặc thương hiệu trong ảnh.",
+      "Đi học: chỉ áp dụng vào ngày trường cho mặc tự do; ưu tiên quy định đồng phục của trường.",
+      "Đi làm: kiểm tra quy định công sở; áo thun, jeans hoặc sneaker chỉ phù hợp nơi cho ăn mặc thoải mái.",
+      "Giày và phụ kiện trong ảnh chỉ giúp hình dung tổng thể; không phải điều kiện lọc hoặc món bắt buộc trong ứng dụng."
+    ],
+    "editorialOrder": 6,
+    "tag": "Phối đồ cơ bản",
+    "color": [
+      "black",
+      "gray"
+    ],
+    "desc": "Outfit toàn thân được tuyển chọn từ Pinterest. Nhãn màu và loại đồ đã đối chiếu với ảnh; nguồn ảnh ở phần chi tiết.",
+    "items": [
+      "Áo thun đen",
+      "Quần vải xám"
+    ]
+  },
+  {
+    "id": "photo-gray-trousers-blazer",
+    "title": "Sơ mi khoác xám và quần vải xám",
+    "name": "Sơ mi khoác xám và quần vải xám",
+    "occasions": [
+      "work",
+      "presentation",
+      "social"
+    ],
+    "image": "./assets/photos/gray-trousers-blazer.jpg",
+    "img": "./assets/photos/gray-trousers-blazer.jpg",
+    "imageSource": "https://www.pinterest.com/pin/1125055550701020154/",
+    "sourceUrl": "https://www.pinterest.com/pin/1125055550701020154/",
+    "fullBodyReviewed": true,
+    "requiredSlots": [
+      {
+        "id": "top",
+        "acceptedItemIds": [
+          "inner-white"
+        ],
+        "substituteItemIds": []
+      },
+      {
+        "id": "bottom",
+        "acceptedItemIds": [
+          "trousers-gray"
+        ],
+        "substituteItemIds": []
+      },
+      {
+        "id": "outerwear",
+        "acceptedItemIds": [
+          "overshirt-gray"
+        ],
+        "substituteItemIds": []
+      }
+    ],
+    "optionalItems": [],
+    "instructions": [
+      "Ảnh cho thấy toàn bộ outfit. Đối chiếu loại và màu từng món với tủ đồ; không cần mua đúng sản phẩm hoặc thương hiệu trong ảnh.",
+      "Đi làm: kiểm tra quy định công sở; áo thun, jeans hoặc sneaker chỉ phù hợp nơi cho ăn mặc thoải mái.",
+      "Thuyết trình hoặc phỏng vấn: ưu tiên trang phục phẳng, vừa vặn và phù hợp mức trang trọng của buổi gặp.",
+      "Giày và phụ kiện trong ảnh chỉ giúp hình dung tổng thể; không phải điều kiện lọc hoặc món bắt buộc trong ứng dụng."
+    ],
+    "editorialOrder": 7,
+    "tag": "Phối đồ cơ bản",
+    "color": [
+      "white",
+      "gray"
+    ],
+    "desc": "Outfit toàn thân được tuyển chọn từ Pinterest. Nhãn màu và loại đồ đã đối chiếu với ảnh; nguồn ảnh ở phần chi tiết.",
+    "items": [
+      "Áo mặc trong trắng",
+      "Quần vải xám",
+      "Áo sơ mi khoác xám"
+    ]
+  },
+  {
+    "id": "photo-white-tee-blue-jeans",
+    "title": "Áo thun trắng và jeans xanh",
+    "name": "Áo thun trắng và jeans xanh",
+    "occasions": [
+      "school",
+      "social"
+    ],
+    "image": "./assets/photos/white-tee-blue-jeans.jpg",
+    "img": "./assets/photos/white-tee-blue-jeans.jpg",
+    "imageSource": "https://www.pinterest.com/pin/1135118281119740169/",
+    "sourceUrl": "https://www.pinterest.com/pin/1135118281119740169/",
+    "fullBodyReviewed": true,
     "requiredSlots": [
       {
         "id": "top",
         "acceptedItemIds": [
           "tee-white"
         ],
-        "substituteItemIds": []
+        "substituteItemIds": [
+          "tee-black"
+        ]
       },
       {
         "id": "bottom",
         "acceptedItemIds": [
-          "skirt-beige"
-        ],
-        "substituteItemIds": []
-      },
-      {
-        "id": "shoes",
-        "acceptedItemIds": [
-          "flats-black"
-        ],
-        "substituteItemIds": []
-      }
-    ],
-    "optionalItems": [],
-    "instructions": [
-      "Giữ trang phục sạch, phẳng và chọn phom vừa người; không cần đúng thương hiệu trong mẫu.",
-      "Giữ bảng màu đơn giản và chọn giày thuận tiện cho quãng đường đi bộ.",
-      "Phụ kiện tùy chọn: một chiếc đồng hồ hoặc túi đơn giản; không cần thêm để hoàn thành bộ."
-    ],
-    "editorialOrder": 22,
-    "tag": "Cơ bản",
-    "name": "Chân váy nhẹ nhàng",
-    "img": "./assets/illustrations/basic-social-5.svg",
-    "color": "white",
-    "desc": "Bộ phối cơ bản từ những món dễ tìm. Hình minh họa cách kết hợp, không phải ảnh sản phẩm.",
-    "items": [
-      "Áo thun trắng",
-      "Chân váy midi be",
-      "Giày bệt đen"
-    ]
-  },
-  {
-    "id": "basic-social-6",
-    "title": "Đầm đen và sneaker",
-    "occasions": [
-      "social"
-    ],
-    "image": "./assets/illustrations/basic-social-6.svg",
-    "imageSource": "StyleMix original vector illustration — created for this project",
-    "requiredSlots": [
-      {
-        "id": "dress",
-        "acceptedItemIds": [
-          "dress-black"
-        ],
-        "substituteItemIds": []
-      },
-      {
-        "id": "shoes",
-        "acceptedItemIds": [
-          "sneakers-white"
+          "jeans-blue"
         ],
         "substituteItemIds": [
-          "sneakers-black"
+          "jeans-black"
         ]
       }
     ],
     "optionalItems": [],
     "instructions": [
-      "Giữ trang phục sạch, phẳng và chọn phom vừa người; không cần đúng thương hiệu trong mẫu.",
-      "Giữ bảng màu đơn giản và chọn giày thuận tiện cho quãng đường đi bộ.",
-      "Phụ kiện tùy chọn: một chiếc đồng hồ hoặc túi đơn giản; không cần thêm để hoàn thành bộ."
+      "Ảnh cho thấy toàn bộ outfit. Đối chiếu loại và màu từng món với tủ đồ; không cần mua đúng sản phẩm hoặc thương hiệu trong ảnh.",
+      "Đi học: chỉ áp dụng vào ngày trường cho mặc tự do; ưu tiên quy định đồng phục của trường.",
+      "Giày và phụ kiện trong ảnh chỉ giúp hình dung tổng thể; không phải điều kiện lọc hoặc món bắt buộc trong ứng dụng."
     ],
-    "editorialOrder": 23,
-    "tag": "Cơ bản",
-    "name": "Đầm đen và sneaker",
-    "img": "./assets/illustrations/basic-social-6.svg",
-    "color": "black",
-    "desc": "Bộ phối cơ bản từ những món dễ tìm. Hình minh họa cách kết hợp, không phải ảnh sản phẩm.",
+    "editorialOrder": 8,
+    "tag": "Phối đồ cơ bản",
+    "color": [
+      "white",
+      "blue"
+    ],
+    "desc": "Outfit toàn thân được tuyển chọn từ Pinterest. Nhãn màu và loại đồ đã đối chiếu với ảnh; nguồn ảnh ở phần chi tiết.",
     "items": [
-      "Đầm liền đen",
-      "Sneaker trắng"
+      "Áo thun trắng",
+      "Quần jeans xanh biển"
+    ]
+  },
+  {
+    "id": "photo-white-shirt-black-trousers",
+    "title": "Sơ mi trắng và quần vải đen",
+    "name": "Sơ mi trắng và quần vải đen",
+    "occasions": [
+      "school",
+      "work",
+      "presentation"
+    ],
+    "image": "./assets/photos/white-shirt-black-trousers.jpg",
+    "img": "./assets/photos/white-shirt-black-trousers.jpg",
+    "imageSource": "https://www.pinterest.com/pin/359513982770774871/",
+    "sourceUrl": "https://www.pinterest.com/pin/359513982770774871/",
+    "fullBodyReviewed": true,
+    "requiredSlots": [
+      {
+        "id": "top",
+        "acceptedItemIds": [
+          "shirt-white"
+        ],
+        "substituteItemIds": []
+      },
+      {
+        "id": "bottom",
+        "acceptedItemIds": [
+          "trousers-black"
+        ],
+        "substituteItemIds": []
+      }
+    ],
+    "optionalItems": [],
+    "instructions": [
+      "Ảnh cho thấy toàn bộ outfit. Đối chiếu loại và màu từng món với tủ đồ; không cần mua đúng sản phẩm hoặc thương hiệu trong ảnh.",
+      "Sơ vin gọn nếu muốn chỉn chu; có thể thả áo khi phù hợp với phom quần và hoàn cảnh.",
+      "Đi học: chỉ áp dụng vào ngày trường cho mặc tự do; ưu tiên quy định đồng phục của trường.",
+      "Đi làm: kiểm tra quy định công sở; áo thun, jeans hoặc sneaker chỉ phù hợp nơi cho ăn mặc thoải mái.",
+      "Thuyết trình hoặc phỏng vấn: ưu tiên trang phục phẳng, vừa vặn và phù hợp mức trang trọng của buổi gặp.",
+      "Giày và phụ kiện trong ảnh chỉ giúp hình dung tổng thể; không phải điều kiện lọc hoặc món bắt buộc trong ứng dụng."
+    ],
+    "editorialOrder": 9,
+    "tag": "Phối đồ cơ bản",
+    "color": [
+      "white",
+      "black"
+    ],
+    "desc": "Outfit toàn thân được tuyển chọn từ Pinterest. Nhãn màu và loại đồ đã đối chiếu với ảnh; nguồn ảnh ở phần chi tiết.",
+    "items": [
+      "Áo sơ mi trắng",
+      "Quần vải đen"
+    ]
+  },
+  {
+    "id": "photo-white-hoodie-blue-jeans",
+    "title": "Hoodie trắng và jeans xanh",
+    "name": "Hoodie trắng và jeans xanh",
+    "occasions": [
+      "school",
+      "social"
+    ],
+    "image": "./assets/photos/white-hoodie-blue-jeans.jpg",
+    "img": "./assets/photos/white-hoodie-blue-jeans.jpg",
+    "imageSource": "https://www.pinterest.com/pin/4593812441569827904/",
+    "sourceUrl": "https://www.pinterest.com/pin/4593812441569827904/",
+    "fullBodyReviewed": true,
+    "requiredSlots": [
+      {
+        "id": "outerwear",
+        "acceptedItemIds": [
+          "hoodie-white"
+        ],
+        "substituteItemIds": []
+      },
+      {
+        "id": "bottom",
+        "acceptedItemIds": [
+          "jeans-blue"
+        ],
+        "substituteItemIds": [
+          "jeans-black"
+        ]
+      }
+    ],
+    "optionalItems": [],
+    "instructions": [
+      "Ảnh cho thấy toàn bộ outfit. Đối chiếu loại và màu từng món với tủ đồ; không cần mua đúng sản phẩm hoặc thương hiệu trong ảnh.",
+      "Đi học: chỉ áp dụng vào ngày trường cho mặc tự do; ưu tiên quy định đồng phục của trường.",
+      "Giày và phụ kiện trong ảnh chỉ giúp hình dung tổng thể; không phải điều kiện lọc hoặc món bắt buộc trong ứng dụng."
+    ],
+    "editorialOrder": 10,
+    "tag": "Phối đồ cơ bản",
+    "color": [
+      "white",
+      "blue"
+    ],
+    "desc": "Outfit toàn thân được tuyển chọn từ Pinterest. Nhãn màu và loại đồ đã đối chiếu với ảnh; nguồn ảnh ở phần chi tiết.",
+    "items": [
+      "Áo hoodie trắng",
+      "Quần jeans xanh biển"
+    ]
+  },
+  {
+    "id": "photo-blue-denim-jacket",
+    "title": "Áo khoác jeans xanh cùng áo thun trắng",
+    "name": "Áo khoác jeans xanh cùng áo thun trắng",
+    "occasions": [
+      "school",
+      "social"
+    ],
+    "image": "./assets/photos/blue-denim-jacket.jpg",
+    "img": "./assets/photos/blue-denim-jacket.jpg",
+    "imageSource": "https://www.pinterest.com/pin/1084171310331580352/",
+    "sourceUrl": "https://www.pinterest.com/pin/1084171310331580352/",
+    "fullBodyReviewed": true,
+    "requiredSlots": [
+      {
+        "id": "top",
+        "acceptedItemIds": [
+          "tee-white"
+        ],
+        "substituteItemIds": [
+          "tee-black"
+        ]
+      },
+      {
+        "id": "bottom",
+        "acceptedItemIds": [
+          "jeans-blue"
+        ],
+        "substituteItemIds": [
+          "jeans-black"
+        ]
+      },
+      {
+        "id": "outerwear",
+        "acceptedItemIds": [
+          "denim-jacket-blue"
+        ],
+        "substituteItemIds": []
+      }
+    ],
+    "optionalItems": [],
+    "instructions": [
+      "Ảnh cho thấy toàn bộ outfit. Đối chiếu loại và màu từng món với tủ đồ; không cần mua đúng sản phẩm hoặc thương hiệu trong ảnh.",
+      "Đi học: chỉ áp dụng vào ngày trường cho mặc tự do; ưu tiên quy định đồng phục của trường.",
+      "Giày và phụ kiện trong ảnh chỉ giúp hình dung tổng thể; không phải điều kiện lọc hoặc món bắt buộc trong ứng dụng."
+    ],
+    "editorialOrder": 11,
+    "tag": "Phối đồ cơ bản",
+    "color": [
+      "white",
+      "blue"
+    ],
+    "desc": "Outfit toàn thân được tuyển chọn từ Pinterest. Nhãn màu và loại đồ đã đối chiếu với ảnh; nguồn ảnh ở phần chi tiết.",
+    "items": [
+      "Áo thun trắng",
+      "Quần jeans xanh biển",
+      "Áo khoác jeans xanh"
     ]
   }
 ]

@@ -8,7 +8,7 @@ test('same-document fragment link never starts a full-page transition',()=>{
     let prevented=false;events.click?.({preventDefault(){prevented=true;}});assert.equal(prevented,false);assert.notEqual(transition.style.transform,'scaleY(1)');
 });
 test('all catalog pages bind their actual search input to the shared controller',()=>{
-    for(const name of ['ao','quan','phu-kien','yeu-thich']){
+    for(const name of ['ao','quan','ao-khoac','yeu-thich']){
         const html=fs.readFileSync(path.join(root,name+'.html'),'utf8');
         assert.match(html,/<input\b[^>]*\bid="searchInput"[^>]*>/,name+' search binding');assert.match(html,/<input\b[^>]*aria-label="[^"]+"[^>]*>/,name+' accessible label');
     }

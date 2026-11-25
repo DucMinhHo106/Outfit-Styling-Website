@@ -1,0 +1,110 @@
+[
+  {
+    "id": "hoodie-black",
+    "name": "Áo khoác hoodie đen",
+    "category": "outerwear",
+    "type": "hoodie",
+    "color": "black",
+    "hex": "#303034",
+    "image": "./assets/photos/black-jeans-hoodie.jpg",
+    "img": "./assets/photos/black-jeans-hoodie.jpg",
+    "sourceUrl": "https://www.pinterest.com/pin/1131036893952756050/",
+    "tag": "Hoodie",
+    "desc": "Ảnh outfit thật có áo khoác hoodie đen. Chọn món theo loại và màu bạn đang có; không cần đúng thương hiệu trong ảnh.",
+    "items": [
+      "Áo khoác hoodie đen",
+      "Ảnh toàn thân để nhìn tổng thể phối đồ",
+      "Màu có thể khác nhẹ theo ánh sáng; chất liệu chưa xác minh"
+    ]
+  },
+  {
+    "id": "hoodie-white",
+    "name": "Áo hoodie trắng",
+    "category": "outerwear",
+    "type": "hoodie",
+    "color": "white",
+    "hex": "#f0ece5",
+    "image": "./assets/photos/white-hoodie-blue-jeans.jpg",
+    "img": "./assets/photos/white-hoodie-blue-jeans.jpg",
+    "sourceUrl": "https://www.pinterest.com/pin/4593812441569827904/",
+    "tag": "Hoodie",
+    "desc": "Ảnh outfit thật có áo hoodie trắng. Chọn món theo loại và màu bạn đang có; không cần đúng thương hiệu trong ảnh.",
+    "items": [
+      "Áo hoodie trắng",
+      "Ảnh toàn thân để nhìn tổng thể phối đồ",
+      "Màu có thể khác nhẹ theo ánh sáng; chất liệu chưa xác minh"
+    ]
+  },
+  {
+    "id": "denim-jacket-blue",
+    "name": "Áo khoác jeans xanh",
+    "category": "outerwear",
+    "type": "denim_jacket",
+    "color": "blue",
+    "hex": "#6484a1",
+    "image": "./assets/photos/blue-denim-jacket.jpg",
+    "img": "./assets/photos/blue-denim-jacket.jpg",
+    "sourceUrl": "https://www.pinterest.com/pin/1084171310331580352/",
+    "tag": "Áo khoác jeans",
+    "desc": "Ảnh outfit thật có áo khoác jeans xanh. Chọn món theo loại và màu bạn đang có; không cần đúng thương hiệu trong ảnh.",
+    "items": [
+      "Áo khoác jeans xanh",
+      "Ảnh toàn thân để nhìn tổng thể phối đồ",
+      "Màu có thể khác nhẹ theo ánh sáng; chất liệu chưa xác minh"
+    ]
+  },
+  {
+    "id": "jacket-brown",
+    "name": "Áo khoác nâu",
+    "category": "outerwear",
+    "type": "jacket",
+    "color": "brown",
+    "hex": "#6d4d35",
+    "image": "./assets/photos/beige-trousers-brown-jacket.jpg",
+    "img": "./assets/photos/beige-trousers-brown-jacket.jpg",
+    "sourceUrl": "https://www.pinterest.com/pin/1130122100274089024/",
+    "tag": "Áo khoác",
+    "desc": "Ảnh outfit thật có áo khoác nâu. Chọn món theo loại và màu bạn đang có; không cần đúng thương hiệu trong ảnh.",
+    "items": [
+      "Áo khoác nâu",
+      "Ảnh toàn thân để nhìn tổng thể phối đồ",
+      "Màu có thể khác nhẹ theo ánh sáng; chất liệu chưa xác minh"
+    ]
+  },
+  {
+    "id": "vest-beige",
+    "name": "Áo gile be",
+    "category": "outerwear",
+    "type": "vest",
+    "color": "beige",
+    "hex": "#c4ae8b",
+    "image": "./assets/photos/beige-trousers-vest.jpg",
+    "img": "./assets/photos/beige-trousers-vest.jpg",
+    "sourceUrl": "https://www.pinterest.com/pin/1089167491167358065/",
+    "tag": "Gile",
+    "desc": "Ảnh outfit thật có áo gile be. Chọn món theo loại và màu bạn đang có; không cần đúng thương hiệu trong ảnh.",
+    "items": [
+      "Áo gile be",
+      "Ảnh toàn thân để nhìn tổng thể phối đồ",
+      "Màu có thể khác nhẹ theo ánh sáng; chất liệu chưa xác minh"
+    ]
+  },
+  {
+    "id": "overshirt-gray",
+    "name": "Áo sơ mi khoác xám",
+    "category": "outerwear",
+    "type": "overshirt",
+    "color": "gray",
+    "hex": "#96969c",
+    "image": "./assets/photos/gray-trousers-blazer.jpg",
+    "img": "./assets/photos/gray-trousers-blazer.jpg",
+    "sourceUrl": "https://www.pinterest.com/pin/1125055550701020154/",
+    "tag": "Sơ mi khoác",
+    "desc": "Ảnh outfit thật có áo sơ mi khoác xám. Chọn món theo loại và màu bạn đang có; không cần đúng thương hiệu trong ảnh.",
+    "items": [
+      "Áo sơ mi khoác xám",
+      "Ảnh toàn thân để nhìn tổng thể phối đồ",
+      "Màu có thể khác nhẹ theo ánh sáng; chất liệu chưa xác minh"
+    ]
+  }
+]

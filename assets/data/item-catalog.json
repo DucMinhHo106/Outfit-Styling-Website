@@ -1,170 +1,308 @@
 [
   {
-    "id": "tee-white",
-    "name": "Áo thun trắng",
-    "type": "tee",
-    "color": "white",
-    "hex": "#eeeae3",
-    "image": "./assets/illustrations/tee-white.svg"
-  },
-  {
-    "id": "tee-black",
-    "name": "Áo thun đen",
-    "type": "tee",
-    "color": "black",
-    "hex": "#303034",
-    "image": "./assets/illustrations/tee-black.svg"
-  },
-  {
-    "id": "tee-gray",
-    "name": "Áo thun xám",
-    "type": "tee",
-    "color": "gray",
-    "hex": "#9b9ba0",
-    "image": "./assets/illustrations/tee-gray.svg"
-  },
-  {
-    "id": "shirt-white",
-    "name": "Sơ mi trắng",
-    "type": "shirt",
-    "color": "white",
-    "hex": "#f0ece5",
-    "image": "./assets/illustrations/shirt-white.svg"
-  },
-  {
-    "id": "shirt-blue",
-    "name": "Sơ mi xanh nhạt",
-    "type": "shirt",
-    "color": "blue",
-    "hex": "#9fbcd2",
-    "image": "./assets/illustrations/shirt-blue.svg"
-  },
-  {
-    "id": "shirt-cream",
-    "name": "Sơ mi kem",
-    "type": "shirt",
-    "color": "cream",
-    "hex": "#dbcbb5",
-    "image": "./assets/illustrations/shirt-cream.svg"
-  },
-  {
-    "id": "polo-navy",
-    "name": "Polo xanh navy",
-    "type": "polo",
-    "color": "navy",
-    "hex": "#31405d",
-    "image": "./assets/illustrations/polo-navy.svg"
-  },
-  {
-    "id": "polo-black",
-    "name": "Polo đen",
-    "type": "polo",
-    "color": "black",
-    "hex": "#303034",
-    "image": "./assets/illustrations/polo-black.svg"
-  },
-  {
-    "id": "jeans-blue",
-    "name": "Jeans xanh",
+    "id": "trousers-black",
+    "name": "Quần vải đen",
+    "category": "pants",
     "type": "trousers",
-    "color": "blue",
-    "hex": "#6484a1",
-    "image": "./assets/illustrations/jeans-blue.svg"
+    "color": "black",
+    "hex": "#303034",
+    "image": "./assets/photos/black-trousers.jpg",
+    "img": "./assets/photos/black-trousers.jpg",
+    "sourceUrl": "https://www.pinterest.com/pin/661325526579466558/",
+    "tag": "Quần vải",
+    "desc": "Ảnh outfit thật có quần vải đen. Chọn món theo loại và màu bạn đang có; không cần đúng thương hiệu trong ảnh.",
+    "items": [
+      "Quần vải đen",
+      "Ảnh toàn thân để nhìn tổng thể phối đồ",
+      "Màu có thể khác nhẹ theo ánh sáng; chất liệu chưa xác minh"
+    ]
   },
   {
     "id": "jeans-black",
-    "name": "Jeans đen",
-    "type": "trousers",
+    "name": "Quần jeans đen",
+    "category": "pants",
+    "type": "jeans",
     "color": "black",
-    "hex": "#36363c",
-    "image": "./assets/illustrations/jeans-black.svg"
+    "hex": "#343438",
+    "image": "./assets/photos/black-jeans-hoodie.jpg",
+    "img": "./assets/photos/black-jeans-hoodie.jpg",
+    "sourceUrl": "https://www.pinterest.com/pin/1131036893952756050/",
+    "tag": "Quần jeans",
+    "desc": "Ảnh outfit thật có quần jeans đen. Chọn món theo loại và màu bạn đang có; không cần đúng thương hiệu trong ảnh.",
+    "items": [
+      "Quần jeans đen",
+      "Ảnh toàn thân để nhìn tổng thể phối đồ",
+      "Màu có thể khác nhẹ theo ánh sáng; chất liệu chưa xác minh"
+    ]
   },
   {
-    "id": "trousers-black",
-    "name": "Quần vải đen",
+    "id": "jeans-blue",
+    "name": "Quần jeans xanh biển",
+    "category": "pants",
+    "type": "jeans",
+    "color": "blue",
+    "hex": "#6484a1",
+    "image": "./assets/photos/blue-jeans-green-tee.jpg",
+    "img": "./assets/photos/blue-jeans-green-tee.jpg",
+    "sourceUrl": "https://www.pinterest.com/pin/915497430526409091/",
+    "tag": "Quần jeans",
+    "desc": "Ảnh outfit thật có quần jeans xanh biển. Chọn món theo loại và màu bạn đang có; không cần đúng thương hiệu trong ảnh.",
+    "items": [
+      "Quần jeans xanh biển",
+      "Ảnh toàn thân để nhìn tổng thể phối đồ",
+      "Màu có thể khác nhẹ theo ánh sáng; chất liệu chưa xác minh"
+    ]
+  },
+  {
+    "id": "trousers-beige",
+    "name": "Quần vải be",
+    "category": "pants",
     "type": "trousers",
-    "color": "black",
-    "hex": "#303034",
-    "image": "./assets/illustrations/trousers-black.svg"
+    "color": "beige",
+    "hex": "#c4ae8b",
+    "image": "./assets/photos/beige-trousers-brown-jacket.jpg",
+    "img": "./assets/photos/beige-trousers-brown-jacket.jpg",
+    "sourceUrl": "https://www.pinterest.com/pin/1130122100274089024/",
+    "tag": "Quần vải",
+    "desc": "Ảnh outfit thật có quần vải be. Chọn món theo loại và màu bạn đang có; không cần đúng thương hiệu trong ảnh.",
+    "items": [
+      "Quần vải be",
+      "Ảnh toàn thân để nhìn tổng thể phối đồ",
+      "Màu có thể khác nhẹ theo ánh sáng; chất liệu chưa xác minh"
+    ]
   },
   {
     "id": "trousers-gray",
     "name": "Quần vải xám",
+    "category": "pants",
     "type": "trousers",
     "color": "gray",
     "hex": "#96969c",
-    "image": "./assets/illustrations/trousers-gray.svg"
+    "image": "./assets/photos/gray-trousers-black-tee.jpg",
+    "img": "./assets/photos/gray-trousers-black-tee.jpg",
+    "sourceUrl": "https://www.pinterest.com/pin/706642997874745107/",
+    "tag": "Quần vải",
+    "desc": "Ảnh outfit thật có quần vải xám. Chọn món theo loại và màu bạn đang có; không cần đúng thương hiệu trong ảnh.",
+    "items": [
+      "Quần vải xám",
+      "Ảnh toàn thân để nhìn tổng thể phối đồ",
+      "Màu có thể khác nhẹ theo ánh sáng; chất liệu chưa xác minh"
+    ]
   },
   {
-    "id": "chinos-beige",
-    "name": "Quần kaki be",
-    "type": "trousers",
-    "color": "beige",
-    "hex": "#c4ae8b",
-    "image": "./assets/illustrations/chinos-beige.svg"
-  },
-  {
-    "id": "skirt-black",
-    "name": "Chân váy midi đen",
-    "type": "skirt",
-    "color": "black",
-    "hex": "#38383d",
-    "image": "./assets/illustrations/skirt-black.svg"
-  },
-  {
-    "id": "skirt-beige",
-    "name": "Chân váy midi be",
-    "type": "skirt",
-    "color": "beige",
-    "hex": "#c4ae8b",
-    "image": "./assets/illustrations/skirt-beige.svg"
-  },
-  {
-    "id": "dress-navy",
-    "name": "Đầm liền xanh navy",
-    "type": "dress",
-    "color": "navy",
-    "hex": "#31405d",
-    "image": "./assets/illustrations/dress-navy.svg"
-  },
-  {
-    "id": "dress-black",
-    "name": "Đầm liền đen",
-    "type": "dress",
+    "id": "tee-black",
+    "name": "Áo thun đen",
+    "category": "tops",
+    "type": "tee",
     "color": "black",
     "hex": "#303034",
-    "image": "./assets/illustrations/dress-black.svg"
+    "image": "./assets/photos/black-trousers.jpg",
+    "img": "./assets/photos/black-trousers.jpg",
+    "sourceUrl": "https://www.pinterest.com/pin/661325526579466558/",
+    "tag": "Áo thun",
+    "desc": "Ảnh outfit thật có áo thun đen. Chọn món theo loại và màu bạn đang có; không cần đúng thương hiệu trong ảnh.",
+    "items": [
+      "Áo thun đen",
+      "Ảnh toàn thân để nhìn tổng thể phối đồ",
+      "Màu có thể khác nhẹ theo ánh sáng; chất liệu chưa xác minh"
+    ]
   },
   {
-    "id": "sneakers-white",
-    "name": "Sneaker trắng",
-    "type": "shoes",
+    "id": "tee-white",
+    "name": "Áo thun trắng",
+    "category": "tops",
+    "type": "tee",
     "color": "white",
     "hex": "#f0ece5",
-    "image": "./assets/illustrations/sneakers-white.svg"
+    "image": "./assets/photos/white-tee-blue-jeans.jpg",
+    "img": "./assets/photos/white-tee-blue-jeans.jpg",
+    "sourceUrl": "https://www.pinterest.com/pin/1135118281119740169/",
+    "tag": "Áo thun",
+    "desc": "Ảnh outfit thật có áo thun trắng. Chọn món theo loại và màu bạn đang có; không cần đúng thương hiệu trong ảnh.",
+    "items": [
+      "Áo thun trắng",
+      "Ảnh toàn thân để nhìn tổng thể phối đồ",
+      "Màu có thể khác nhẹ theo ánh sáng; chất liệu chưa xác minh"
+    ]
   },
   {
-    "id": "sneakers-black",
-    "name": "Sneaker đen",
-    "type": "shoes",
-    "color": "black",
-    "hex": "#38383d",
-    "image": "./assets/illustrations/sneakers-black.svg"
+    "id": "tee-green",
+    "name": "Áo thun xanh lá",
+    "category": "tops",
+    "type": "tee",
+    "color": "green",
+    "hex": "#245547",
+    "image": "./assets/photos/blue-jeans-green-tee.jpg",
+    "img": "./assets/photos/blue-jeans-green-tee.jpg",
+    "sourceUrl": "https://www.pinterest.com/pin/915497430526409091/",
+    "tag": "Áo thun",
+    "desc": "Ảnh outfit thật có áo thun xanh lá. Chọn món theo loại và màu bạn đang có; không cần đúng thương hiệu trong ảnh.",
+    "items": [
+      "Áo thun xanh lá",
+      "Ảnh toàn thân để nhìn tổng thể phối đồ",
+      "Màu có thể khác nhẹ theo ánh sáng; chất liệu chưa xác minh"
+    ]
   },
   {
-    "id": "loafers-black",
-    "name": "Loafer đen",
-    "type": "shoes",
+    "id": "shirt-white",
+    "name": "Áo sơ mi trắng",
+    "category": "tops",
+    "type": "shirt",
+    "color": "white",
+    "hex": "#f0ece5",
+    "image": "./assets/photos/white-shirt-black-trousers.jpg",
+    "img": "./assets/photos/white-shirt-black-trousers.jpg",
+    "sourceUrl": "https://www.pinterest.com/pin/359513982770774871/",
+    "tag": "Sơ mi",
+    "desc": "Ảnh outfit thật có áo sơ mi trắng. Chọn món theo loại và màu bạn đang có; không cần đúng thương hiệu trong ảnh.",
+    "items": [
+      "Áo sơ mi trắng",
+      "Ảnh toàn thân để nhìn tổng thể phối đồ",
+      "Màu có thể khác nhẹ theo ánh sáng; chất liệu chưa xác minh"
+    ]
+  },
+  {
+    "id": "shirt-black",
+    "name": "Áo sơ mi đen",
+    "category": "tops",
+    "type": "shirt",
     "color": "black",
     "hex": "#303034",
-    "image": "./assets/illustrations/loafers-black.svg"
+    "image": "./assets/photos/beige-trousers-brown-jacket.jpg",
+    "img": "./assets/photos/beige-trousers-brown-jacket.jpg",
+    "sourceUrl": "https://www.pinterest.com/pin/1130122100274089024/",
+    "tag": "Sơ mi",
+    "desc": "Ảnh outfit thật có áo sơ mi đen. Chọn món theo loại và màu bạn đang có; không cần đúng thương hiệu trong ảnh.",
+    "items": [
+      "Áo sơ mi đen",
+      "Ảnh toàn thân để nhìn tổng thể phối đồ",
+      "Màu có thể khác nhẹ theo ánh sáng; chất liệu chưa xác minh"
+    ]
   },
   {
-    "id": "flats-black",
-    "name": "Giày bệt đen",
-    "type": "shoes",
+    "id": "inner-white",
+    "name": "Áo mặc trong trắng",
+    "category": "tops",
+    "type": "inner_top",
+    "color": "white",
+    "hex": "#f0ece5",
+    "image": "./assets/photos/gray-trousers-blazer.jpg",
+    "img": "./assets/photos/gray-trousers-blazer.jpg",
+    "sourceUrl": "https://www.pinterest.com/pin/1125055550701020154/",
+    "tag": "Áo mặc trong",
+    "desc": "Ảnh outfit thật có áo mặc trong trắng. Chọn món theo loại và màu bạn đang có; không cần đúng thương hiệu trong ảnh.",
+    "items": [
+      "Áo mặc trong trắng",
+      "Ảnh toàn thân để nhìn tổng thể phối đồ",
+      "Màu có thể khác nhẹ theo ánh sáng; chất liệu chưa xác minh"
+    ]
+  },
+  {
+    "id": "hoodie-black",
+    "name": "Áo khoác hoodie đen",
+    "category": "outerwear",
+    "type": "hoodie",
     "color": "black",
     "hex": "#303034",
-    "image": "./assets/illustrations/flats-black.svg"
+    "image": "./assets/photos/black-jeans-hoodie.jpg",
+    "img": "./assets/photos/black-jeans-hoodie.jpg",
+    "sourceUrl": "https://www.pinterest.com/pin/1131036893952756050/",
+    "tag": "Hoodie",
+    "desc": "Ảnh outfit thật có áo khoác hoodie đen. Chọn món theo loại và màu bạn đang có; không cần đúng thương hiệu trong ảnh.",
+    "items": [
+      "Áo khoác hoodie đen",
+      "Ảnh toàn thân để nhìn tổng thể phối đồ",
+      "Màu có thể khác nhẹ theo ánh sáng; chất liệu chưa xác minh"
+    ]
+  },
+  {
+    "id": "hoodie-white",
+    "name": "Áo hoodie trắng",
+    "category": "outerwear",
+    "type": "hoodie",
+    "color": "white",
+    "hex": "#f0ece5",
+    "image": "./assets/photos/white-hoodie-blue-jeans.jpg",
+    "img": "./assets/photos/white-hoodie-blue-jeans.jpg",
+    "sourceUrl": "https://www.pinterest.com/pin/4593812441569827904/",
+    "tag": "Hoodie",
+    "desc": "Ảnh outfit thật có áo hoodie trắng. Chọn món theo loại và màu bạn đang có; không cần đúng thương hiệu trong ảnh.",
+    "items": [
+      "Áo hoodie trắng",
+      "Ảnh toàn thân để nhìn tổng thể phối đồ",
+      "Màu có thể khác nhẹ theo ánh sáng; chất liệu chưa xác minh"
+    ]
+  },
+  {
+    "id": "denim-jacket-blue",
+    "name": "Áo khoác jeans xanh",
+    "category": "outerwear",
+    "type": "denim_jacket",
+    "color": "blue",
+    "hex": "#6484a1",
+    "image": "./assets/photos/blue-denim-jacket.jpg",
+    "img": "./assets/photos/blue-denim-jacket.jpg",
+    "sourceUrl": "https://www.pinterest.com/pin/1084171310331580352/",
+    "tag": "Áo khoác jeans",
+    "desc": "Ảnh outfit thật có áo khoác jeans xanh. Chọn món theo loại và màu bạn đang có; không cần đúng thương hiệu trong ảnh.",
+    "items": [
+      "Áo khoác jeans xanh",
+      "Ảnh toàn thân để nhìn tổng thể phối đồ",
+      "Màu có thể khác nhẹ theo ánh sáng; chất liệu chưa xác minh"
+    ]
+  },
+  {
+    "id": "jacket-brown",
+    "name": "Áo khoác nâu",
+    "category": "outerwear",
+    "type": "jacket",
+    "color": "brown",
+    "hex": "#6d4d35",
+    "image": "./assets/photos/beige-trousers-brown-jacket.jpg",
+    "img": "./assets/photos/beige-trousers-brown-jacket.jpg",
+    "sourceUrl": "https://www.pinterest.com/pin/1130122100274089024/",
+    "tag": "Áo khoác",
+    "desc": "Ảnh outfit thật có áo khoác nâu. Chọn món theo loại và màu bạn đang có; không cần đúng thương hiệu trong ảnh.",
+    "items": [
+      "Áo khoác nâu",
+      "Ảnh toàn thân để nhìn tổng thể phối đồ",
+      "Màu có thể khác nhẹ theo ánh sáng; chất liệu chưa xác minh"
+    ]
+  },
+  {
+    "id": "vest-beige",
+    "name": "Áo gile be",
+    "category": "outerwear",
+    "type": "vest",
+    "color": "beige",
+    "hex": "#c4ae8b",
+    "image": "./assets/photos/beige-trousers-vest.jpg",
+    "img": "./assets/photos/beige-trousers-vest.jpg",
+    "sourceUrl": "https://www.pinterest.com/pin/1089167491167358065/",
+    "tag": "Gile",
+    "desc": "Ảnh outfit thật có áo gile be. Chọn món theo loại và màu bạn đang có; không cần đúng thương hiệu trong ảnh.",
+    "items": [
+      "Áo gile be",
+      "Ảnh toàn thân để nhìn tổng thể phối đồ",
+      "Màu có thể khác nhẹ theo ánh sáng; chất liệu chưa xác minh"
+    ]
+  },
+  {
+    "id": "overshirt-gray",
+    "name": "Áo sơ mi khoác xám",
+    "category": "outerwear",
+    "type": "overshirt",
+    "color": "gray",
+    "hex": "#96969c",
+    "image": "./assets/photos/gray-trousers-blazer.jpg",
+    "img": "./assets/photos/gray-trousers-blazer.jpg",
+    "sourceUrl": "https://www.pinterest.com/pin/1125055550701020154/",
+    "tag": "Sơ mi khoác",
+    "desc": "Ảnh outfit thật có áo sơ mi khoác xám. Chọn món theo loại và màu bạn đang có; không cần đúng thương hiệu trong ảnh.",
+    "items": [
+      "Áo sơ mi khoác xám",
+      "Ảnh toàn thân để nhìn tổng thể phối đồ",
+      "Màu có thể khác nhẹ theo ánh sáng; chất liệu chưa xác minh"
+    ]
   }
 ]

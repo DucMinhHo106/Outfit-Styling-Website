@@ -37,16 +37,31 @@
         }
         function makePicker(){
             picker.replaceChildren();
-            const groups=[['Áo',['tee','shirt','polo']],['Quần / chân váy',['trousers','skirt']],['Giày',['shoes']],['Đầm liền',['dress']]];
-            groups.forEach(([label,types],index)=>{
+            const groups=[['Quần','pants'],['Áo','tops'],['Áo khoác','outerwear']];
+            groups.forEach(([label,category],index)=>{
                 const group=document.createElement('details');group.className='picker-group';group.open=index===0;
-                group.append(text('summary',label));const list=document.createElement('div');list.className='picker-items';
-                for(const item of catalog.filter(x=>types.includes(x.type))){
-                    const button=document.createElement('button');button.type='button';button.className='picker-item';button.dataset.itemId=item.id;button.setAttribute('aria-pressed','false');
-                    const image=document.createElement('img');image.src=item.image;image.alt='';image.loading='lazy';image.width=70;image.height=70;
-                    button.append(image,text('span',item.name));button.addEventListener('click',()=>change({type:'toggle',id:item.id}));list.append(button);
+                group.append(text('summary',label));
+                const filters=document.createElement('div');filters.className='picker-filters';
+                const list=document.createElement('div');list.className='picker-items';
+                const data=catalog.filter(item=>item.category===category);
+                const colorSelect=document.createElement('select'),typeSelect=document.createElement('select');
+                for(const [select,name,values] of [[colorSelect,'Màu '+label.toLowerCase(),['all',...new Set(data.map(x=>x.color))]],[typeSelect,'Loại '+label.toLowerCase(),['all',...new Set(data.map(x=>x.type))]]]){
+                    const field=text('label',name);select.setAttribute('aria-label',name);
+                    for(const value of values){const option=document.createElement('option');option.value=value;option.textContent=value==='all'?'Tất cả':select===colorSelect?(root.StyleMixAdmin.colors[value]?.[0]||value):(root.StyleMixAdmin.taxonomy[category].types[value]?.[0]||value);select.append(option);}
+                    field.append(select);filters.append(field);
                 }
-                group.append(list);picker.append(group);
+                function renderGroup(){
+                    list.replaceChildren();
+                    const filtered=root.CatalogFilter.filterGarments(data,{category,color:colorSelect.value,type:typeSelect.value});
+                    for(const item of filtered){
+                        const button=document.createElement('button');button.type='button';button.className='picker-item';button.dataset.itemId=item.id;button.setAttribute('aria-pressed',String(state.selectedItemIds.includes(item.id)));button.classList.toggle('active',state.selectedItemIds.includes(item.id));
+                        const image=document.createElement('img');image.src=item.image;image.alt='Outfit có '+item.name.toLowerCase();image.loading='lazy';image.width=150;image.height=220;
+                        button.append(image,text('span',item.name));button.addEventListener('click',()=>change({type:'toggle',id:item.id}));list.append(button);
+                    }
+                    if(!filtered.length)list.append(text('p','Chưa có ảnh theo màu và loại này. Đổi một điều kiện để xem tiếp.','wardrobe-note'));
+                }
+                colorSelect.addEventListener('change',renderGroup);typeSelect.addEventListener('change',renderGroup);renderGroup();
+                group.append(filters,list);picker.append(group);
             });
         }
         function slotNames(template,slotIds){return slotIds.map(id=>{const slot=template.requiredSlots.find(s=>s.id===id);return slot.acceptedItemIds.map(item=>itemsById.get(item)?.name).filter(Boolean).join(' hoặc ');});}

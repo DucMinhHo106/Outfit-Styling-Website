@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StyleMIX — Chuẩn bị ảnh</title>
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/global.css?v=20261126">
+  <link rel="stylesheet" href="./assets/css/admin.css?v=20261126">
+  <script src="./assets/js/admin-core.js?v=20261126" defer></script>
+  <script src="./assets/js/admin.js?v=20261126" defer></script>
+</head>
+<body class="admin-page">
+  <header class="admin-header"><a class="admin-brand" href="./index.html">Style<span>MIX</span></a><a href="./index.html">← Về thư viện</a></header>
+  <main class="admin-main">
+    <p class="admin-eyebrow">DÀNH CHO NGƯỜI DUY TRÌ · CHUẨN BỊ CỤC BỘ</p>
+    <h1>Ảnh thật. Nhãn được duyệt.</h1>
+    <p class="admin-intro">Chọn ảnh toàn thân, đối chiếu nguồn rồi duyệt từng món theo thứ tự quần → áo → áo khoác. Công cụ xuất JSON để người duy trì áp dụng vào dự án; không tự đăng ảnh hay thay đổi thư viện đang chạy.</p>
+    <noscript><p class="admin-notice">Cần bật JavaScript để chuẩn bị và xuất dữ liệu.</p></noscript>
+    <form id="photoForm" class="admin-grid" novalidate>
+      <section class="admin-panel" aria-labelledby="photoHeading">
+        <h2 id="photoHeading"><span>01</span> Ảnh &amp; nguồn</h2>
+        <label for="photoFile">Ảnh outfit trên máy</label>
+        <input id="photoFile" type="file" accept="image/jpeg,image/png,image/webp" aria-describedby="fileHelp">
+        <p id="fileHelp" class="admin-help">JPEG, PNG, WebP · tối đa 12 MiB. Chỉ chọn ảnh thấy toàn bộ người và giày. Định dạng khác cần chuyển đổi trên máy trước.</p>
+        <label for="libraryPhoto">Ảnh có sẵn trong thư viện</label>
+        <select id="libraryPhoto" disabled><option value="">Đang tải danh sách ảnh…</option></select>
+        <button id="openLibraryPhoto" class="admin-button admin-button-secondary" type="button" disabled>Mở ảnh thư viện</button>
+        <p id="libraryStatus" class="admin-help" role="status" aria-live="polite">Mở ảnh có sẵn và link nguồn để kiểm tra lại nhãn; không tự duyệt.</p>
+        <div class="admin-preview"><img id="photoPreview" alt="Ảnh toàn thân đang chuẩn bị" hidden><p id="previewEmpty">Ảnh sẽ hiển thị trọn khung ở đây</p></div>
+        <label for="sourceUrl">Link Pin nguồn</label>
+        <input id="sourceUrl" type="url" placeholder="https://www.pinterest.com/pin/123/" autocomplete="off" required>
+        <p class="admin-help">Lưu link Pin gốc để truy nguyên. Công cụ không xác minh quyền sử dụng ảnh.</p>
+        <label class="admin-check"><input id="fullBodyConfirmed" type="checkbox"><span>Tôi đã đối chiếu đúng Pin nguồn và xác nhận ảnh toàn thân, thấy chân và giày.</span></label>
+      </section>
+      <section class="admin-panel" aria-labelledby="labelsHeading">
+        <h2 id="labelsHeading"><span>02</span> Chọn món &amp; duyệt nhãn</h2>
+        <label for="category">Nhóm trang phục</label><select id="category"></select>
+        <div class="admin-fields"><div><label for="color">Màu</label><select id="color"></select></div><div><label for="garmentType">Loại</label><select id="garmentType"></select></div></div>
+        <div class="admin-model">
+          <h3>Gợi ý ảnh trên trình duyệt <span>tuỳ chọn</span></h3>
+          <p>CLIP so sánh loại + màu trong nhóm đã chọn. Lần đầu tải mô hình khá lớn (có thể hơn 100 MB) từ Hugging Face và thư viện từ CDN, cần mạng và có thể mất vài phút. Ảnh được xử lý trên máy, không gửi lên dịch vụ nhận diện; không cần API key. Mô hình có thể được trình duyệt lưu cache.</p>
+          <button id="analyzePhoto" class="admin-button admin-button-secondary" type="button" disabled>Phân tích nhóm đã chọn</button>
+          <p id="modelStatus" class="admin-help" role="status" aria-live="polite">Có thể bỏ qua AI và tự chọn nhãn.</p>
+          <ul id="candidates" class="admin-candidates" aria-label="Nhãn gợi ý"></ul>
+          <p class="admin-help">Điểm là độ tương đồng tương đối giữa các nhãn đang so sánh, không phải xác suất đúng. Ảnh toàn thân có nhiều món nên gợi ý dễ sai. Không suy luận chất liệu từ ảnh; kiểm tra lại bằng mắt.</p>
+        </div>
+        <label for="recordId">ID bản ghi</label><input id="recordId" maxlength="80" autocomplete="off" required>
+        <label for="recordName">Tên mô tả món đã chọn</label><input id="recordName" maxlength="160" placeholder="Ví dụ: Quần jeans xanh dáng thẳng" required>
+        <label class="admin-check"><input id="approved" type="checkbox"><span>Tôi đã kiểm tra ảnh và duyệt đúng nhóm, màu, loại và tên mô tả; đã sửa mọi gợi ý sai.</span></label>
+        <button class="admin-button" type="submit">Thêm bản ghi đã duyệt</button>
+      </section>
+    </form>
+    <p id="adminStatus" class="admin-notice" role="status" aria-live="polite">Ảnh và bản ghi chỉ tồn tại trong phiên này. Tải lại trang sẽ mất dữ liệu chưa xuất.</p>
+    <section class="admin-panel admin-review" aria-labelledby="reviewHeading">
+      <div class="admin-review-heading"><div><p class="admin-eyebrow">03 · KIỂM TRA TRƯỚC KHI BÀN GIAO</p><h2 id="reviewHeading">Bản ghi đã duyệt <span id="reviewCount">0</span></h2></div><div class="admin-actions"><button id="clearSession" class="admin-button admin-button-secondary" type="button">Xoá phiên</button><button id="exportJson" class="admin-button" type="button" disabled>Xuất JSON đã duyệt</button></div></div>
+      <ul id="reviewList" class="admin-review-list"></ul>
+      <p class="admin-help">JSON chỉ tham chiếu tên file ảnh, không chứa ảnh. Giữ lại các file gốc và bàn giao cùng JSON cho người duy trì để kiểm tra quyền sử dụng, thêm vào dự án và triển khai. Không có thao tác nào ở đây tự xuất bản.</p>
+    </section>
+  </main>
+</body>
+</html>
