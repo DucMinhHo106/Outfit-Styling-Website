@@ -1,0 +1,170 @@
+[
+  {
+    "id": "tee-white",
+    "name": "Áo thun trắng",
+    "type": "tee",
+    "color": "white",
+    "hex": "#eeeae3",
+    "image": "./assets/illustrations/tee-white.svg"
+  },
+  {
+    "id": "tee-black",
+    "name": "Áo thun đen",
+    "type": "tee",
+    "color": "black",
+    "hex": "#303034",
+    "image": "./assets/illustrations/tee-black.svg"
+  },
+  {
+    "id": "tee-gray",
+    "name": "Áo thun xám",
+    "type": "tee",
+    "color": "gray",
+    "hex": "#9b9ba0",
+    "image": "./assets/illustrations/tee-gray.svg"
+  },
+  {
+    "id": "shirt-white",
+    "name": "Sơ mi trắng",
+    "type": "shirt",
+    "color": "white",
+    "hex": "#f0ece5",
+    "image": "./assets/illustrations/shirt-white.svg"
+  },
+  {
+    "id": "shirt-blue",
+    "name": "Sơ mi xanh nhạt",
+    "type": "shirt",
+    "color": "blue",
+    "hex": "#9fbcd2",
+    "image": "./assets/illustrations/shirt-blue.svg"
+  },
+  {
+    "id": "shirt-cream",
+    "name": "Sơ mi kem",
+    "type": "shirt",
+    "color": "cream",
+    "hex": "#dbcbb5",
+    "image": "./assets/illustrations/shirt-cream.svg"
+  },
+  {
+    "id": "polo-navy",
+    "name": "Polo xanh navy",
+    "type": "polo",
+    "color": "navy",
+    "hex": "#31405d",
+    "image": "./assets/illustrations/polo-navy.svg"
+  },
+  {
+    "id": "polo-black",
+    "name": "Polo đen",
+    "type": "polo",
+    "color": "black",
+    "hex": "#303034",
+    "image": "./assets/illustrations/polo-black.svg"
+  },
+  {
+    "id": "jeans-blue",
+    "name": "Jeans xanh",
+    "type": "trousers",
+    "color": "blue",
+    "hex": "#6484a1",
+    "image": "./assets/illustrations/jeans-blue.svg"
+  },
+  {
+    "id": "jeans-black",
+    "name": "Jeans đen",
+    "type": "trousers",
+    "color": "black",
+    "hex": "#36363c",
+    "image": "./assets/illustrations/jeans-black.svg"
+  },
+  {
+    "id": "trousers-black",
+    "name": "Quần vải đen",
+    "type": "trousers",
+    "color": "black",
+    "hex": "#303034",
+    "image": "./assets/illustrations/trousers-black.svg"
+  },
+  {
+    "id": "trousers-gray",
+    "name": "Quần vải xám",
+    "type": "trousers",
+    "color": "gray",
+    "hex": "#96969c",
+    "image": "./assets/illustrations/trousers-gray.svg"
+  },
+  {
+    "id": "chinos-beige",
+    "name": "Quần kaki be",
+    "type": "trousers",
+    "color": "beige",
+    "hex": "#c4ae8b",
+    "image": "./assets/illustrations/chinos-beige.svg"
+  },
+  {
+    "id": "skirt-black",
+    "name": "Chân váy midi đen",
+    "type": "skirt",
+    "color": "black",
+    "hex": "#38383d",
+    "image": "./assets/illustrations/skirt-black.svg"
+  },
+  {
+    "id": "skirt-beige",
+    "name": "Chân váy midi be",
+    "type": "skirt",
+    "color": "beige",
+    "hex": "#c4ae8b",
+    "image": "./assets/illustrations/skirt-beige.svg"
+  },
+  {
+    "id": "dress-navy",
+    "name": "Đầm liền xanh navy",
+    "type": "dress",
+    "color": "navy",
+    "hex": "#31405d",
+    "image": "./assets/illustrations/dress-navy.svg"
+  },
+  {
+    "id": "dress-black",
+    "name": "Đầm liền đen",
+    "type": "dress",
+    "color": "black",
+    "hex": "#303034",
+    "image": "./assets/illustrations/dress-black.svg"
+  },
+  {
+    "id": "sneakers-white",
+    "name": "Sneaker trắng",
+    "type": "shoes",
+    "color": "white",
+    "hex": "#f0ece5",
+    "image": "./assets/illustrations/sneakers-white.svg"
+  },
+  {
+    "id": "sneakers-black",
+    "name": "Sneaker đen",
+    "type": "shoes",
+    "color": "black",
+    "hex": "#38383d",
+    "image": "./assets/illustrations/sneakers-black.svg"
+  },
+  {
+    "id": "loafers-black",
+    "name": "Loafer đen",
+    "type": "shoes",
+    "color": "black",
+    "hex": "#303034",
+    "image": "./assets/illustrations/loafers-black.svg"
+  },
+  {
+    "id": "flats-black",
+    "name": "Giày bệt đen",
+    "type": "shoes",
+    "color": "black",
+    "hex": "#303034",
+    "image": "./assets/illustrations/flats-black.svg"
+  }
+]

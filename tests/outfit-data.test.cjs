@@ -1,0 +1,8 @@
+const {test}=require('node:test');const assert=require('node:assert/strict');const fs=require('node:fs');const path=require('node:path');
+const load=()=>{const file=path.join(__dirname,'../assets/js/outfit-data.js');const api=fs.existsSync(file)?require(file):{};assert.equal(typeof api.validateTemplates,'function');return api;};
+const catalog=[{id:'shirt',name:'Sơ mi trắng',type:'shirt',color:'white'}];
+const template={id:'one',title:'Một bộ',occasions:['work'],image:'./assets/illustrations/one.svg',imageSource:'StyleMix original illustration',requiredSlots:[{id:'top',acceptedItemIds:['shirt'],substituteItemIds:[]}],instructions:['Sơ vin gọn.'],editorialOrder:1};
+test('valid template and catalog accepted',()=>assert.equal(load().validateTemplates([template],catalog).length,0));
+test('duplicate IDs, unknown items and absent sources rejected',()=>{const errors=load().validateTemplates([template,{...template,imageSource:'',requiredSlots:[{id:'top',acceptedItemIds:['unknown']}]}],catalog);assert.ok(errors.length>=3);});
+test('malformed catalogs and templates rejected without throwing',()=>{assert.ok(load().validateTemplates([null],catalog).length);assert.ok(load().validateTemplates([template],null).length);});
+test('all 24 published templates have local illustrations, valid references and four occasions',()=>{const api=load();const templates=require('../assets/data/outfit-templates.json'),items=require('../assets/data/item-catalog.json');assert.equal(templates.length,24);assert.deepEqual(api.validateTemplates(templates,items),[]);assert.deepEqual([...new Set(templates.flatMap(t=>t.occasions))].sort(),['presentation','school','social','work']);for(const t of templates)assert.ok(fs.existsSync(path.join(__dirname,'..',t.image)));});
