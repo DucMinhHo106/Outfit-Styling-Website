@@ -1,0 +1,8 @@
+const {test}=require('node:test');const assert=require('node:assert/strict');const fs=require('node:fs');const path=require('node:path');
+const load=()=>{const p=path.join(__dirname,'../assets/js/outfit-storage.js');const api=fs.existsSync(p)?require(p):{};assert.equal(typeof api.createStore,'function');return api;};
+function memory(){const m=new Map();return {getItem:k=>m.get(k)||null,setItem:(k,v)=>m.set(k,v)};}
+test('selection survives a new store instance',()=>{const api=load(),storage=memory();api.writeSelection(storage,{occasion:'work',selectedItemIds:['shirt']});assert.deepEqual(api.readSelection(storage),{occasion:'work',selectedItemIds:['shirt']});});
+test('corrupt, wrong-shaped and future-version data recover safely',()=>{const api=load();for(const value of ['{','null','{}','{"version":99,"occasion":"work","selectedItemIds":["x"]}'])assert.deepEqual(api.readSelection({getItem:()=>value}),{occasion:'school',selectedItemIds:[]});});
+test('blocked storage falls back to session memory and reports not persisted',()=>{const api=load(),store=api.createStore({getItem(){throw Error('blocked');},setItem(){throw Error('blocked');}});assert.equal(store.set('key',[1]),false);assert.deepEqual(store.get('key',[]),[1]);});
+test('after failed write, stale storage cannot overwrite session value',()=>{const store=load().createStore({getItem:()=> '["old"]',setItem(){throw Error('quota');}});store.set('key',['new']);assert.deepEqual(store.get('key',[]),['new']);});
+test('selection removes duplicate IDs and rejects unknown occasion',()=>{const api=load(),storage=memory();api.writeSelection(storage,{occasion:'bad',selectedItemIds:['shirt','shirt',null]});assert.deepEqual(api.readSelection(storage),{occasion:'school',selectedItemIds:['shirt']});});

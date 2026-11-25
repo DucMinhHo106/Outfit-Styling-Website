@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="./assets/css/global.css"/>
   <link rel="stylesheet" href="./assets/css/home.css"/>
+  <link rel="stylesheet" href="./assets/css/wardrobe.css"/>
 </head>
 <body>
 
@@ -46,6 +47,7 @@
       <span class="nav__logo-style">STYLE</span><span class="nav__logo-mix">MIX</span>
     </a>
     <div class="nav__links">
+      <a href="./index.html#wardrobe">Phối đồ</a>
       <a href="./ao.html">Áo</a>
       <a href="./quan.html">Quần</a>
       <a href="./phu-kien.html">Phụ kiện</a>
@@ -74,9 +76,9 @@
         <span class="line-white">Mix &amp; Match</span>
         <span class="line-orange">Your Style</span>
       </h1>
-      <p class="hero__sub reveal" style="transition-delay:.22s">Khám phá nghìn outfit độc đáo, sáng tạo phong cách riêng của bạn</p>
+      <p class="hero__sub reveal" style="transition-delay:.22s">Tìm bộ phối cơ bản từ những món bạn đang có</p>
       <div class="hero__ctas reveal" style="transition-delay:.32s">
-        <button class="btn btn--primary" onclick="document.getElementById('hot-outfits').scrollIntoView({behavior:'smooth'})"><span>Khám phá ngay</span><span>→</span></button>
+        <button class="btn btn--primary" onclick="document.getElementById('wardrobe').scrollIntoView({behavior:'smooth'})"><span>Khám phá ngay</span><span>→</span></button>
         <button class="btn btn--ghost" onclick="document.getElementById('trending').scrollIntoView({behavior:'smooth'})">Xem trending</button>
       </div>
     </div>
@@ -97,12 +99,32 @@
     </div>
   </section>
 
+  <section class="wardrobe" id="wardrobe" aria-labelledby="wardrobeTitle">
+    <div class="section-inner">
+      <div class="wardrobe__header"><span class="tag tag--orange">Phối từ đồ bạn có</span>
+        <h2 class="section-title" id="wardrobeTitle">Hôm nay <span class="accent">mặc gì?</span></h2>
+        <p>Chọn nơi bạn đến và một vài món trong tủ. StyleMix tìm bộ mẫu cơ bản và chỉ rõ món đã có, món thay thế hoặc còn thiếu.</p>
+      </div>
+      <div class="wardrobe__controls">
+        <label for="outfitOccasion">Bạn chuẩn bị đi đâu?<select id="outfitOccasion"><option value="school">Đi học</option><option value="work">Đi làm</option><option value="presentation">Thuyết trình / phỏng vấn</option><option value="social">Đi chơi</option></select></label>
+        <button type="button" class="btn btn--ghost" id="clearSelection">Xóa lựa chọn</button>
+      </div>
+      <p class="wardrobe-note">Bạn có thể chỉ chọn một món. Không cần có tất cả món trong mẫu; web sẽ ghi rõ phần còn thiếu.</p>
+      <div id="itemPicker"></div><div id="selectedItems" class="selected-items" aria-label="Đồ bạn đã chọn"></div>
+      <button type="button" class="btn btn--primary" id="findOutfits" disabled>Xem gợi ý phối đồ</button>
+      <p class="wardrobe-note" id="selectionStorageNote">Lựa chọn và bộ đã lưu chỉ nằm trên trình duyệt này.</p>
+      <p class="wardrobe-note" id="wardrobeStatus" role="status" aria-live="polite">Đang tải thư viện phối đồ…</p>
+      <button type="button" class="btn btn--ghost" id="retryOutfits" hidden>Thử tải lại thư viện</button>
+      <div id="outfitResults" tabindex="-1" aria-label="Kết quả gợi ý phối đồ"></div>
+    </div>
+  </section>
+
   <section class="hot-outfits" id="hot-outfits">
     <div class="section-inner">
       <div class="hot-outfits__header reveal">
-        <span class="tag tag--red">Hot 2026</span>
-        <h2 class="section-title" style="margin-top:14px">Hot Outfits <span class="accent">of the Year</span></h2>
-        <p class="section-sub">Những bộ outfit được yêu thích nhất, cập nhật liên tục theo xu hướng mới nhất</p>
+        <span class="tag tag--red">Khám phá thêm</span>
+        <h2 class="section-title" style="margin-top:14px">Outfit <span class="accent">tham khảo</span></h2>
+        <p class="section-sub">Một số ý tưởng phối đồ để bạn tham khảo và tìm phong cách phù hợp</p>
       </div>
       <div class="outfit-grid" id="outfitGrid"></div>
 
@@ -147,8 +169,8 @@
     <div class="cta-banner__bg"></div>
     <div class="cta-banner__content reveal">
       <h2 class="cta-banner__title">Sẵn sàng tạo <span class="accent">phong cách</span><br/>của bạn?</h2>
-      <p class="cta-banner__desc">Tham gia cộng đồng yêu thời trang và khám phá phong cách của riêng bạn</p>
-      <button class="btn btn--primary" onclick="showToast('Chào mừng bạn đến với StyleMix!')"><span>Bắt đầu ngay</span></button>
+      <p class="cta-banner__desc">Chọn đồ trong tủ và lưu những bộ mẫu dễ mặc theo</p>
+      <button class="btn btn--primary" onclick="document.getElementById('wardrobe').scrollIntoView({behavior:'smooth'})"><span>Bắt đầu ngay</span></button>
     </div>
   </div>
 
@@ -165,7 +187,11 @@
   </footer>
 
   <script src="./assets/js/catalog-filter.js"></script>
+  <script src="./assets/js/outfit-storage.js"></script>
   <script src="./assets/js/global.js"></script>
   <script src="./assets/js/home.js"></script>
+  <script src="./assets/js/outfit-data.js"></script>
+  <script src="./assets/js/outfit-matcher.js"></script>
+  <script src="./assets/js/outfit-picker.js"></script>
 </body>
 </html>

@@ -13,3 +13,4 @@ Task 1: inspected baseline and original UI at 360×800 and 1280×800, server 801
 Ruling: New templates use original vector clothing illustrations rather than unverified third-party photos — supports self-contained preview without claiming image rights — cost if wrong: illustrations are less realistic than model photography. Existing images remain subject to a production rights audit.
 Task 2: complete — 3/3 regression tests PASS after RED; browser black + trang returned 0 and clear conditions. Hot Hits removed, old URL redirects to library. Favorites change events added; full persistence/UI review follows task 6.
 Task 3: complete — 24 templates, 21 catalog items, original SVG sources; 4 data tests RED-to-GREEN. Image files and normalized references checked.
+Task 4 matcher: complete — 8 matching tests RED-to-GREEN; exact, substitutions, missing, one-piece and unrelated/unknown selections checked.

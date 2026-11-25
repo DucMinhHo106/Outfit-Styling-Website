@@ -1,0 +1,25 @@
+/* Extends existing StyleMix components; original design tokens are unchanged. */
+.wardrobe{padding:70px var(--section-px);scroll-margin-top:85px}
+.wardrobe__header{margin-bottom:28px}.wardrobe__header .section-title{margin-top:12px}
+.wardrobe__header p{max-width:720px;color:var(--color-text-muted)}
+.wardrobe__controls{display:flex;gap:16px;align-items:end;flex-wrap:wrap;margin:24px 0}
+.wardrobe__controls label{display:grid;gap:8px;font-size:14px}
+.wardrobe select{background:var(--color-bg-3);color:var(--color-text);border:1px solid var(--color-border-light);border-radius:var(--radius-sm);font:inherit;padding:12px 34px 12px 14px;min-width:220px;max-width:100%}
+.picker-group{border:1px solid var(--color-border);border-radius:var(--radius-md);margin:12px 0;background:var(--color-bg-2)}
+.picker-group summary{cursor:pointer;padding:15px 20px;font-size:16px}
+.picker-items{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px;padding:0 16px 16px}
+.picker-item{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:12px 8px;background:var(--color-bg-3);border:1px solid var(--color-border);border-radius:var(--radius-sm);color:var(--color-text);font:inherit;font-size:14px;cursor:pointer}
+.picker-item img{width:70px;height:70px;object-fit:contain}.picker-item.active{border-color:var(--color-orange);background:rgba(249,115,22,.12)}
+.selected-items{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0;min-height:10px}.wardrobe-note{color:var(--color-text-muted);font-size:14px;margin:14px 0}
+#outfitResults{scroll-margin-top:85px}.result-heading{font-size:22px;margin:30px 0 18px}.template-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.template-card{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-md);overflow:hidden}
+.template-card>img{width:100%;height:auto;aspect-ratio:660/410;object-fit:contain;background:var(--color-bg-3)}
+.template-card__body{padding:18px}.template-card h4{font-size:18px;font-weight:500;margin-bottom:12px}.template-card__note{font-size:14px;color:var(--color-text-muted);margin:8px 0}
+.template-card__actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.template-card__actions .btn{font-size:14px;padding:9px 14px}
+.modal__guidance{font-size:14px;color:var(--color-text-muted);margin:14px 0}.modal__guidance p{margin:8px 0}.modal__guidance strong{color:var(--color-text)}
+.nav__like-icon{background:transparent;color:inherit;font:inherit}.support-copy{max-width:760px;margin:0 auto;padding:30px var(--section-px)}
+button:disabled{opacity:.5;cursor:default}button:focus-visible,a:focus-visible,select:focus-visible,summary:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--color-orange);outline-offset:4px}
+@media(max-width:900px){.template-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.wardrobe{padding:48px var(--section-px)}.template-grid{grid-template-columns:1fr}.wardrobe__controls{align-items:stretch}.wardrobe__controls label{width:100%}.wardrobe select{width:100%}.picker-items{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation:none!important;transition:none!important}.reveal,.reveal-left,.reveal-right,.reveal-scale{opacity:1!important;transform:none!important}.cursor,.cursor-follower{display:none!important}body{cursor:auto}}
+@media(hover:none){body{cursor:auto}.cursor,.cursor-follower{display:none}.outfit-card__overlay{opacity:1!important}}

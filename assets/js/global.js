@@ -48,22 +48,53 @@ window.showToast = showToast;
     const overlay = document.getElementById('modal');
     const closeBtn = document.getElementById('modalClose');
     if (!overlay) return;
-    function open() { overlay.classList.add('open'); document.body.style.overflow = 'hidden'; }
-    function close() { overlay.classList.remove('open'); document.body.style.overflow = ''; }
+    let previousFocus;
+    overlay.setAttribute('role', 'dialog'); overlay.setAttribute('aria-modal', 'true'); overlay.setAttribute('aria-labelledby', 'modalTitle');
+    overlay.setAttribute('aria-hidden','true'); overlay.inert = true;
+    closeBtn?.setAttribute('aria-label','Đóng chi tiết');
+    function open() {
+        previousFocus = document.activeElement; overlay.inert = false; overlay.setAttribute('aria-hidden','false');
+        overlay.classList.add('open'); document.body.style.overflow = 'hidden'; closeBtn?.focus();
+    }
+    function close() {
+        overlay.classList.remove('open'); overlay.setAttribute('aria-hidden','true'); overlay.inert = true; document.body.style.overflow = '';
+        if(previousFocus?.isConnected) previousFocus.focus();
+    }
     closeBtn && closeBtn.addEventListener('click', close);
     overlay.addEventListener('click', e => { if (e.target === overlay) close(); });
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+    document.addEventListener('keydown', e => {
+        if(!overlay.classList.contains('open')) return;
+        if(e.key === 'Escape') close();
+        if(e.key === 'Tab') {
+            const elements = [...overlay.querySelectorAll('button,a[href],input,select,[tabindex="0"]')].filter(el=>!el.disabled&&!el.hidden&&el.offsetParent!==null);
+            const first=elements[0],last=elements[elements.length-1];
+            if(e.shiftKey&&document.activeElement===first){e.preventDefault();last?.focus();}
+            else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first?.focus();}
+        }
+    });
+    function renderItems(items) {
+        document.getElementById('modalItems').replaceChildren(...items.map(item=>{
+            const li=document.createElement('li');li.className='modal__item';li.textContent=item;return li;
+        }));
+    }
+    function renderGuidance(outfit) {
+        let box=document.getElementById('modalGuidance');
+        if(!box){box=document.createElement('div');box.id='modalGuidance';box.className='modal__guidance';document.getElementById('modalItems').after(box);}
+        box.replaceChildren();
+        for(const line of [...(outfit.fitNotes||[]),...(outfit.instructions||[])]){const p=document.createElement('p');p.textContent=line;box.append(p);}
+        if(outfit.imageSource){const p=document.createElement('p');p.textContent='Hình minh họa phối đồ do StyleMix tạo.';box.append(p);}
+    }
 
     window.openOutfitModal = function (o) {
         window.currentOutfit = o;
         document.getElementById('modalImg').src = o.img;
+        document.getElementById('modalImg').alt = o.name;
         document.getElementById('modalTag').textContent = o.tag;
         document.getElementById('modalTitle').textContent = o.name.toUpperCase();
         document.getElementById('modalDesc').textContent = o.desc;
-        document.getElementById('modalItems').innerHTML =
-            o.items.map(i => '<li class="modal__item">' + i + '</li>').join('');
+        renderItems(o.items || []); renderGuidance(o);
         const saveBtn = document.getElementById('modalSaveBtn');
-        if (saveBtn) updateSaveBtnUI(saveBtn, isOutfitLiked(o.id));
+        if (saveBtn) { saveBtn.hidden = false; updateSaveBtnUI(saveBtn, isOutfitLiked(o.id)); }
         open();
     };
     window.openStyleModal = function (key) {
@@ -73,8 +104,8 @@ window.showToast = showToast;
         document.getElementById('modalTag').textContent = data.tag;
         document.getElementById('modalTitle').textContent = data.title;
         document.getElementById('modalDesc').textContent = data.desc;
-        document.getElementById('modalItems').innerHTML =
-            data.items.map(i => '<li class="modal__item">' + i + '</li>').join('');
+        renderItems(data.items || []); renderGuidance({});
+        window.currentOutfit = null; document.getElementById('modalSaveBtn').hidden = true;
         open();
     };
 })();
@@ -99,16 +130,33 @@ initScrollReveal();
     document.querySelectorAll('.nav__links a').forEach(a => {
         if (a.getAttribute('href') === page || a.getAttribute('href') === './' + page) a.classList.add('active');
     });
-    updateNavLikeBadge();
+    document.addEventListener('DOMContentLoaded', updateNavLikeBadge);
 })();
 
 /* ══ LIKE / SAVE SYSTEM ════════════════════════ */
 const LIKED_KEY = 'stylemix_liked_outfits';
 
+let fallbackLikes;
 function getLikedOutfits() {
-    try { return JSON.parse(localStorage.getItem(LIKED_KEY)) || []; } catch { return []; }
+    let list;
+    if (window.OutfitStorage) list = window.OutfitStorage.store.get(LIKED_KEY, []);
+    else { try { list = fallbackLikes || JSON.parse(localStorage.getItem(LIKED_KEY) || '[]'); } catch { list = fallbackLikes || []; } }
+    return Array.isArray(list) ? list.filter(o => o && ['string','number'].includes(typeof o.id) && typeof o.name === 'string' && Array.isArray(o.items)) : [];
 }
-function saveLikedList(list) { localStorage.setItem(LIKED_KEY, JSON.stringify(list)); document.dispatchEvent(new Event('stylemix:likes-changed')); }
+function saveLikedList(list) {
+    const clean = list.map(({fitNotes, ...outfit}) => outfit);
+    let persisted;
+    if (window.OutfitStorage) persisted = window.OutfitStorage.store.set(LIKED_KEY, clean);
+    else { fallbackLikes = clean; try { localStorage.setItem(LIKED_KEY, JSON.stringify(clean)); persisted = true; } catch { persisted = false; } }
+    window.likesPersisted = persisted;
+    document.dispatchEvent(new Event('stylemix:likes-changed'));
+}
+window.addEventListener('storage', event => {
+    if (event.key === LIKED_KEY || event.key === null) {
+        window.OutfitStorage?.store.invalidate(LIKED_KEY);
+        updateNavLikeBadge(); document.dispatchEvent(new Event('stylemix:likes-changed'));
+    }
+});
 function isOutfitLiked(id) { return getLikedOutfits().some(o => o.id === id); }
 window.isOutfitSaved = isOutfitLiked;
 
@@ -152,7 +200,7 @@ window.saveOutfitLocal = function (outfit) {
             if (d && d.id === outfit.id) syncLikeBtn(btn, now);
         } catch {}
     });
-    showToast(now ? 'Đã lưu vào tủ đồ ♥' : 'Đã xoá khỏi tủ đồ');
+    showToast(window.likesPersisted === false ? 'Đã cập nhật trong phiên này; trình duyệt chưa cho lưu lâu dài.' : now ? 'Đã lưu vào tủ đồ ♥' : 'Đã xoá khỏi tủ đồ');
 };
 
 function syncLikeBtn(btn, liked) {
@@ -173,7 +221,7 @@ window.likeOutfit = function (btn, event, outfit) {
     updateNavLikeBadge();
     const saveBtn = document.getElementById('modalSaveBtn');
     if (saveBtn && window.currentOutfit && window.currentOutfit.id === outfit.id) updateSaveBtnUI(saveBtn, nowLiked);
-    showToast(nowLiked ? 'Đã thêm vào yêu thích ♥' : 'Đã bỏ yêu thích');
+    showToast(window.likesPersisted === false ? 'Đã cập nhật trong phiên này; trình duyệt chưa cho lưu lâu dài.' : nowLiked ? 'Đã thêm vào yêu thích ♥' : 'Đã bỏ yêu thích');
 };
 
 window.openSavedOutfits = function () {
@@ -225,6 +273,7 @@ function createOutfitCard(o, delay) {
     // Use closure to attach events — no inline onclick, no JSON in HTML
     (function(outfit, container) {
         var btn = container.querySelector('.outfit-card__like');
+        btn.dataset.outfitJson = JSON.stringify(outfit);
         btn.addEventListener('click', function(e) {
             e.stopPropagation();
             window.likeOutfit(btn, e, outfit);
