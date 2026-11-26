@@ -2,7 +2,7 @@
 
 Thư viện phối đồ cơ bản cho học sinh, sinh viên và dân công sở. Chọn hoàn cảnh và những món đang có để tìm bộ mẫu, đọc hướng dẫn và lưu lại.
 
-**Demo:** https://ducminhho106.github.io/Outfit-Styling-Website/
+**Demo:** https://stylemix.pages.dev/
 
 ## Chức năng
 - Chọn một hoặc nhiều món trong 17 món cơ bản, theo 4 hoàn cảnh.
